@@ -1,0 +1,2 @@
+# Samplers should have a sample() method that takes n_samples and the output params, and return an (n_sample)x(n feature) array
+# Should have to assume encoder net outputs are appropriate to sample distribution parameters
