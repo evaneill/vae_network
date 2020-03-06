@@ -18,7 +18,7 @@ train, test = my_loader.load()
 In order to work, you gotta have the data to load in the first place:
 
 `data/` directory must contain:
-  - `freyfaces.pkl`  - FreyFace data
+  - `freyfaces.pkl`  - FreyFace data (from the repo [here](https://github.com/y0ast/Variational-Autoencoder/blob/master/freyfaces.pkl))
   - `chardata.mat` - OMNIGLOT data
   - `caltech101_silhouettes_28.mat` - Silhouettes data
   - `MNIST/` - MNIST data broken up in different files. Labels are irrelevant but will break my fragile functions if not present
