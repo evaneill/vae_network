@@ -1,2 +1,9 @@
-# Samplers should have a sample() method that takes n_samples and the output params, and return an (n_sample)x(n feature) array
-# Should have to assume encoder net outputs are appropriate to sample distribution parameters
+# Samplers should be functions that take mu, log_sigmasq tensors and return sampled versions
+import torch
+
+def gaussianSampler(mu, log_sigmasq):
+	
+	std = torch.exp(.5*log_sigmasq)
+	eps = torch.randn_like(std)
+
+	return mu+eps*std
