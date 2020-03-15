@@ -10,7 +10,7 @@ from .samplers import gaussianSampler
 from .layers import StochasticGaussianLayer, DeterministicLayer
 
 # This implementation borrows a lot from the pytorch VAE example
-class RDAENet(nn.Module):
+class VRalphaNet(nn.Module):
 	""" 'Renyi Divergence AutoEncoder Net' """
 
 	def __init__(self,train_data,layers,activations,n_samples=5,alpha=1,data_type='binary'):
@@ -43,7 +43,7 @@ class RDAENet(nn.Module):
 			print("layers argument gotta be list of tuples bruh, see documentation")
 			raise BadInputException
 
-		super(RDAENet,self).__init__()
+		super(VRalphaNet,self).__init__()
 
 		self.encoder = EncoderNet(train_data,layers,activations,n_samples)
 		self.decoder = DecoderNet(train_data,layers[::-1],activations,data_type)
@@ -51,11 +51,11 @@ class RDAENet(nn.Module):
 	def forward(self,x):
 
 		# Sampling is built into the logic of stochastic layers, which the encoder should end in
-		samples, qmu, qlog_sigmasq = self.encoder.encode(x)
+		q_samples, qmu, qlog_sigmasq = self.encoder.encode(x)
 
-		output, pmu, plog_sigmasq = self.decoder.decode(samples)
+		output, pmu, plog_sigmasq = self.decoder.decode(q_samples[-1])
 
-		return output, qmu, pmu, qlog_sigmasq, plog_sigmasq
+		return q_samples, qmu, pmu, qlog_sigmasq, plog_sigmasq
 
 
 class EncoderNet(nn.Module):
@@ -73,11 +73,14 @@ class EncoderNet(nn.Module):
 
 		augmented_layers = [(data.shape[1],'d')] + layers
 		self.layers = []
+		layer=[]
 		for this_layer, next_layer in zip(augmented_layers[:-1],augmented_layers[1:]):
 			if next_layer[1]=='d':
-				self.layers.append(DeterministicLayer(this_layer[0],next_layer[0],activations)) 
+				layer.append(DeterministicLayer(this_layer[0],next_layer[0],activations)) 
 			elif next_layer[1]=='s':
-				self.layers.append(StochasticGaussianLayer(this_layer[0],next_layer[0])) 
+				layer.append(StochasticGaussianLayer(this_layer[0],next_layer[0]))
+				self.layers.append(layer)
+				layer=[]
 			else:
 				print(f"'{next_layer[1]}' isn't a valid type of layer - gotta be 's' or 'd' bruh")
 				raise BadInputException
@@ -85,19 +88,22 @@ class EncoderNet(nn.Module):
 		self.n_samples = n_samples
 
 	def encode(self,data):
-		output = data.repeat_interleave(self.n_samples,dim=0)
+		outputs = [data.repeat_interleave(self.n_samples,dim=0)]
 
 		# Keep a list of these, since they'll have to be incorporated into the divergence measure
 		# Length of these lists should be equal to the # of stochastic layers (minimum length 1)
 		mu_list, log_sigmasq_list = [], []
 
+		output = outputs[-1]
 		for layer in self.layers:
-			output, mu, log_sigmasq = layer.forward(output)
-			if mu is not None and log_sigmasq is not None:
-				mu_list.append(mu)
-				log_sigmasq_list.append(log_sigmasq_list)
+			for unit in layer:
+				output, mu, log_sigmasq = unit.forward(output)
+				if mu is not None and log_sigmasq is not None:
+					mu_list.append(mu)
+					log_sigmasq_list.append(log_sigmasq)
+					outputs.append(output)
 
-		return output, mu_list, log_sigmasq_list
+		return outputs, mu_list, log_sigmasq_list
 		
 
 
@@ -116,19 +122,24 @@ class DecoderNet(nn.Module):
 
 		augmented_layers = layers + [(data.shape[1],'d')]
 		self.layers = []
+		layer = []
 		for this_layer, next_layer in zip(augmented_layers[:-2],augmented_layers[1:-1]):
 			if next_layer[1]=='d':
-				self.layers.append(DeterministicLayer(this_layer[0],next_layer[0],activations)) 
+				layer.append(DeterministicLayer(this_layer[0],next_layer[0],activations)) 
 			elif next_layer[1]=='s':
-				self.layers.append(StochasticGaussianLayer(this_layer[0],next_layer[0],n_samples)) 
+				layer.append(StochasticGaussianLayer(this_layer[0],next_layer[0]))
+				self.layers.append(layer)
+				layer=[]
 			else:
 				print(f"'{next_layer[1]}' isn't a valid type of layer - gotta be 's' or 'd' bruh")
 				raise BadInputException
 
 		if data_type=='binary':
-			self.layers.append(DeterministicLayer(augmented_layers[-2][0],augmented_layers[-1][0],'sigmoid'))
+			layer.append(DeterministicLayer(augmented_layers[-2][0],augmented_layers[-1][0],'sigmoid'))
+			self.layers.append(layer)
 		elif data_type=='continuous':
-			self.layers.append(StochasticGaussianLayer(augmented_layers[-2][0],augmented_layers[-1][0]))
+			layer.append(StochasticGaussianLayer(augmented_layers[-2][0],augmented_layers[-1][0]))
+			self.layers.append(layer)
 		else:
 			print(f"data_type {data_type} is invalid - should be 'binary' or 'continuous'")
 			raise BadInputException
@@ -136,15 +147,18 @@ class DecoderNet(nn.Module):
 	def decode(self,data):
 
 		mu_list, log_sigmasq_list = [], []
-		output = data
-		
-		for layer in self.layers:
-			output, mu, log_sigmasq = layer.forward(output)
-			if mu is not None and log_sigmasq is not None:
-				mu_list.append(mu)
-				log_sigmasq_list.append(log_sigmasq_list)
+		outputs = [data]
 
-		return output, mu_list, log_sigmasq_list
+		output = outputs[-1]
+		for layer in self.layers:
+			for unit in layer:
+				output, mu, log_sigmasq = unit.forward(output)
+				if mu is not None and log_sigmasq is not None:
+					mu_list.append(mu)
+					log_sigmasq_list.append(log_sigmasq)
+					outputs.append(output)
+
+		return outputs, mu_list, log_sigmasq_list
 
 class BadInputException(Exception):
 	pass

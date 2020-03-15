@@ -3,6 +3,7 @@ from .samplers import gaussianSampler
 
 import torch.nn as nn
 from torch.nn import functional as F
+import torch
 
 class StochasticGaussianLayer:
 
@@ -24,7 +25,10 @@ class DeterministicLayer:
 		
 		self.fc = nn.Linear(prev_layer_neurons,n_neurons)
 
-		self.activation = getattr(F,activation)
+		try:
+			self.activation = getattr(torch,activation)
+		except:
+			self.activation = getattr(F,activation)
 
 	def forward(self,input_activations):
 		return self.activation(self.fc(input_activations)), None, None
