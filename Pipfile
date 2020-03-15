@@ -9,6 +9,7 @@ verify_ssl = true
 torch = "*"
 scipy = "*"
 python-mnist = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.6"
