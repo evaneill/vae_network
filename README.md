@@ -1,8 +1,8 @@
 # vae_network
 Try to recreate VAE implementation from project paper using pytorch
 
-[Paper in reference](https://arxiv.org/pdf/1602.02311.pdf) - Renyi divergence.
-
+[Paper in reference](https://arxiv.org/pdf/1602.02311.pdf) - Renyi divergence.\
+[Github of paper](https://github.com/YingzhenLi/VRbound)
 ### utils.py
 
 Contains a `Loader` class that can be instantiated with the name of a dataset and load data into training and test sets in np.ndarray form.
