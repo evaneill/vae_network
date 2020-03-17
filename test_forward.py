@@ -35,10 +35,15 @@ if __name__=="__main__":
 	my_loader = Loader(data_name)
 	data = my_loader.load()
 
-	if l==1:
-		model = net.VRalphaNet(data[0],[(200,'d'),(200,'d'),(50,'s')],'softplus')
+	if data_name=="freyfaces":
+		data_type="continuous"
 	else:
-		model = net.VRalphaNet(data[0],[(200,'d'),(200,'d'),(100,'s'),(100,'d'),(100,'d'),(50,'s')],'tanh')
+		data_type="binary"
+
+	if l==1:
+		model = net.VRalphaNet(data[0],[(200,'d'),(200,'d'),(50,'s')],'softplus',data_type=data_type)
+	else:
+		model = net.VRalphaNet(data[0],[(200,'d'),(200,'d'),(100,'s'),(100,'d'),(100,'d'),(50,'s')],'tanh',data_type=data_type)
 
 	main(data,model)
 	

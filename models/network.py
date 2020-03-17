@@ -7,7 +7,7 @@ import torch.nn.functional as F
 import torch
 
 from .samplers import gaussianSampler 
-from .layers import StochasticGaussianLayer, DeterministicLayer
+from .layers import StochasticGaussianLayer, StochasticBernoulliLayer, DeterministicLayer
 
 # This implementation borrows a lot from the pytorch VAE example
 class VRalphaNet(nn.Module):
@@ -135,7 +135,7 @@ class DecoderNet(nn.Module):
 				raise BadInputException
 
 		if data_type=='binary':
-			layer.append(DeterministicLayer(augmented_layers[-2][0],augmented_layers[-1][0],'sigmoid'))
+			layer.append(StochasticBernoulliLayer(augmented_layers[-2][0],augmented_layers[-1][0]))
 			self.layers.append(layer)
 		elif data_type=='continuous':
 			layer.append(StochasticGaussianLayer(augmented_layers[-2][0],augmented_layers[-1][0]))
@@ -153,7 +153,7 @@ class DecoderNet(nn.Module):
 		for layer in self.layers:
 			for unit in layer:
 				output, mu, log_sigmasq = unit.forward(output)
-				if mu is not None and log_sigmasq is not None:
+				if log_sigmasq is not None:
 					mu_list.append(mu)
 					log_sigmasq_list.append(log_sigmasq)
 					outputs.append(output)
