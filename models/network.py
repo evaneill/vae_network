@@ -89,7 +89,7 @@ class DecoderNet(nn.Module):
 		else:
 			return self.hidden_to_out(hidden)
 
-def ELBO(est, gt, mean, var, data_continuous):
+def loss(est, gt, mean, var, data_continuous):
 	# todo think about how loss is actually computed xd
 
 	# important: that loss is somewhat intractable for a != 1 might actually be relevant here
