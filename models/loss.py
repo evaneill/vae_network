@@ -8,6 +8,8 @@ import numpy as np
 from torch import Tensor as T
 import torch
 
+import math
+
 def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbound'):
 		""" Monte-carlo estimate of variational renyi bound
 		Args:
@@ -43,7 +45,7 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 			if optimize_on=='full_lowerbound':
 				return torch.mean(log_pq_ratio)
 			elif optimize_on=='max':
-				log_pq_ratio = log_pq_ratio.reshape([model.encoder.num_samples,-1])
+				log_pq_ratio = log_pq_ratio.reshape([model.encoder.n_samples,-1])
 				max_log_ratio_values = log_pq_ratio.max(axis=1)
 				return torch.mean(max_log_ratio_values)
 			elif optimize_on=='sample':
@@ -51,19 +53,20 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 				pass
 		else:
 			# Trick comes from vae_renyi_divergence codebase, which is is at least from original iwae codebase
-			log_pq_ratio_alpha = (1-alpha)*log_pq_ratio.reshape([-1,model.encoder.num_samples])
-			max_log_ratio_values = log_pq_ratio.max(axis=1)
+			log_pq_ratio_alpha = (1-alpha)*log_pq_ratio.reshape([-1,model.encoder.n_samples])
+			# pdb.set_trace()
+			max_log_ratio_values = log_pq_ratio_alpha.max(axis=1)
 			log_pq_ratio_alpha_norm = torch.log(
 				torch.sum(
 					torch.exp(
-						log_pq_ratio_alpha-max_log_ratio_values.values.repeat_interleave(model.encoder.num_samples).reshape([-1,model.encoder.num_samples])
+						log_pq_ratio_alpha-max_log_ratio_values.values.repeat_interleave(model.encoder.n_samples).reshape([-1,model.encoder.n_samples])
 					)
 					,axis=1)
 				)
 			
 			if optimize_on=='full_lowerbound':
-				tf.reduce_mean(logF_normalizer + logF_max - tf.log(model.encoder.num_samples)) / (1 - alpha)
-				return torch.mean(log_pq_ratio_alpha_norm + max_log_ratio_values.values - torch.log(model.encoder.num_samples))/(1-alpha)
+				log_one_over_k = math.log(model.encoder.n_samples)
+				return torch.mean(log_pq_ratio_alpha_norm + max_log_ratio_values.values - log_one_over_k)/(1-alpha)
 			elif optimize_on=='max':
 				return torch.mean(max_log_ratio_values.values)
 			elif optimize_on=='sample':
