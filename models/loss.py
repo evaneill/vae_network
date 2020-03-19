@@ -42,39 +42,38 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 				# then pmu is actually theta of a bernoulli distribution
 				log_pq_ratio+=bernoulli_log_likelihood(current_sample,pmu) - gaussian_log_likelihood(next_sample,(qmu,qlog_sigmasq))
 
-		return log_pq_ratio
-		# if abs(alpha-1)<=1e-3:
-		# 	if optimize_on=='full_lowerbound':
-		# 		return torch.mean(log_pq_ratio)
-		# 	elif optimize_on=='max':
-		# 		#TODO: Is this even right tho
-		# 		log_pq_ratio = log_pq_ratio.reshape([model.encoder.n_samples,-1])
-		# 		max_log_ratio_values = log_pq_ratio.max(axis=1)
-		# 		return torch.mean(max_log_ratio_values)
-		# 	elif optimize_on=='sample':
-		# 		#nah
-		# 		pass
-		# else:
-		# 	# Trick comes from vae_renyi_divergence codebase, which is is at least from original iwae codebase
-		# 	log_pq_ratio_alpha = (1-alpha)*log_pq_ratio.reshape([-1,model.encoder.n_samples])
-		# 	# pdb.set_trace()
-		# 	max_log_ratio_values = log_pq_ratio_alpha.max(axis=1,keepdim=True)
-		# 	rel_weights = torch.exp(log_pq_ratio_alpha-max_log_ratio_values.values)
-		# 	log_pq_ratio_alpha_norm = rel_weights/torch.sum(rel_weights,axis=1,keepdim=True)
+		if abs(alpha-1)<=1e-3:
+			if optimize_on=='full_lowerbound':
+				return torch.mean(log_pq_ratio)
+			elif optimize_on=='max':
+				#TODO: Is this even right tho
+				log_pq_ratio = log_pq_ratio.reshape([model.encoder.n_samples,-1])
+				max_log_ratio_values = log_pq_ratio.max(axis=1)
+				return torch.mean(max_log_ratio_values)
+			elif optimize_on=='sample':
+				#nah
+				pass
+		else:
+			# Trick comes from vae_renyi_divergence codebase, which is is at least from original iwae codebase
+			log_pq_ratio_alpha = (1-alpha)*log_pq_ratio.reshape([-1,model.encoder.n_samples])
+			# pdb.set_trace()
+			max_log_ratio_values = log_pq_ratio_alpha.max(axis=1,keepdim=True)
+			rel_weights = torch.exp(log_pq_ratio_alpha-max_log_ratio_values.values)
+			log_pq_ratio_alpha_norm = rel_weights/torch.sum(rel_weights,axis=1,keepdim=True)
 
-		# 	log_pq_ratio_alpha_norm = Variable(log_pq_ratio_alpha_norm.data,requires_grad=False)
-		# 	sample_sum_per_input = torch.sum(log_pq_ratio_alpha_norm * log_pq_ratio_alpha,1)/model.encoder.n_samples
+			log_pq_ratio_alpha_norm = Variable(log_pq_ratio_alpha_norm.data,requires_grad=False)
+			sample_sum_per_input = torch.sum(log_pq_ratio_alpha_norm * log_pq_ratio_alpha,1)/model.encoder.n_samples
 
-		# 	if optimize_on=='full_lowerbound':
-		# 		# log_one_over_k = math.log(model.encoder.n_samples)
-		# 		# return torch.mean(log_pq_ratio_alpha_norm + max_log_ratio_values.values - log_one_over_k)/(1-alpha)
-		# 		return torch.sum(sample_sum_per_input)/(1-alpha)
-		# 	elif optimize_on=='max':
-		# 		# TODO: is this right tho
-		# 		return torch.mean(max_log_ratio_values.values)
-		# 	elif optimize_on=='sample':
-		# 		#nah
-		# 		pass
+			if optimize_on=='full_lowerbound':
+				# log_one_over_k = math.log(model.encoder.n_samples)
+				# return torch.mean(log_pq_ratio_alpha_norm + max_log_ratio_values.values - log_one_over_k)/(1-alpha)
+				return torch.sum(sample_sum_per_input)/(1-alpha)
+			elif optimize_on=='max':
+				# TODO: is this right tho
+				return torch.mean(max_log_ratio_values.values)
+			elif optimize_on=='sample':
+				#nah
+				pass
 			
 
 def gaussian_log_likelihood(sample,params):
