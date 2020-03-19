@@ -9,11 +9,13 @@ from torch import Tensor as T
 import numpy as np
 import torch
 
-class StochasticGaussianLayer:
+class StochasticGaussianLayer(nn.Module):
 
 	def __init__(self,prev_layer_neurons,n_neurons):
 		# N_neurons = number used to represent both mean and SD of stochastic layer
 		# No activation needed - stochastic layers apparently ALWAYS use linear for mu and exp(linear) for sigma^2
+		super(StochasticGaussianLayer,self).__init__()
+
 		self.fc_mu = nn.Linear(prev_layer_neurons,n_neurons)
 		self.fc_log_sigmasq = nn.Linear(prev_layer_neurons,n_neurons)
 
@@ -25,10 +27,15 @@ class StochasticGaussianLayer:
 
 		return gaussianSampler(mu,log_sigmasq), mu, log_sigmasq
 
-class StochasticBernoulliLayer:
+	def _params(self):
+		return torch.nn.ParameterList(self.fc_mu,self.fc_log_sigmasq)
+
+class StochasticBernoulliLayer(nn.Module):
 
 	def __init__(self,prev_layer_neurons,n_neurons):
 		# N_neurons = number used to represent both mean and SD of stochastic layer
+		super(StochasticBernoulliLayer,self).__init__()
+
 		self.fc_theta = nn.Linear(prev_layer_neurons,n_neurons)
 		
 		self._type = "bernoulli"
@@ -39,10 +46,15 @@ class StochasticBernoulliLayer:
 		# Nondifferentiable but don't need it to be - only output theta matters for our purpose ¯\_(° ¿ °)_/¯
 		return bernoulliSampler(theta), theta, None
 
-class DeterministicLayer:
+	def _params(self):
+		return self.fc_theta
+
+class DeterministicLayer(nn.Module):
 
 	def __init__(self,prev_layer_neurons,n_neurons,activation):
 		
+		super(DeterministicLayer,self).__init__()
+
 		self.fc = nn.Linear(prev_layer_neurons,n_neurons)
 
 		try:
@@ -52,6 +64,9 @@ class DeterministicLayer:
 
 	def forward(self,input_activations):
 		return self.activation(self.fc(input_activations)), None, None
+
+	def _params(self):
+		return self.fc
 
 
 

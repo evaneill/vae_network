@@ -2,6 +2,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.autograd import Variable
 
 import numpy as np
 
@@ -15,7 +16,7 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 		Args:
 		    alpha (float): alpha of renyi alpha-divergence
 		    model (VRalphaNet): net from models.network
-		    q_samples (list): list of the output latent samples form training, with the data as the first element.
+		    q_samples (list): list of the output latent samples from training, with the data as the first element.
 		    	(should be the result of model.forward(data))
 		    q_mu (list): 
 		    q_log_sigmasq (list): resulting log_sigmasq output list of network forward() method - describes 
@@ -41,40 +42,40 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 				# then pmu is actually theta of a bernoulli distribution
 				log_pq_ratio+=bernoulli_log_likelihood(current_sample,pmu) - gaussian_log_likelihood(next_sample,(qmu,qlog_sigmasq))
 
-		if abs(alpha-1)<=1e-3:
-			if optimize_on=='full_lowerbound':
-				return torch.mean(log_pq_ratio)
-			elif optimize_on=='max':
-				log_pq_ratio = log_pq_ratio.reshape([model.encoder.n_samples,-1])
-				max_log_ratio_values = log_pq_ratio.max(axis=1)
-				return torch.mean(max_log_ratio_values)
-			elif optimize_on=='sample':
-				#nah
-				pass
-		else:
-			# Trick comes from vae_renyi_divergence codebase, which is is at least from original iwae codebase
-			log_pq_ratio_alpha = (1-alpha)*log_pq_ratio.reshape([-1,model.encoder.n_samples])
-			# pdb.set_trace()
-			max_log_ratio_values = log_pq_ratio_alpha.max(axis=1)
-			log_pq_ratio_alpha_norm = torch.log(
-				torch.sum(
-					torch.exp(
-						log_pq_ratio_alpha-max_log_ratio_values.values.repeat_interleave(model.encoder.n_samples).reshape([-1,model.encoder.n_samples])
-					)
-					,axis=1)
-				)
-			
-			if optimize_on=='full_lowerbound':
-				log_one_over_k = math.log(model.encoder.n_samples)
-				return torch.mean(log_pq_ratio_alpha_norm + max_log_ratio_values.values - log_one_over_k)/(1-alpha)
-			elif optimize_on=='max':
-				return torch.mean(max_log_ratio_values.values)
-			elif optimize_on=='sample':
-				#nah
-				pass
-			
+		return log_pq_ratio
+		# if abs(alpha-1)<=1e-3:
+		# 	if optimize_on=='full_lowerbound':
+		# 		return torch.mean(log_pq_ratio)
+		# 	elif optimize_on=='max':
+		# 		#TODO: Is this even right tho
+		# 		log_pq_ratio = log_pq_ratio.reshape([model.encoder.n_samples,-1])
+		# 		max_log_ratio_values = log_pq_ratio.max(axis=1)
+		# 		return torch.mean(max_log_ratio_values)
+		# 	elif optimize_on=='sample':
+		# 		#nah
+		# 		pass
+		# else:
+		# 	# Trick comes from vae_renyi_divergence codebase, which is is at least from original iwae codebase
+		# 	log_pq_ratio_alpha = (1-alpha)*log_pq_ratio.reshape([-1,model.encoder.n_samples])
+		# 	# pdb.set_trace()
+		# 	max_log_ratio_values = log_pq_ratio_alpha.max(axis=1,keepdim=True)
+		# 	rel_weights = torch.exp(log_pq_ratio_alpha-max_log_ratio_values.values)
+		# 	log_pq_ratio_alpha_norm = rel_weights/torch.sum(rel_weights,axis=1,keepdim=True)
 
+		# 	log_pq_ratio_alpha_norm = Variable(log_pq_ratio_alpha_norm.data,requires_grad=False)
+		# 	sample_sum_per_input = torch.sum(log_pq_ratio_alpha_norm * log_pq_ratio_alpha,1)/model.encoder.n_samples
 
+		# 	if optimize_on=='full_lowerbound':
+		# 		# log_one_over_k = math.log(model.encoder.n_samples)
+		# 		# return torch.mean(log_pq_ratio_alpha_norm + max_log_ratio_values.values - log_one_over_k)/(1-alpha)
+		# 		return torch.sum(sample_sum_per_input)/(1-alpha)
+		# 	elif optimize_on=='max':
+		# 		# TODO: is this right tho
+		# 		return torch.mean(max_log_ratio_values.values)
+		# 	elif optimize_on=='sample':
+		# 		#nah
+		# 		pass
+			
 
 def gaussian_log_likelihood(sample,params):
 	"""Calculate likelihood of current sample given previous (for encoder likelihood, talking about q(h_i | h_(i-1)))
@@ -91,10 +92,9 @@ def gaussian_log_likelihood(sample,params):
 	(mu, log_sigmasq) = params
 
 	sigma_sq = torch.exp(log_sigmasq)
-	output =  -.5*T.log(torch.tensor(2*np.pi)) - .5*log_sigmasq
-	output -= .5*T.pow((sample-mu),2)/sigma_sq
+	output =   -.5*torch.sum(log_sigmasq,axis=1)-.5*sample.shape[1]*T.log(torch.tensor(2*np.pi)) - .5*torch.sum(torch.pow(sample-mu,2)/sigma_sq,axis=1)
 
-	return torch.sum(output,axis=1)
+	return output
 
 def bernoulli_log_likelihood(sample,theta):
 	"""Calculate likelihood of current sample given previous (for encoder likelihood, talking about q(h_i | h_(i-1)))
@@ -109,7 +109,7 @@ def bernoulli_log_likelihood(sample,theta):
 	    torch.Tensor: observation-length vector whose entries are Log Likelihood of sample given params
 	"""
 
-	output = (1-sample)*(1-theta) + sample*theta
+	output = (1-sample)*torch.log(1-theta) + sample*torch.log(theta)
 
 	return torch.sum(output,axis=1)
 

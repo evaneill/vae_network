@@ -8,6 +8,8 @@ import numpy as np
 from scipy.io import loadmat
 from mnist import MNIST
 
+from torch import Tensor as T
+
 DATASETS = {
 	"freyfaces": "freyfaces.pkl",
 	"mnist":{
@@ -23,6 +25,7 @@ DATASETS = {
 	"omniglot":"chardata.mat",
 }
 
+
 class Loader:
 
 	def __init__(self,data_name):
@@ -37,14 +40,15 @@ class Loader:
 
 		self.data_name = data_name.lower().strip()
 
-	def load(self,train_ratio=.9,seed=123):
+	def load(self,train_ratio=.9,seed=123,output_type = 'numpy'):
 		"""Load the data into a train and test np.ndarray
 		
 		Args:
 		    train_ratio (float, optional): proportion of data to be used for training. Some datasets are already split and this is ignored
-		
+			seed (int): seeds random partitioning of select datasets into training and test sets
+			output_type (str,optional): either 'numpy' (default) or 'tensor' to specify whether resulting objects shouldbe numpy arrays or Tensors 
 		Returns:
-		    np.ndarray: (training data, test data)
+		    tuple: (train, test) in the form of numpy.ndarrays or pytorch Tensors
 		"""
 		data_dir = cfg.DATA_DIR
 
@@ -138,4 +142,7 @@ class Loader:
 			data_train = data['data'].T.astype('float32').reshape((-1, 28, 28)).reshape((-1, 28*28), order='F') 
 			data_test = data['testdata'].T.astype('float32').reshape((-1, 28, 28)).reshape((-1, 28*28), order='F')
 		
+		if output_type=='tensor':
+			data_train, data_test = T(data_train), T(data_test)
+
 		return data_train, data_test

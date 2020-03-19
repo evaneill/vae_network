@@ -12,7 +12,7 @@ def main(data,model,alpha,optimize_on,batch_size):
 	data_train_t, data_test_t = T(data_train), T(data_test)
 
 	print("Trying to feed forward...")
-	output, qmu, pmu, qlog_sigmasq, plog_sigmasq = model.forward(data_train_t[:batch_size,:])
+	output, qmu, qlog_sigmasq = model.forward(data_train_t[:batch_size,:])
 
 	print(f"Trying to test loss with alpha={str(alpha)} and L={len(model.encoder.layers)}")
 	print(f"==== Loss = {VRBound(alpha,model,output,qmu,qlog_sigmasq,optimize_on=optimize_on)} =====")

@@ -48,6 +48,10 @@ class VRalphaNet(nn.Module):
 		self.encoder = EncoderNet(train_data,layers,activations,n_samples)
 		self.decoder = DecoderNet(train_data,layers[::-1],activations,data_type)
 
+		# self._params = nn.ParameterList()
+		# self._params.extend(self.encoder._params)
+		# self._params.extend(self.decoder._params)
+
 	def forward(self,x):
 
 		# Sampling is built into the logic of stochastic layers, which the encoder should end in
@@ -55,8 +59,12 @@ class VRalphaNet(nn.Module):
 
 		output, pmu, plog_sigmasq = self.decoder.decode(q_samples[-1])
 
-		return q_samples, qmu, pmu, qlog_sigmasq, plog_sigmasq
+		return q_samples, qmu, qlog_sigmasq
 
+	def get_recon(self,x):
+		q_samples, qmu, qlog_sigmasq = self.encoder.encode(x,sample=False)
+
+		return self.decoder.recon(q_samples[-1])
 
 class EncoderNet(nn.Module):
 
@@ -72,23 +80,32 @@ class EncoderNet(nn.Module):
 		super(EncoderNet,self).__init__()
 
 		augmented_layers = [(data.shape[1],'d')] + layers
-		self.layers = []
-		layer=[]
+
+		self.layers = nn.ModuleList()
+		layer=nn.ModuleList()
+
+		# self._params=nn.ParameterList()
+
 		for this_layer, next_layer in zip(augmented_layers[:-1],augmented_layers[1:]):
 			if next_layer[1]=='d':
-				layer.append(DeterministicLayer(this_layer[0],next_layer[0],activations)) 
+				layer.append(DeterministicLayer(this_layer[0],next_layer[0],activations))
+				# self._params.append(layer[-1]._params()) 
 			elif next_layer[1]=='s':
 				layer.append(StochasticGaussianLayer(this_layer[0],next_layer[0]))
 				self.layers.append(layer)
-				layer=[]
+				# self._params.append(layer[-1]._params()) 
+				layer=nn.ModuleList()
 			else:
 				print(f"'{next_layer[1]}' isn't a valid type of layer - gotta be 's' or 'd' bruh")
 				raise BadInputException
 
 		self.n_samples = n_samples
 
-	def encode(self,data):
-		outputs = [data.repeat_interleave(self.n_samples,dim=0)]
+	def encode(self,data,sample=True):
+		if sample:
+			outputs = [data.repeat_interleave(self.n_samples,dim=0)]
+		else:
+			outputs = [data]
 
 		# Keep a list of these, since they'll have to be incorporated into the divergence measure
 		# Length of these lists should be equal to the # of stochastic layers (minimum length 1)
@@ -121,15 +138,21 @@ class DecoderNet(nn.Module):
 		super(DecoderNet,self).__init__()
 
 		augmented_layers = layers + [(data.shape[1],'d')]
-		self.layers = []
-		layer = []
+		
+		self.layers = nn.ModuleList()
+		layer=nn.ModuleList()
+
+		# self._params=nn.ParameterList()
+
 		for this_layer, next_layer in zip(augmented_layers[:-2],augmented_layers[1:-1]):
 			if next_layer[1]=='d':
-				layer.append(DeterministicLayer(this_layer[0],next_layer[0],activations)) 
+				layer.append(DeterministicLayer(this_layer[0],next_layer[0],activations))
+				# self._params.append(layer[-1]._params())  
 			elif next_layer[1]=='s':
 				layer.append(StochasticGaussianLayer(this_layer[0],next_layer[0]))
 				self.layers.append(layer)
-				layer=[]
+				# self._params.append(layer[-1]._params()) 
+				layer=nn.ModuleList()
 			else:
 				print(f"'{next_layer[1]}' isn't a valid type of layer - gotta be 's' or 'd' bruh")
 				raise BadInputException
@@ -159,6 +182,14 @@ class DecoderNet(nn.Module):
 					outputs.append(output)
 
 		return outputs, mu_list, log_sigmasq_list
+
+	def recon(self,input_latent):
+		output = input_latent
+		for layer in self.layers:
+			for unit in layer:
+				output, mu, log_sigmasq = unit.forward(output)
+
+		return output
 
 class BadInputException(Exception):
 	pass
