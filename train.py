@@ -11,7 +11,7 @@ from torch import optim
 from torch.utils.data import TensorDataset, DataLoader
 from torchvision.utils import save_image
 
-def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs):
+def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,log_interval=10):
 
 	data_train, data_test = data[0], data[1]
 
@@ -27,13 +27,15 @@ def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs):
 	optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
 	for epoch in range(1,n_epochs+1):
-		train(epoch,model,optimizer,alpha,data_train_loader,optimize_on,device)
-		test(epoch,model,optimizer,alpha,data_test_loader,optimize_on,device)
+		train(epoch,model,optimizer,alpha,data_train_loader,optimize_on,device,imsize)
+		if (epoch-1) % log_interval==0:
+			test(epoch,model,optimizer,alpha,data_test_loader,optimize_on,device,imsize)
 
 
-def train(epoch,model,optimizer,alpha,data_loader,optimize_on,device):
+def train(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
 	model.train()
 	train_loss = 0
+	(H,W) = imsize
 	for batch_idx, [data] in enumerate(data_loader):
 		data = data.to(device)
 		optimizer.zero_grad()
@@ -51,9 +53,10 @@ def train(epoch,model,optimizer,alpha,data_loader,optimize_on,device):
 	print('====> Epoch: {} Average loss: {:.4f}'.format(
 	      epoch, train_loss / len(data_loader.dataset)))
 
-def test(epoch,model,optimizer,alpha,data_loader,optimize_on,device):
+def test(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
     model.eval()
     test_loss = 0
+    (H,W) = imsize
     with torch.no_grad():
         for i, [data] in enumerate(data_loader):
             data = data.to(device)
@@ -62,8 +65,8 @@ def test(epoch,model,optimizer,alpha,data_loader,optimize_on,device):
             recon_batch = model.get_recon(data)
             if i == 0:
                 n = min(data.size(0), 8)
-                comparison = torch.cat([data[:n].view(-1,1,28,28),
-                                      recon_batch.view(-1, 1, 28, 28)[:n]])
+                comparison = torch.cat([data[:n].view(-1,1,H,W),
+                                      recon_batch.view(-1, 1, H, W)[:n]])
                 save_image(comparison.cpu(),
                          'results/reconstruction_' + str(epoch) + '.png', nrow=n)
 
@@ -85,7 +88,10 @@ if __name__=="__main__":
 	parser.add_argument('--batch_size','-batch',type=int,default=100)#,description='batch size of training passes (before sampling)')
 	parser.add_argument('--optimize_on',choices=['full_lowerbound','max'],default='full_lowerbound')#,description='whether a full sum should be taken, or only the max-weight observation when estimating the bound')
 	parser.add_argument('--learning_rate','-lr',type=float,default=-1.)
-	parser.add_argument('--n_epoch','-e',type=float,default=100)
+	parser.add_argument('--n_epoch','-e',type=int,default=100)
+
+	# Logging
+	parser.add_argument('--log_interval','-log',type=int,default=10)
 
 	args = parser.parse_args()
 	data_name = args.data
@@ -98,15 +104,19 @@ if __name__=="__main__":
 	learning_rate = args.learning_rate
 	n_epochs = args.n_epoch
 
+	log_interval = args.log_interval
+	
 	if data_name=="freyfaces":
+		imsize=(28,20)
 		data_type="continuous"
 		if learning_rate<0:
 			# That used in paper
 			learning_rate = 5e-4
 	else:
 		data_type="binary"
+		imsize=(28,28)
 		if learning_rate<0:
-			# That used in paper, though exact training scheme won't be implemented here (multiple epochs w/ changing hyperparameters)
+			# That used in paper, though exact training scheme won't be implemented here (multiple epochs w/ changing LR)
 			learning_rate = 1e-3
 
 	my_loader = Loader(data_name)
@@ -123,4 +133,4 @@ if __name__=="__main__":
 	elif L==2:
 		model = VRalphaNet(data[0],[(200,'d'),(200,'d'),(100,'s'),(100,'d'),(100,'d'),(50,'s')],'tanh',data_type=data_type,n_samples=n_samples)
 
-	main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs)
+	main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,log_interval=log_interval)

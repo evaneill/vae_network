@@ -82,8 +82,8 @@ class Loader:
 				raise Exception
 			num_train = int(train_ratio* data.shape[0])
 
-			data_train = data[:num_train]
-			data_test = data[num_train:]
+			data_train = 1-data[:num_train]
+			data_test = 1-data[num_train:]
 			# End of copy
 
 		elif self.data_name == "silhouettes":
@@ -139,6 +139,7 @@ class Loader:
 			data = loadmat(fpath)
 
 			# From iwae repository
+
 			data_train = data['data'].T.astype('float32').reshape((-1, 28, 28)).reshape((-1, 28*28), order='F') 
 			data_test = data['testdata'].T.astype('float32').reshape((-1, 28, 28)).reshape((-1, 28*28), order='F')
 		

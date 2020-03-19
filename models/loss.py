@@ -16,7 +16,7 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 		Args:
 		    alpha (float): alpha of renyi alpha-divergence
 		    model (VRalphaNet): net from models.network
-		    q_samples (list): list of the output latent samples from training, with the data as the first element.
+		    q_samples (list): list of the output latent samples from training, with the (sampled) data as the first element.
 		    	(should be the result of model.forward(data))
 		    q_mu (list): 
 		    q_log_sigmasq (list): resulting log_sigmasq output list of network forward() method - describes 
@@ -29,6 +29,7 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 		prior_log_sigmasq = torch.zeros_like(q_samples[-1]) # To work with innard of the LL function just use log(sigma^2) instead of sigma
 
 		log_pq_ratio=gaussian_log_likelihood(q_samples[-1],(prior_mu,prior_log_sigmasq))
+		#log_pq_ratio=torch.zeros_like(q_samples[-1].sum(axis=1))
 
 		for current_sample, next_sample, qmu , qlog_sigmasq, p_layer in zip(q_samples,q_samples[1:],q_mu,q_log_sigmasq,model.decoder.layers[::-1]):
 			p_out = next_sample
@@ -42,6 +43,7 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 				# then pmu is actually theta of a bernoulli distribution
 				log_pq_ratio+=bernoulli_log_likelihood(current_sample,pmu) - gaussian_log_likelihood(next_sample,(qmu,qlog_sigmasq))
 
+		# return log_pq_ratio
 		if abs(alpha-1)<=1e-3:
 			if optimize_on=='full_lowerbound':
 				return torch.mean(log_pq_ratio)
@@ -56,13 +58,13 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 		else:
 			# Trick comes from vae_renyi_divergence codebase, which is is at least from original iwae codebase
 			log_pq_ratio_alpha = (1-alpha)*log_pq_ratio.reshape([-1,model.encoder.n_samples])
-			# pdb.set_trace()
+
 			max_log_ratio_values = log_pq_ratio_alpha.max(axis=1,keepdim=True)
 			rel_weights = torch.exp(log_pq_ratio_alpha-max_log_ratio_values.values)
 			log_pq_ratio_alpha_norm = rel_weights/torch.sum(rel_weights,axis=1,keepdim=True)
 
-			log_pq_ratio_alpha_norm = Variable(log_pq_ratio_alpha_norm.data,requires_grad=False)
-			sample_sum_per_input = torch.sum(log_pq_ratio_alpha_norm * log_pq_ratio_alpha,1)/model.encoder.n_samples
+			# log_pq_ratio_alpha_norm = Variable(log_pq_ratio_alpha_norm.data,requires_grad=False)
+			sample_sum_per_input = torch.sum(log_pq_ratio_alpha_norm * log_pq_ratio_alpha,1)
 
 			if optimize_on=='full_lowerbound':
 				# log_one_over_k = math.log(model.encoder.n_samples)
@@ -91,8 +93,7 @@ def gaussian_log_likelihood(sample,params):
 	(mu, log_sigmasq) = params
 
 	sigma_sq = torch.exp(log_sigmasq)
-	output =   -.5*torch.sum(log_sigmasq,axis=1)-.5*sample.shape[1]*T.log(torch.tensor(2*np.pi)) - .5*torch.sum(torch.pow(sample-mu,2)/sigma_sq,axis=1)
-
+	output = -.5*sample.shape[1]*T.log(torch.tensor(2*np.pi)) -.5*torch.sum(log_sigmasq,axis=1)- .5*torch.sum(torch.pow(sample-mu,2)/sigma_sq,axis=1)
 	return output
 
 def bernoulli_log_likelihood(sample,theta):
