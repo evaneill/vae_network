@@ -596,7 +596,7 @@ class VAE5(nn.Module):
         ws_matrix = torch.exp(log_w_minus_max)
         ws_norm = ws_matrix / torch.sum(ws_matrix, 1, keepdim=True)
         # ws_norm = ws_matrix / torch.clamp(torch.sum(ws_matrix, 1, keepdim=True), 1e-9, np.inf)
-        ws_sum_per_datapoint = torch.sum(log_w_matrix_alpha * ws_norm, 1) * 1 / K
+        ws_sum_per_datapoint = torch.sum(log_w_matrix_alpha * ws_norm, 1)
         loss = -torch.sum(ws_sum_per_datapoint)
         if alpha != 1:
             loss *= 1/(1-alpha)
