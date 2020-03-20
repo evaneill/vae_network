@@ -36,11 +36,10 @@ def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,e
 			test_loss = test(epoch,model,optimizer,alpha,data_test_loader,optimize_on,device,imsize)
 			test_loss_record.append(test_loss)
 
-
-	if eval_log_marginal=True:
+	if eval_log_marginal:
 		test_loss = score(model,alpha,data_test_loader,device,n_samples=5000)
 		return test_loss_record, test_loss
-	
+
 	return test_loss_record
 
 def train(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
