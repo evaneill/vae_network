@@ -4,10 +4,20 @@ from .samplers import gaussianSampler, bernoulliSampler
 import torch.nn as nn
 from torch.nn import functional as F
 
+import math
 
 from torch import Tensor as T
 import numpy as np
 import torch
+
+class Linear(nn.Linear):
+
+	def reset_parameters(self):
+		bound = .1 * math.sqrt(6/(self.in_features+self.out_features)) # from iwae codebase
+		nn.init.uniform_(self.weight,a=-bound,b=bound)
+		if self.bias is not None:
+			nn.init.zeros_(self.bias) #lol lazy cheat
+
 
 class StochasticGaussianLayer(nn.Module):
 
@@ -16,19 +26,19 @@ class StochasticGaussianLayer(nn.Module):
 		# No activation needed - stochastic layers apparently ALWAYS use linear for mu and exp(linear) for sigma^2
 		super(StochasticGaussianLayer,self).__init__()
 
-		self.fc_mu = nn.Linear(prev_layer_neurons,n_neurons)
-		self.fc_log_sigmasq = nn.Linear(prev_layer_neurons,n_neurons)
+		self.fc_mu = Linear(prev_layer_neurons,n_neurons)
+		self.fc_log_sigma = Linear(prev_layer_neurons,n_neurons)
 
 		self._type = "gaussian"
 
 	def forward(self,input_activations):
 		mu = self.fc_mu(input_activations)
-		log_sigmasq = self.fc_log_sigmasq(input_activations)
+		log_sigma = self.fc_log_sigma(input_activations)
 
-		return gaussianSampler(mu,log_sigmasq), mu, log_sigmasq
+		return gaussianSampler(mu,log_sigma), mu, log_sigma
 
 	def _params(self):
-		return torch.nn.ParameterList(self.fc_mu,self.fc_log_sigmasq)
+		return torch.nn.ParameterList(self.fc_mu,self.fc_log_sigma)
 
 class StochasticBernoulliLayer(nn.Module):
 
@@ -36,7 +46,7 @@ class StochasticBernoulliLayer(nn.Module):
 		# N_neurons = number used to represent both mean and SD of stochastic layer
 		super(StochasticBernoulliLayer,self).__init__()
 
-		self.fc_theta = nn.Linear(prev_layer_neurons,n_neurons)
+		self.fc_theta = Linear(prev_layer_neurons,n_neurons)
 		
 		self._type = "bernoulli"
 
@@ -55,7 +65,7 @@ class DeterministicLayer(nn.Module):
 		
 		super(DeterministicLayer,self).__init__()
 
-		self.fc = nn.Linear(prev_layer_neurons,n_neurons)
+		self.fc = Linear(prev_layer_neurons,n_neurons)
 
 		try:
 			self.activation = getattr(torch,activation)
