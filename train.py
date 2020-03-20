@@ -11,7 +11,7 @@ from torch import optim
 from torch.utils.data import TensorDataset, DataLoader
 from torchvision.utils import save_image
 
-def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,log_interval=10):
+def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,eval_log_marginal=True,log_interval=10):
 
 	data_train, data_test = data[0], data[1]
 
@@ -36,6 +36,11 @@ def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,l
 			test_loss = test(epoch,model,optimizer,alpha,data_test_loader,optimize_on,device,imsize)
 			test_loss_record.append(test_loss)
 
+
+	if eval_log_marginal=True:
+		test_loss = score(model,alpha,data_test_loader,device,n_samples=5000)
+		return test_loss_record, test_loss
+	
 	return test_loss_record
 
 def train(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
