@@ -11,7 +11,7 @@ from torch import optim
 from torch.utils.data import TensorDataset, DataLoader
 from torchvision.utils import save_image
 
-def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,eval_log_marginal=True,log_interval=10):
+def fit(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,eval_log_marginal=True,log_interval=10):
 
 	data_train, data_test = data[0], data[1]
 
@@ -161,4 +161,4 @@ if __name__=="__main__":
 	elif L==2:
 		model = VRalphaNet(data[0],[(200,'d'),(200,'d'),(100,'s'),(100,'d'),(100,'d'),(50,'s')],'tanh',data_type=data_type,n_samples=n_samples)
 
-	main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,log_interval=log_interval)
+	fit(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,log_interval=log_interval)
