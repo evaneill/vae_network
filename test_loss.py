@@ -12,10 +12,10 @@ def main(data,model,alpha,optimize_on,batch_size):
 	data_train_t, data_test_t = T(data_train), T(data_test)
 
 	print("Trying to feed forward...")
-	output, qmu, qlog_sigmasq = model.forward(data_train_t[:batch_size,:])
+	output, qmu, qlog_sigma = model.forward(data_train_t[:batch_size,:])
 
 	print(f"Trying to test loss with alpha={str(alpha)} and L={len(model.encoder.layers)}")
-	print(f"==== Loss = {VRBound(alpha,model,output,qmu,qlog_sigmasq,optimize_on=optimize_on)} =====")
+	print(f"==== Loss = {VRBound(alpha,model,output,qmu,qlog_sigma,optimize_on=optimize_on)} =====")
 
 if __name__=="__main__":
 	parser = argparse.ArgumentParser(description='test feed forward of architecture')

@@ -11,17 +11,17 @@ def main(data,model):
 	data_train_t, data_test_t = T(data_train), T(data_test)
 
 	print("Trying to feed forward...")
-	output, qmu, qlog_sigmasq= model.forward(data_train_t[:10,:])
+	output, qmu, qlog_sigma= model.forward(data_train_t[:10,:])
 
 	print("==== output ====")
 	print(output)
 
-	print("===== q_mu, qlog_sigmasq =======")
-	print(qmu,qlog_sigmasq)
+	print("===== q_mu, qlog_sigma =======")
+	print(qmu,qlog_sigma)
 
 
-	print("====== pmu, plog_sigmasq =======")
-	print(pmu,plog_sigmasq)
+	print("====== pmu, plog_sigma =======")
+	print(pmu,plog_sigma)
 
 if __name__=="__main__":
 	parser = argparse.ArgumentParser(description='test feed forward of architecture')
