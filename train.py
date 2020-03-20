@@ -59,27 +59,44 @@ def train(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
 	print('====> Epoch: {} Average loss: {:.4f}'.format(
 	      epoch, train_loss / len(data_loader.dataset)))
 
-def test(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
-    model.eval()
-    test_loss = 0
-    (H,W) = imsize
-    with torch.no_grad():
-        for i, [data] in enumerate(data_loader):
-            data = data.to(device)
-            output, q_mu, q_log_sigma = model.forward(data)
-            test_loss += -1*VRBound(alpha,model,output,q_mu, q_log_sigma,optimize_on=optimize_on)
-            recon_batch = model.get_recon(data)
-            if i == 0:
-                n = min(data.size(0), 8)
-                comparison = torch.cat([data[:n].view(-1,1,H,W),
-                                      recon_batch.view(-1, 1, H, W)[:n]])
-                save_image(comparison.cpu(),
-                         'results/reconstruction_' + str(epoch) + '.png', nrow=n)
+def test(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize,n_samples = None):
+	if n_samples is None:
+		n_samples = model.encoder.n_samples
+	elif type(n_samples)!=int:
+		raise Exception
 
-    test_loss /= len(data_loader.dataset)
-    print('====> Test set loss: {:.4f}'.format(test_loss))
-    return test_loss 
+	model.eval()
+	test_loss = 0
+	(H,W) = imsize
+	with torch.no_grad():
+	    for i, [data] in enumerate(data_loader):
+	        data = data.to(device)
+	        output, q_mu, q_log_sigma = model.forward(data,n_samples = n_samples)
+	        test_loss += -1*VRBound(alpha,model,output,q_mu, q_log_sigma,optimize_on=optimize_on)
+	        recon_batch = model.get_recon(data)
+	        if i == 0:
+	            n = min(data.size(0), 8)
+	            comparison = torch.cat([data[:n].view(-1,1,H,W),
+	                                  recon_batch.view(-1, 1, H, W)[:n]])
+	            save_image(comparison.cpu(),
+	                     'results/reconstruction_' + str(epoch) + '.png', nrow=n)
+
+	test_loss /= len(data_loader.dataset)
+	print('====> Test set loss: {:.4f}'.format(test_loss))
+	return test_loss 
     
+def score(model,alpha,test_data_loader,device,n_samples=5000):
+	score = 0
+	model.eval()
+	for [batch] in iter(test_data_loader):
+		batch = batch.to(device)
+		output, q_mu, q_log_sigma = model.forward(batch,n_samples = n_samples)
+		batch_score = -1*VRBound(alpha,model,output,q_mu, q_log_sigma,optimize_on='full_lowerbound')
+		score+=batch_score 
+
+	score/= len(data_loader.dataset)
+	return score# I think I want to divide? Printed output from above seems to be the thing I want
+
 if __name__=="__main__":
 	parser = argparse.ArgumentParser(description='try to train a model!')
 

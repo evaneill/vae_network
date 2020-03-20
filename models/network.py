@@ -52,12 +52,16 @@ class VRalphaNet(nn.Module):
 		# self._params.extend(self.encoder._params)
 		# self._params.extend(self.decoder._params)
 
-	def forward(self,x):
+	def forward(self,x,n_samples=None):
 
 		# Sampling is built into the logic of stochastic layers, which the encoder should end in
-		q_samples, qmu, qlog_sigma = self.encoder.encode(x)
+		if not n_samples:
+			q_samples, qmu, qlog_sigma = self.encoder.encode(x)
+		else:
+			q_samples, qmu, qlog_sigma = self.encoder.encode(x,n_samples=n_samples)
 
-		output, pmu, plog_sigma = self.decoder.decode(q_samples[-1])
+		# I guess this was actually unnecessary...
+		# output, pmu, plog_sigma = self.decoder.decode(q_samples[-1]) 
 
 		return q_samples, qmu, qlog_sigma
 
@@ -101,9 +105,12 @@ class EncoderNet(nn.Module):
 
 		self.n_samples = n_samples
 
-	def encode(self,data,sample=True):
+	def encode(self,data,sample=True,n_samples=None):
 		if sample:
-			outputs = [data.repeat_interleave(self.n_samples,dim=0)]
+			if not n_samples:
+				outputs = [data.repeat_interleave(self.n_samples,dim=0)]
+			else:
+				outputs = [data.repeat_interleave(n_samples,dim=0)]
 		else:
 			outputs = [data]
 
