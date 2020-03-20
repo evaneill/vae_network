@@ -55,14 +55,14 @@ class VRalphaNet(nn.Module):
 	def forward(self,x):
 
 		# Sampling is built into the logic of stochastic layers, which the encoder should end in
-		q_samples, qmu, qlog_sigmasq = self.encoder.encode(x)
+		q_samples, qmu, qlog_sigma = self.encoder.encode(x)
 
-		output, pmu, plog_sigmasq = self.decoder.decode(q_samples[-1])
+		output, pmu, plog_sigma = self.decoder.decode(q_samples[-1])
 
-		return q_samples, qmu, qlog_sigmasq
+		return q_samples, qmu, qlog_sigma
 
 	def get_recon(self,x):
-		q_samples, qmu, qlog_sigmasq = self.encoder.encode(x,sample=False)
+		q_samples, qmu, qlog_sigma = self.encoder.encode(x,sample=False)
 
 		return self.decoder.recon(q_samples[-1])
 
@@ -109,18 +109,18 @@ class EncoderNet(nn.Module):
 
 		# Keep a list of these, since they'll have to be incorporated into the divergence measure
 		# Length of these lists should be equal to the # of stochastic layers (minimum length 1)
-		mu_list, log_sigmasq_list = [], []
+		mu_list, log_sigma_list = [], []
 
 		output = outputs[-1]
 		for layer in self.layers:
 			for unit in layer:
-				output, mu, log_sigmasq = unit.forward(output)
-				if mu is not None and log_sigmasq is not None:
+				output, mu, log_sigma = unit.forward(output)
+				if mu is not None and log_sigma is not None:
 					mu_list.append(mu)
-					log_sigmasq_list.append(log_sigmasq)
+					log_sigma_list.append(log_sigma)
 					outputs.append(output)
 
-		return outputs, mu_list, log_sigmasq_list
+		return outputs, mu_list, log_sigma_list
 		
 
 
@@ -169,25 +169,25 @@ class DecoderNet(nn.Module):
 
 	def decode(self,data):
 
-		mu_list, log_sigmasq_list = [], []
+		mu_list, log_sigma_list = [], []
 		outputs = [data]
 
 		output = outputs[-1]
 		for layer in self.layers:
 			for unit in layer:
-				output, mu, log_sigmasq = unit.forward(output)
-				if log_sigmasq is not None:
+				output, mu, log_sigma = unit.forward(output)
+				if log_sigma is not None:
 					mu_list.append(mu)
-					log_sigmasq_list.append(log_sigmasq)
+					log_sigma_list.append(log_sigma)
 					outputs.append(output)
 
-		return outputs, mu_list, log_sigmasq_list
+		return outputs, mu_list, log_sigma_list
 
 	def recon(self,input_latent):
 		output = input_latent
 		for layer in self.layers:
 			for unit in layer:
-				output, mu, log_sigmasq = unit.forward(output)
+				output, mu, log_sigma = unit.forward(output)
 
 		return output
 

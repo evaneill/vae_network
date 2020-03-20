@@ -11,7 +11,7 @@ import torch
 
 import math
 
-def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbound'):
+def VRBound(alpha,model,q_samples,q_mu, q_log_sigma,optimize_on='full_lowerbound'):
 		""" Monte-carlo estimate of variational renyi bound
 		Args:
 		    alpha (float): alpha of renyi alpha-divergence
@@ -19,60 +19,65 @@ def VRBound(alpha,model,q_samples,q_mu, q_log_sigmasq,optimize_on='full_lowerbou
 		    q_samples (list): list of the output latent samples from training, with the (sampled) data as the first element.
 		    	(should be the result of model.forward(data))
 		    q_mu (list): 
-		    q_log_sigmasq (list): resulting log_sigmasq output list of network forward() method - describes 
+		    q_log_sigma (list): resulting log_sigma output list of network forward() method - describes 
 		    optimize_on (str, optional): Whether to optimize the estimate over all samples, or just the max
 		
 		"""
 		# alpha = torch.float(alpha)
 
-		prior_mu = torch.zeros_like(q_samples[-1]) # Prior is N(0,1) latent distribution in the ultimate encoder layer
-		prior_log_sigmasq = torch.zeros_like(q_samples[-1]) # To work with innard of the LL function just use log(sigma^2) instead of sigma
+		prior_mu = Variable(torch.zeros_like(q_samples[-1]),requires_grad=False) # Prior is N(0,1) latent distribution in the ultimate encoder layer
+		prior_log_sigma = Variable(torch.zeros_like(q_samples[-1]),requires_grad=False) # To work with innard of the LL function just use log(sigma^2) instead of sigma
 
-		log_pq_ratio=gaussian_log_likelihood(q_samples[-1],(prior_mu,prior_log_sigmasq))
+		log_pq_ratio=gaussian_log_likelihood(q_samples[-1],(prior_mu,prior_log_sigma))
 		#log_pq_ratio=torch.zeros_like(q_samples[-1].sum(axis=1))
 
-		for current_sample, next_sample, qmu , qlog_sigmasq, p_layer in zip(q_samples,q_samples[1:],q_mu,q_log_sigmasq,model.decoder.layers[::-1]):
+		for current_sample, next_sample, qmu , qlog_sigma, p_layer in zip(q_samples,q_samples[1:],q_mu,q_log_sigma,model.decoder.layers[::-1]):
 			p_out = next_sample
 			for unit in p_layer:
-				p_out, pmu, plog_sigmasq = unit.forward(p_out)
+				p_out, pmu, plog_sigma = unit.forward(p_out)
 			
-			if plog_sigmasq is not None:
+			if plog_sigma is not None:
 				# then this unit is a stochastic decoder layer. want LL p(h_i | h_(i+1)) - LL q(h_(i+1) | h(i))
-				log_pq_ratio+=gaussian_log_likelihood(current_sample,(pmu,plog_sigmasq)) - gaussian_log_likelihood(next_sample,(qmu,qlog_sigmasq))
-			elif pmu is not None and plog_sigmasq is None:
+				log_pq_ratio+=gaussian_log_likelihood(current_sample,(pmu,plog_sigma)) - gaussian_log_likelihood(next_sample,(qmu,qlog_sigma))
+			elif pmu is not None and plog_sigma is None:
 				# then pmu is actually theta of a bernoulli distribution
-				log_pq_ratio+=bernoulli_log_likelihood(current_sample,pmu) - gaussian_log_likelihood(next_sample,(qmu,qlog_sigmasq))
+				log_pq_ratio+=bernoulli_log_likelihood(current_sample,pmu) - gaussian_log_likelihood(next_sample,(qmu,qlog_sigma))
 
-		# return log_pq_ratio
+		log_ws_matrix = log_pq_ratio.reshape([-1, model.encoder.n_samples])
+		log_ws_minus_max = log_ws_matrix - log_ws_matrix.max(axis=1, keepdim=True).values
+		ws = torch.exp(log_ws_minus_max)
+		ws_normalized = ws / torch.sum(ws, axis=1, keepdim=True)
+		ws_normalized_vector = ws_normalized.reshape(log_pq_ratio.shape)
+
 		if abs(alpha-1)<=1e-3:
 			if optimize_on=='full_lowerbound':
-				return torch.mean(log_pq_ratio)
+				return torch.sum(log_pq_ratio)/model.encoder.n_samples
 			elif optimize_on=='max':
 				#TODO: Is this even right tho
 				log_pq_ratio = log_pq_ratio.reshape([model.encoder.n_samples,-1])
 				max_log_ratio_values = log_pq_ratio.max(axis=1)
-				return torch.mean(max_log_ratio_values)
+				return torch.sum(max_log_ratio_values)
 			elif optimize_on=='sample':
 				#nah
 				pass
 		else:
 			# Trick comes from vae_renyi_divergence codebase, which is is at least from original iwae codebase
-			log_pq_ratio_alpha = (1-alpha)*log_pq_ratio.reshape([-1,model.encoder.n_samples])
+			# log_pq_ratio_alpha = (1-alpha)*log_pq_ratio.reshape([-1,model.encoder.n_samples])
 
-			max_log_ratio_values = log_pq_ratio_alpha.max(axis=1,keepdim=True)
-			rel_weights = torch.exp(log_pq_ratio_alpha-max_log_ratio_values.values)
-			log_pq_ratio_alpha_norm = rel_weights/torch.sum(rel_weights,axis=1,keepdim=True)
+			# max_log_ratio_values = log_pq_ratio_alpha.max(axis=1,keepdim=True)
+			# rel_weights = torch.exp(log_pq_ratio_alpha-max_log_ratio_values.values)
+			# log_pq_ratio_alpha_norm = rel_weights/torch.sum(rel_weights,axis=1,keepdim=True)
 
-			# log_pq_ratio_alpha_norm = Variable(log_pq_ratio_alpha_norm.data,requires_grad=False)
-			sample_sum_per_input = torch.sum(log_pq_ratio_alpha_norm * log_pq_ratio_alpha,1)
+			# # log_pq_ratio_alpha_norm = Variable(log_pq_ratio_alpha_norm.data,requires_grad=False)
+			# sample_sum_per_input = torch.sum(log_pq_ratio_alpha_norm * log_pq_ratio_alpha,1)
 
 			if optimize_on=='full_lowerbound':
 				# log_one_over_k = math.log(model.encoder.n_samples)
 				# return torch.mean(log_pq_ratio_alpha_norm + max_log_ratio_values.values - log_one_over_k)/(1-alpha)
-				return torch.sum(sample_sum_per_input)/(1-alpha)
+				return torch.dot(log_pq_ratio,ws_normalized_vector)/(1-alpha)
 			elif optimize_on=='max':
 				# TODO: is this right tho
-				return torch.mean(max_log_ratio_values.values)
+				return torch.sum(max_log_ratio_values.values)
 			elif optimize_on=='sample':
 				#nah
 				pass
@@ -84,16 +89,16 @@ def gaussian_log_likelihood(sample,params):
 	
 	Args:
 	    sample: that generated by the network (or is just input!) whose likelihood we want to evaluate
-	    params (tuple): mu and log_sigmasq generated by network given previous stochastic layer sample output
+	    params (tuple): mu and log_sigma generated by network given previous stochastic layer sample output
 	
 	
 	Returns:
 	    torch.Tensor: observation-length vector whose entries are Log Likelihood of sample given params
 	"""
-	(mu, log_sigmasq) = params
+	(mu, log_sigma) = params
 
-	sigma_sq = torch.exp(log_sigmasq)
-	output = -.5*sample.shape[1]*T.log(torch.tensor(2*np.pi)) -.5*torch.sum(log_sigmasq,axis=1)- .5*torch.sum(torch.pow(sample-mu,2)/sigma_sq,axis=1)
+	sigma = torch.exp(log_sigma)
+	output = -.5*sample.shape[1]*T.log(torch.tensor(2*np.pi)) -torch.sum(log_sigma,axis=1)- .5*torch.sum(torch.pow((sample-mu)/sigma,2),axis=1)
 	return output
 
 def bernoulli_log_likelihood(sample,theta):

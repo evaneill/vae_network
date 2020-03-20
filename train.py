@@ -18,7 +18,10 @@ def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,l
 	data_train_loader = DataLoader(TensorDataset(data_train),batch_size = batch_size)
 	data_test_loader = DataLoader(TensorDataset(data_test),batch_size = batch_size)
 
-	device = torch.device('cpu')
+	if torch.cuda.is_available():
+		device = torch.device('cuda')
+	else:
+		device = torch.device('cpu')
 
 	# model.encoder = model.encoder.to(device)
 	# model.decoder = model.decoder.to(device)
@@ -26,11 +29,14 @@ def main(data,model,alpha,optimize_on,batch_size,learning_rate,n_epochs,imsize,l
 
 	optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
+	test_loss_record = []
 	for epoch in range(1,n_epochs+1):
 		train(epoch,model,optimizer,alpha,data_train_loader,optimize_on,device,imsize)
 		if (epoch-1) % log_interval==0:
-			test(epoch,model,optimizer,alpha,data_test_loader,optimize_on,device,imsize)
+			test_loss = test(epoch,model,optimizer,alpha,data_test_loader,optimize_on,device,imsize)
+			test_loss_record.append(test_loss)
 
+	return test_loss_record
 
 def train(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
 	model.train()
@@ -39,8 +45,8 @@ def train(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
 	for batch_idx, [data] in enumerate(data_loader):
 		data = data.to(device)
 		optimizer.zero_grad()
-		output, q_mu, q_log_sigmasq = model.forward(data)
-		loss = -1*VRBound(alpha,model,output,q_mu, q_log_sigmasq,optimize_on=optimize_on)
+		output, q_mu, q_log_sigma = model.forward(data)
+		loss = -1*VRBound(alpha,model,output,q_mu, q_log_sigma,optimize_on=optimize_on)
 		loss.backward()
 		train_loss += loss.item()
 		optimizer.step()
@@ -60,8 +66,8 @@ def test(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
     with torch.no_grad():
         for i, [data] in enumerate(data_loader):
             data = data.to(device)
-            output, q_mu, q_log_sigmasq = model.forward(data)
-            test_loss += -1*VRBound(alpha,model,output,q_mu, q_log_sigmasq,optimize_on=optimize_on)
+            output, q_mu, q_log_sigma = model.forward(data)
+            test_loss += -1*VRBound(alpha,model,output,q_mu, q_log_sigma,optimize_on=optimize_on)
             recon_batch = model.get_recon(data)
             if i == 0:
                 n = min(data.size(0), 8)
@@ -72,7 +78,8 @@ def test(epoch,model,optimizer,alpha,data_loader,optimize_on,device,imsize):
 
     test_loss /= len(data_loader.dataset)
     print('====> Test set loss: {:.4f}'.format(test_loss))
-
+    return test_loss 
+    
 if __name__=="__main__":
 	parser = argparse.ArgumentParser(description='try to train a model!')
 
@@ -105,7 +112,7 @@ if __name__=="__main__":
 	n_epochs = args.n_epoch
 
 	log_interval = args.log_interval
-	
+
 	if data_name=="freyfaces":
 		imsize=(28,20)
 		data_type="continuous"

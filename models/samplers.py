@@ -1,9 +1,9 @@
-# Samplers should be functions that take mu, log_sigmasq tensors and return sampled versions
+# Samplers should be functions that take mu, log_sigma tensors and return sampled versions
 import torch
 
-def gaussianSampler(mu, log_sigmasq):
+def gaussianSampler(mu, log_sigma):
 	
-	std = torch.exp(.5*log_sigmasq) # exp(.5 log(o^2))
+	std = torch.exp(log_sigma) # exp(log(sigma))
 	eps = torch.randn_like(std)
 
 	return mu+eps*std
