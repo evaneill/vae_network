@@ -102,7 +102,7 @@ class freyface_model(nn.Module):
         # (B*K)
         log_q = compute_log_probabitility_gaussian(z, mu, logstd)
 
-        log_p_z = torch.sum(-0.5 * z ** 2, 1)
+        log_p_z = torch.sum(-0.5 * z ** 2, 1)-.5*z.shape[1]*T.log(torch.tensor(2*np.pi)) 
         decoded = model.decode(z) # decoded = (pmu, plog_sigma)
         pmu, plog_sigma = decoded
         log_p = compute_log_probabitility_gaussian(data_k_vec,pmu, plog_sigma)
