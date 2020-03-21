@@ -8,6 +8,7 @@ from torchvision import datasets, transforms
 from torchvision.utils import save_image
 from torch.autograd import Variable
 import datetime
+import os
 
 batch_size = 128
 epochs = 501
@@ -296,37 +297,6 @@ class VAE3(nn.Module):
         return recon, mu, logstd
 
     def compute_loss_for_batch(self, data, model, K=K):
-        # he wants (K, B, 784)
-        # i have (B, 1, 28, 28)
-        # B, _, H, W = data.shape
-        # data = data.view(B, H*W)
-        # data = data.expand(K, B, H*W)
-        # # mu_h1, log_sigma_h1 = model.encode(data)
-        # # sigma_h1 = torch.exp(log_sigma_h1)
-        # # eps = Variable(sigma_h1.data.new(sigma_h1.size()).normal_())
-        #
-        # h1, mu_h1, log_sigma_h1, h2, mu_h2, log_sigma_h2 = self.encode(data)
-        # sigma_h1, sigma_h2 = torch.exp(log_sigma_h1), torch.exp(log_sigma_h2)
-        # log_Qh1Gx = torch.sum(-0.5*((h1-mu_h1)/sigma_h1)**2 - torch.log(sigma_h1), -1)
-        # log_Qh2Gh1 = torch.sum(-0.5*((h2-mu_h2)/sigma_h2)**2 - torch.log(sigma_h2), -1)
-        #
-        # #log_Qh1Gx = torch.sum(-0.5 * (eps1) ** 2 - torch.log(sigma_h1), -1)
-        # #log_Qh2Gh1 = torch.sum(-0.5 * (eps2) ** 2 - torch.log(sigma_h2), -1)
-        #
-        # h1, mu_h1, sigma_h1, p = self.decode(h1, h2)
-        # log_Ph2 = torch.sum(-0.5 * h2 ** 2, -1)
-        # log_Ph1Gh2 = torch.sum(-0.5 * ((h1 - mu_h1) / sigma_h1) ** 2 - torch.log(sigma_h1), -1)
-        # log_PxGh1 = torch.sum(data * torch.log(p) + (1 - data) * torch.log(1 - p), -1)
-        #
-        # log_weight = log_Ph2 + log_Ph1Gh2 + log_PxGh1 - log_Qh1Gx - log_Qh2Gh1
-        # log_weight = log_weight - torch.max(log_weight, 0)[0]
-        # weight = torch.exp(log_weight)
-        # weight = weight / torch.sum(weight, 0)
-        # weight = Variable(weight.data, requires_grad=False)
-        # loss = -torch.mean(torch.sum(weight * (log_Ph2 + log_Ph1Gh2 + log_PxGh1 - log_Qh1Gx - log_Qh2Gh1), 0))
-        # return 0, 0, 0, loss
-
-
         # data = (B, F) = (B, 1, H, W)
         B, _, H, W = data.shape
         data_k_vec = data.repeat((1, K, 1, 1)).view(-1, H*W)
@@ -500,54 +470,12 @@ class VAE5(nn.Module):
         h4 = torch.tanh(self.fc11(h3))
         return z1, mu3, logstd3, torch.sigmoid(self.fc12(h4))
 
-        # # h3 = F.relu(self.fc3(z))
-        # h1 = torch.tanh(self.fc7(z2))
-        # h2 = torch.tanh(self.fc8(h1))
-        # mu3, logstd3 = self.fc91(h2), self.fc92(h2)
-        # z3 = self.reparameterize(mu3, logstd3)
-        #
-        # h3 = torch.tanh(self.fc10(z3))
-        # h4 = torch.tanh(self.fc11(h3))
-        # return z3, mu3, logstd3, torch.sigmoid(self.fc12(h4))
-
     def forward(self, x):
-        #mu, logstd = self.encode(x.view(-1, 784))
         z1, _, _, z2, mu, logstd = self.encode(x.view(-1, 784))
-        #z = self.reparameterize(mu, logstd)
         _, _, _, recon = self.decode(z1, z2)
         return recon, mu, logstd
 
     def compute_loss_for_batch(self, data, model, K=K):
-        # he wants (K, B, 784)
-        # i have (B, 1, 28, 28)
-        # B, _, H, W = data.shape
-        # data = data.view(B, H*W)
-        # data = data.expand(K, B, H*W)
-        # # mu_h1, log_sigma_h1 = model.encode(data)
-        # # sigma_h1 = torch.exp(log_sigma_h1)
-        # # eps = Variable(sigma_h1.data.new(sigma_h1.size()).normal_())
-        #
-        # h1, mu_h1, log_sigma_h1, h2, mu_h2, log_sigma_h2 = self.encode(data)
-        # sigma_h1, sigma_h2 = torch.exp(log_sigma_h1), torch.exp(log_sigma_h2)
-        # log_Qh1Gx = torch.sum(-0.5*((h1-mu_h1)/sigma_h1)**2 - torch.log(sigma_h1), -1)
-        # log_Qh2Gh1 = torch.sum(-0.5*((h2-mu_h2)/sigma_h2)**2 - torch.log(sigma_h2), -1)
-        #
-        # #log_Qh1Gx = torch.sum(-0.5 * (eps1) ** 2 - torch.log(sigma_h1), -1)
-        # #log_Qh2Gh1 = torch.sum(-0.5 * (eps2) ** 2 - torch.log(sigma_h2), -1)
-        #
-        # h1, mu_h1, sigma_h1, p = self.decode(h1, h2)
-        # log_Ph2 = torch.sum(-0.5 * h2 ** 2, -1)
-        # log_Ph1Gh2 = torch.sum(-0.5 * ((h1 - mu_h1) / sigma_h1) ** 2 - torch.log(sigma_h1), -1)
-        # log_PxGh1 = torch.sum(data * torch.log(p) + (1 - data) * torch.log(1 - p), -1)
-        #
-        # log_weight = log_Ph2 + log_Ph1Gh2 + log_PxGh1 - log_Qh1Gx - log_Qh2Gh1
-        # log_weight = log_weight - torch.max(log_weight, 0)[0]
-        # weight = torch.exp(log_weight)
-        # weight = weight / torch.sum(weight, 0)
-        # weight = Variable(weight.data, requires_grad=False)
-        # loss = -torch.mean(torch.sum(weight * (log_Ph2 + log_Ph1Gh2 + log_PxGh1 - log_Qh1Gx - log_Qh2Gh1), 0))
-        # return 0, 0, 0, loss
-
         # data = (B, F) = (B, 1, H, W)
         B, _, H, W = data.shape
         data_k_vec = data.repeat((1, K, 1, 1)).view(-1, H*W)
@@ -579,7 +507,7 @@ class VAE5(nn.Module):
         ws_matrix = torch.exp(log_w_minus_max)
         ws_norm = ws_matrix / torch.sum(ws_matrix, 1, keepdim=True)
         # ws_norm = ws_matrix / torch.clamp(torch.sum(ws_matrix, 1, keepdim=True), 1e-9, np.inf)
-        ws_sum_per_datapoint = torch.sum(log_w_matrix_alpha * ws_norm, 1) * 1 / K
+        ws_sum_per_datapoint = torch.sum(log_w_matrix_alpha * ws_norm, 1)
         loss = -torch.sum(ws_sum_per_datapoint)
         if alpha != 1:
             loss *= 1/(1-alpha)
@@ -660,6 +588,7 @@ def _test(epoch):
 
 if __name__ == "__main__":
     if torch.cuda.is_available(): print("Training on GPU")
+    os.makedirs('results', exist_ok=True)
     print(datetime.datetime.now())
     for epoch in range(1, epochs + 1):
         train(epoch)
