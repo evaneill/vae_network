@@ -2,19 +2,21 @@ from __future__ import print_function
 import argparse
 import torch
 import torch.utils.data
-from torch import nn, optim
+from torch import nn, optim, Tensor as T
 from torch.nn import functional as F
 from torchvision import datasets, transforms
 from torchvision.utils import save_image
 from torch.autograd import Variable
 import datetime
 import os
+import numpy as np
 
 batch_size = 128
 epochs = 501
 seed = 1
 log_interval = 100
-K = 50
+testing_frequency = 50
+K = 5
 learning_rate = 1e-3
 discrete_data = True
 alpha = 0
@@ -59,7 +61,6 @@ class VAE1(nn.Module):
         return mu + eps*std
 
     def decode(self, z):
-        #h3 = F.relu(self.fc3(z))
         h3 = torch.tanh(self.fc3(z))
         return torch.sigmoid(self.fc4(h3))
 
@@ -68,40 +69,9 @@ class VAE1(nn.Module):
         z = self.reparameterize(mu, logstd)
         return self.decode(z), mu, logstd
 
-    def compute_loss_for_batch(self, data, model, K=K):
+    def compute_loss_for_batch(self, data, model, K=K, testing_mode=False):
         # data = (B, F) = (B, 1, H, W)
         B, _, H, W = data.shape
-        # if mode == 'vae':
-        #     recon_batch, mu, logstd = model(data)
-        #     return recon_batch, mu, logstd, loss_function(recon_batch, data, mu, logstd)
-        # elif mode == 'iwae':
-        # he wants (K, B, 784)
-        # i have (B, 1, 28, 28)
-        # data = data.view(B, H*W)
-        # data = data.expand(K, B, H*W)
-        # mu_h1, log_sigma_h1 = model.encode(data)
-        # sigma_h1 = torch.exp(log_sigma_h1)
-        # eps = Variable(sigma_h1.data.new(sigma_h1.size()).normal_())
-        #
-        # #h1 = mu_h1 + sigma_h1 * eps
-        # std = torch.exp(log_sigma_h1)
-        # #eps = torch.randn_like(std)
-        # h1 = mu_h1 + eps*std
-        #
-        # log_Qh1Gx = torch.sum(-0.5*((h1-mu_h1)/sigma_h1)**2 - torch.log(sigma_h1), -1)
-        # #log_Qh1Gx = torch.sum(-0.5 * eps** 2 - torch.log(sigma_h1), -1)
-        #
-        # p = model.decode(h1)
-        # log_Ph1 = torch.sum(-0.5 * h1 ** 2, -1)
-        # log_PxGh1 = torch.sum(data * torch.log(p) + (1 - data) * torch.log(1 - p), -1)
-        #
-        # log_weight = log_Ph1 + log_PxGh1 - log_Qh1Gx
-        # log_weight = log_weight - torch.max(log_weight, 0)[0]
-        # weight = torch.exp(log_weight)
-        # weight = weight / torch.sum(weight, 0)
-        # weight = Variable(weight.data, requires_grad=False)
-        # loss = -torch.mean(torch.sum(weight * (log_Ph1 + log_PxGh1 - log_Qh1Gx), 0))
-        # return p, mu_h1, torch.log(sigma_h1), loss
 
         data_k_vec = data.repeat((1, K, 1, 1)).view(-1, H*W)
         mu, logstd = model.encode(data_k_vec)
@@ -113,8 +83,8 @@ class VAE1(nn.Module):
         log_q = compute_log_probabitility_gaussian(z, mu, logstd)
         # log_q = torch.sum(-0.5 * ((z-mu)/torch.exp(logstd))**2 - logstd, 1) # - log(torch.sqrt(2*torch.pi))
 
-        log_p_z = torch.sum(-0.5 * z ** 2, 1)
-        # log_p_z = compute_log_probabitility_gaussian(z, torch.zeros_like(z, requires_grad=False), torch.zeros_like(z, requires_grad=False))
+        #log_p_z = torch.sum(-0.5 * z ** 2, 1)
+        log_p_z = compute_log_probabitility_gaussian(z, torch.zeros_like(z, requires_grad=False), torch.zeros_like(z, requires_grad=False))
         recon = model.decode(z)
         if discrete_data:
             log_p = compute_log_probabitility_bernoulli(recon, data_k_vec)
@@ -125,7 +95,7 @@ class VAE1(nn.Module):
             log_p = compute_log_probabitility_gaussian(recon, data_k_vec, torch.zeros_like(recon))
             # log_p = torch.sum(-0.5 * (decoded-data_k.view(-1, 784))**2, 1)
         # hopefully this reshape operation magically works like always
-        if model_type == 'iwae':
+        if model_type == 'iwae' or testing_mode:
             log_w_matrix = (log_p_z + log_p - log_q).view(B, K)
         elif model_type =='vae':
             # treat each sample for a given data point as you would treat all samples in the minibatch
@@ -177,7 +147,7 @@ class VAE2(nn.Module):
         z = self.reparameterize(mu, logstd)
         return self.decode(z), mu, logstd
 
-    def compute_loss_for_batch(self, data, model, K=K):
+    def compute_loss_for_batch(self, data, model, K=K, testing_mode=False):
         # data = (B, 1, H, W)
         B, _, H, W = data.shape
         data_k_vec = data.repeat((1, K, 1, 1)).view(-1, H*W)
@@ -189,7 +159,7 @@ class VAE2(nn.Module):
         # (B*K)
         log_q = compute_log_probabitility_gaussian(z, mu, logstd)
 
-        log_p_z = torch.sum(-0.5 * z ** 2, 1)
+        log_p_z = compute_log_probabitility_gaussian(z, torch.zeros_like(z, requires_grad=False), torch.zeros_like(z, requires_grad=False))
         decoded = model.decode(z)
         if discrete_data:
             log_p = compute_log_probabitility_bernoulli(decoded, data_k_vec)
@@ -197,7 +167,7 @@ class VAE2(nn.Module):
             # Gaussian where sigma = 0, not letting sigma be predicted atm
             log_p = compute_log_probabitility_gaussian(decoded, data_k_vec, torch.zeros_like(decoded))
         # hopefully this reshape operation magically works like always
-        if model_type == 'iwae':
+        if model_type == 'iwae' or testing_mode:
             log_w_matrix = (log_p_z + log_p - log_q).view(B, K)
         elif model_type =='vae':
             # treat each sample for a given data point as you would treat all samples in the minibatch
@@ -296,7 +266,7 @@ class VAE3(nn.Module):
         _, _, _, recon = self.decode(z1, z2)
         return recon, mu, logstd
 
-    def compute_loss_for_batch(self, data, model, K=K):
+    def compute_loss_for_batch(self, data, model, K=K, testing_mode=False):
         # data = (B, F) = (B, 1, H, W)
         B, _, H, W = data.shape
         data_k_vec = data.repeat((1, K, 1, 1)).view(-1, H*W)
@@ -305,8 +275,8 @@ class VAE3(nn.Module):
         log_q_1 = compute_log_probabitility_gaussian(z1, mu1, logstd1)
         log_q_2 = compute_log_probabitility_gaussian(z2, mu2, logstd2)
 
-        log_p_z = torch.sum(-0.5 * z2 ** 2, 1)
-        # log_p_z = compute_log_probabitility_gaussian(z, torch.zeros_like(z, requires_grad=False), torch.zeros_like(z, requires_grad=False))
+        log_p_z = compute_log_probabitility_gaussian(z2, torch.zeros_like(z2, requires_grad=False), torch.zeros_like(z2, requires_grad=False))
+        #log_p_z = torch.sum(-0.5 * z2 ** 2, 1)
         z3, mu3, logstd3, recon = model.decode(z1, z2)
         log_p_1 = compute_log_probabitility_gaussian(z3, mu3, logstd3)
         if discrete_data:
@@ -316,7 +286,7 @@ class VAE3(nn.Module):
             log_p_2 = compute_log_probabitility_gaussian(recon, data_k_vec, torch.zeros_like(recon))
             # log_p = torch.sum(-0.5 * (decoded-data_k.view(-1, 784))**2, 1)
         # hopefully this reshape operation magically works like always
-        if model_type == 'iwae':
+        if model_type == 'iwae' or testing_mode:
             log_w_matrix = (log_p_z + log_p_1 + log_p_2 - log_q_1 - log_q_2).view(B, K)
         elif model_type =='vae':
             # treat each sample for a given data point as you would treat all samples in the minibatch
@@ -368,7 +338,7 @@ class VAE4(nn.Module):
         z = self.reparameterize(mu, logstd)
         return self.decode(z), mu, logstd
 
-    def compute_loss_for_batch(self, data, model, K=K):
+    def compute_loss_for_batch(self, data, model, K=K, testing_mode=False):
         # data = (B, F) = (B, 1, H, W)
         B, _, H, W = data.shape
         data_k_vec = data.repeat((1, K, 1, 1)).view(-1, H*W)
@@ -378,7 +348,9 @@ class VAE4(nn.Module):
         # summing over latents due to independence assumption
         # (B*K)
         log_q = compute_log_probabitility_gaussian(z, mu, logstd)
-        log_p_z = torch.sum(-0.5 * z ** 2, 1)
+
+        log_p_z = compute_log_probabitility_gaussian(z, torch.zeros_like(z, requires_grad=False), torch.zeros_like(z, requires_grad=False))
+        #log_p_z = torch.sum(-0.5 * z ** 2, 1)
         decoded = model.decode(z)
         if discrete_data:
             log_p = compute_log_probabitility_bernoulli(decoded, data_k_vec)
@@ -386,7 +358,7 @@ class VAE4(nn.Module):
             # Gaussian where sigma = 0, not letting sigma be predicted atm
             log_p = compute_log_probabitility_gaussian(decoded, data_k_vec, torch.zeros_like(decoded))
         # hopefully this reshape operation magically works like always
-        if model_type == 'iwae':
+        if model_type == 'iwae' or testing_mode:
             log_w_matrix = (log_p_z + log_p - log_q).view(B, K)
         elif model_type == 'vae':
             log_w_matrix = (log_p_z + log_p - log_q).view(B*K, 1) * 1 / K
@@ -475,7 +447,7 @@ class VAE5(nn.Module):
         _, _, _, recon = self.decode(z1, z2)
         return recon, mu, logstd
 
-    def compute_loss_for_batch(self, data, model, K=K):
+    def compute_loss_for_batch(self, data, model, K=K, testing_mode=False):
         # data = (B, F) = (B, 1, H, W)
         B, _, H, W = data.shape
         data_k_vec = data.repeat((1, K, 1, 1)).view(-1, H*W)
@@ -484,8 +456,8 @@ class VAE5(nn.Module):
         log_q_1 = compute_log_probabitility_gaussian(z1, mu1, logstd1)
         log_q_2 = compute_log_probabitility_gaussian(z2, mu2, logstd2)
 
-        log_p_z = torch.sum(-0.5 * z2 ** 2, 1)
-        # log_p_z = compute_log_probabitility_gaussian(z, torch.zeros_like(z, requires_grad=False), torch.zeros_like(z, requires_grad=False))
+        #log_p_z = torch.sum(-0.5 * z2 ** 2, 1)
+        log_p_z = compute_log_probabitility_gaussian(z2, torch.zeros_like(z2, requires_grad=False), torch.zeros_like(z2, requires_grad=False))
         z3, mu3, logstd3, recon = model.decode(z1, z2)
         log_p_1 = compute_log_probabitility_gaussian(z3, mu3, logstd3)
         if discrete_data:
@@ -495,7 +467,7 @@ class VAE5(nn.Module):
             log_p_2 = compute_log_probabitility_gaussian(recon, data_k_vec, torch.zeros_like(recon))
             # log_p = torch.sum(-0.5 * (decoded-data_k.view(-1, 784))**2, 1)
         # hopefully this reshape operation magically works like always
-        if model_type == 'iwae':
+        if model_type == 'iwae' or testing_mode:
             log_w_matrix = (log_p_z + log_p_1 + log_p_2 - log_q_1 - log_q_2).view(B, K)
         elif model_type == 'vae':
             log_w_matrix = (log_p_z + log_p_1 + log_p_2 - log_q_1 - log_q_2).view(B*K, 1) * 1 / K
@@ -521,20 +493,9 @@ class VAE5(nn.Module):
 model = VAE2().to(device)
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-
-# Reconstruction + KL divergence losses summed over all elements and batch
-def loss_function(recon_x, x, mu, logstd):
-    BCE = F.binary_cross_entropy(recon_x, x.view(-1, 784), reduction='sum')
-    # see Appendix B from VAE paper:
-    # Kingma and Welling. Auto-Encoding Variational Bayes. ICLR, 2014
-    # https://arxiv.org/abs/1312.6114
-    # 0.5 * sum(1 + log(sigma^2) - mu^2 - sigma^2)
-    KLD = -0.5 * torch.sum(1 + logstd - mu.pow(2) - logstd.exp())
-    return BCE + KLD
-
 def compute_log_probabitility_gaussian(obs, mu, logstd, axis=1):
     # leaving out constant factor related to 2 pi in formula
-    return torch.sum(-0.5 * ((obs-mu) / torch.exp(logstd)) ** 2 - logstd, axis)
+    return torch.sum(-0.5 * ((obs-mu) / torch.exp(logstd)) ** 2 - logstd, axis)-.5*obs.shape[1]*T.log(torch.tensor(2*np.pi))
 
 def compute_log_probabitility_bernoulli(obs, p, axis=1):
     return torch.sum(p*torch.log(obs) + (1-p)*torch.log(1-obs), axis)
@@ -572,7 +533,7 @@ def _test(epoch):
         for i, (data, _) in enumerate(test_loader):
             data = data.to(device)
             recon_batch, mu, logvar = model(data)
-            _, _, _, loss = model.compute_loss_for_batch(data, model, 5000)
+            _, _, _, loss = model.compute_loss_for_batch(data, model, 5000, testing_mode=True)
             test_loss += loss.item()
             #test_loss += loss_function(recon_batch, data, mu, logvar).item()
             if i == 0:
@@ -592,7 +553,7 @@ if __name__ == "__main__":
     print(datetime.datetime.now())
     for epoch in range(1, epochs + 1):
         train(epoch)
-        if epoch % 500 == 1:
+        if epoch % testing_frequency == 1:
             _test(epoch)
             with torch.no_grad():
                 if isinstance(model, VAE1):
