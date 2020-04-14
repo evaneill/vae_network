@@ -1,0 +1,212 @@
+INFO:root:Training on GPU
+INFO:root:2020-04-13 09:49:43.414550
+INFO:root:Train Epoch: 1 [0/60000 (0%)]	Loss: 544.425659
+INFO:root:====> Epoch: 1 Average loss: 195.0945
+INFO:root:====> Test set loss: 157.9031
+INFO:root:Train Epoch: 2 [0/60000 (0%)]	Loss: 164.187408
+INFO:root:====> Epoch: 2 Average loss: 147.1372
+INFO:root:Train Epoch: 3 [0/60000 (0%)]	Loss: 132.082535
+INFO:root:====> Epoch: 3 Average loss: 131.5415
+INFO:root:Train Epoch: 4 [0/60000 (0%)]	Loss: 132.312317
+INFO:root:====> Epoch: 4 Average loss: 124.3503
+INFO:root:Train Epoch: 5 [0/60000 (0%)]	Loss: 123.904167
+INFO:root:====> Epoch: 5 Average loss: 119.8210
+INFO:root:Train Epoch: 6 [0/60000 (0%)]	Loss: 115.149414
+INFO:root:====> Epoch: 6 Average loss: 116.1490
+INFO:root:Train Epoch: 7 [0/60000 (0%)]	Loss: 116.243423
+INFO:root:====> Epoch: 7 Average loss: 113.0798
+INFO:root:Train Epoch: 8 [0/60000 (0%)]	Loss: 109.796371
+INFO:root:====> Epoch: 8 Average loss: 110.7800
+INFO:root:Train Epoch: 9 [0/60000 (0%)]	Loss: 109.867447
+INFO:root:====> Epoch: 9 Average loss: 108.9583
+INFO:root:Train Epoch: 10 [0/60000 (0%)]	Loss: 106.446091
+INFO:root:====> Epoch: 10 Average loss: 107.4725
+INFO:root:Train Epoch: 11 [0/60000 (0%)]	Loss: 106.159897
+INFO:root:====> Epoch: 11 Average loss: 106.1886
+INFO:root:Train Epoch: 12 [0/60000 (0%)]	Loss: 106.018402
+INFO:root:====> Epoch: 12 Average loss: 105.1318
+INFO:root:Train Epoch: 13 [0/60000 (0%)]	Loss: 101.674622
+INFO:root:====> Epoch: 13 Average loss: 104.2458
+INFO:root:Train Epoch: 14 [0/60000 (0%)]	Loss: 105.595490
+INFO:root:====> Epoch: 14 Average loss: 103.4658
+INFO:root:Train Epoch: 15 [0/60000 (0%)]	Loss: 105.694641
+INFO:root:====> Epoch: 15 Average loss: 102.7813
+INFO:root:Train Epoch: 16 [0/60000 (0%)]	Loss: 99.955154
+INFO:root:====> Epoch: 16 Average loss: 102.2132
+INFO:root:Train Epoch: 17 [0/60000 (0%)]	Loss: 103.945602
+INFO:root:====> Epoch: 17 Average loss: 101.6962
+INFO:root:Train Epoch: 18 [0/60000 (0%)]	Loss: 105.712234
+INFO:root:====> Epoch: 18 Average loss: 101.2352
+INFO:root:Train Epoch: 19 [0/60000 (0%)]	Loss: 100.183365
+INFO:root:====> Epoch: 19 Average loss: 100.8481
+INFO:root:Train Epoch: 20 [0/60000 (0%)]	Loss: 100.385300
+INFO:root:====> Epoch: 20 Average loss: 100.5094
+INFO:root:Train Epoch: 21 [0/60000 (0%)]	Loss: 96.975906
+INFO:root:====> Epoch: 21 Average loss: 100.1720
+INFO:root:====> Test set loss: 93.0046
+INFO:root:Train Epoch: 22 [0/60000 (0%)]	Loss: 100.163811
+INFO:root:====> Epoch: 22 Average loss: 99.8352
+INFO:root:Train Epoch: 23 [0/60000 (0%)]	Loss: 106.073593
+INFO:root:====> Epoch: 23 Average loss: 99.5558
+INFO:root:Train Epoch: 24 [0/60000 (0%)]	Loss: 95.780602
+INFO:root:====> Epoch: 24 Average loss: 99.2745
+INFO:root:Train Epoch: 25 [0/60000 (0%)]	Loss: 95.473053
+INFO:root:====> Epoch: 25 Average loss: 99.0089
+INFO:root:Train Epoch: 26 [0/60000 (0%)]	Loss: 96.025009
+INFO:root:====> Epoch: 26 Average loss: 98.7264
+INFO:root:Train Epoch: 27 [0/60000 (0%)]	Loss: 99.092667
+INFO:root:====> Epoch: 27 Average loss: 98.5579
+INFO:root:Train Epoch: 28 [0/60000 (0%)]	Loss: 100.404549
+INFO:root:====> Epoch: 28 Average loss: 98.3104
+INFO:root:Train Epoch: 29 [0/60000 (0%)]	Loss: 95.315506
+INFO:root:====> Epoch: 29 Average loss: 98.1589
+INFO:root:Train Epoch: 30 [0/60000 (0%)]	Loss: 96.623024
+INFO:root:====> Epoch: 30 Average loss: 97.9334
+INFO:root:Train Epoch: 31 [0/60000 (0%)]	Loss: 98.573090
+INFO:root:====> Epoch: 31 Average loss: 97.7815
+INFO:root:Train Epoch: 32 [0/60000 (0%)]	Loss: 97.236382
+INFO:root:====> Epoch: 32 Average loss: 97.6326
+INFO:root:Train Epoch: 33 [0/60000 (0%)]	Loss: 99.366516
+INFO:root:====> Epoch: 33 Average loss: 97.5595
+INFO:root:Train Epoch: 34 [0/60000 (0%)]	Loss: 96.014832
+INFO:root:====> Epoch: 34 Average loss: 97.3682
+INFO:root:Train Epoch: 35 [0/60000 (0%)]	Loss: 94.674858
+INFO:root:====> Epoch: 35 Average loss: 97.2163
+INFO:root:Train Epoch: 36 [0/60000 (0%)]	Loss: 92.481293
+INFO:root:====> Epoch: 36 Average loss: 97.0664
+INFO:root:Train Epoch: 37 [0/60000 (0%)]	Loss: 96.490204
+INFO:root:====> Epoch: 37 Average loss: 96.9639
+INFO:root:Train Epoch: 38 [0/60000 (0%)]	Loss: 92.046059
+INFO:root:====> Epoch: 38 Average loss: 96.8361
+INFO:root:Train Epoch: 39 [0/60000 (0%)]	Loss: 98.323776
+INFO:root:====> Epoch: 39 Average loss: 96.7537
+INFO:root:Train Epoch: 40 [0/60000 (0%)]	Loss: 97.159012
+INFO:root:====> Epoch: 40 Average loss: 96.6229
+INFO:root:Train Epoch: 41 [0/60000 (0%)]	Loss: 93.004852
+INFO:root:====> Epoch: 41 Average loss: 96.5478
+INFO:root:====> Test set loss: 90.2181
+INFO:root:Train Epoch: 42 [0/60000 (0%)]	Loss: 97.613411
+INFO:root:====> Epoch: 42 Average loss: 96.4622
+INFO:root:Train Epoch: 43 [0/60000 (0%)]	Loss: 97.743073
+INFO:root:====> Epoch: 43 Average loss: 96.3279
+INFO:root:Train Epoch: 44 [0/60000 (0%)]	Loss: 93.652023
+INFO:root:====> Epoch: 44 Average loss: 96.2301
+INFO:root:Train Epoch: 45 [0/60000 (0%)]	Loss: 98.073463
+INFO:root:====> Epoch: 45 Average loss: 96.1796
+INFO:root:Train Epoch: 46 [0/60000 (0%)]	Loss: 100.076965
+INFO:root:====> Epoch: 46 Average loss: 96.0470
+INFO:root:Train Epoch: 47 [0/60000 (0%)]	Loss: 93.577240
+INFO:root:====> Epoch: 47 Average loss: 96.0288
+INFO:root:Train Epoch: 48 [0/60000 (0%)]	Loss: 95.070503
+INFO:root:====> Epoch: 48 Average loss: 95.9236
+INFO:root:Train Epoch: 49 [0/60000 (0%)]	Loss: 95.140869
+INFO:root:====> Epoch: 49 Average loss: 95.8723
+INFO:root:Train Epoch: 50 [0/60000 (0%)]	Loss: 94.845428
+INFO:root:====> Epoch: 50 Average loss: 95.7658
+INFO:root:Train Epoch: 51 [0/60000 (0%)]	Loss: 90.230942
+INFO:root:====> Epoch: 51 Average loss: 95.7065
+INFO:root:Train Epoch: 52 [0/60000 (0%)]	Loss: 96.567062
+INFO:root:====> Epoch: 52 Average loss: 95.6976
+INFO:root:Train Epoch: 53 [0/60000 (0%)]	Loss: 96.630943
+INFO:root:====> Epoch: 53 Average loss: 95.6004
+INFO:root:Train Epoch: 54 [0/60000 (0%)]	Loss: 93.489845
+INFO:root:====> Epoch: 54 Average loss: 95.5722
+INFO:root:Train Epoch: 55 [0/60000 (0%)]	Loss: 95.636887
+INFO:root:====> Epoch: 55 Average loss: 95.4958
+INFO:root:Train Epoch: 56 [0/60000 (0%)]	Loss: 94.971336
+INFO:root:====> Epoch: 56 Average loss: 95.3872
+INFO:root:Train Epoch: 57 [0/60000 (0%)]	Loss: 99.452057
+INFO:root:====> Epoch: 57 Average loss: 95.3667
+INFO:root:Train Epoch: 58 [0/60000 (0%)]	Loss: 92.334526
+INFO:root:====> Epoch: 58 Average loss: 95.3044
+INFO:root:Train Epoch: 59 [0/60000 (0%)]	Loss: 95.940895
+INFO:root:====> Epoch: 59 Average loss: 95.2209
+INFO:root:Train Epoch: 60 [0/60000 (0%)]	Loss: 98.132782
+INFO:root:====> Epoch: 60 Average loss: 95.2338
+INFO:root:Train Epoch: 61 [0/60000 (0%)]	Loss: 93.280701
+INFO:root:====> Epoch: 61 Average loss: 95.1660
+INFO:root:====> Test set loss: 88.9719
+INFO:root:Train Epoch: 62 [0/60000 (0%)]	Loss: 95.328598
+INFO:root:====> Epoch: 62 Average loss: 95.1378
+INFO:root:Train Epoch: 63 [0/60000 (0%)]	Loss: 95.322006
+INFO:root:====> Epoch: 63 Average loss: 95.0481
+INFO:root:Train Epoch: 64 [0/60000 (0%)]	Loss: 93.811989
+INFO:root:====> Epoch: 64 Average loss: 95.0538
+INFO:root:Train Epoch: 65 [0/60000 (0%)]	Loss: 95.627838
+INFO:root:====> Epoch: 65 Average loss: 94.9681
+INFO:root:Train Epoch: 66 [0/60000 (0%)]	Loss: 96.162308
+INFO:root:====> Epoch: 66 Average loss: 94.9234
+INFO:root:Train Epoch: 67 [0/60000 (0%)]	Loss: 98.915527
+INFO:root:====> Epoch: 67 Average loss: 94.8869
+INFO:root:Train Epoch: 68 [0/60000 (0%)]	Loss: 96.560715
+INFO:root:====> Epoch: 68 Average loss: 94.8635
+INFO:root:Train Epoch: 69 [0/60000 (0%)]	Loss: 88.719513
+INFO:root:====> Epoch: 69 Average loss: 94.8125
+INFO:root:Train Epoch: 70 [0/60000 (0%)]	Loss: 93.042953
+INFO:root:====> Epoch: 70 Average loss: 94.7519
+INFO:root:Train Epoch: 71 [0/60000 (0%)]	Loss: 96.676453
+INFO:root:====> Epoch: 71 Average loss: 94.7049
+INFO:root:Train Epoch: 72 [0/60000 (0%)]	Loss: 97.370605
+INFO:root:====> Epoch: 72 Average loss: 94.7138
+INFO:root:Train Epoch: 73 [0/60000 (0%)]	Loss: 94.692947
+INFO:root:====> Epoch: 73 Average loss: 94.6332
+INFO:root:Train Epoch: 74 [0/60000 (0%)]	Loss: 93.078796
+INFO:root:====> Epoch: 74 Average loss: 94.6302
+INFO:root:Train Epoch: 75 [0/60000 (0%)]	Loss: 92.945015
+INFO:root:====> Epoch: 75 Average loss: 94.6093
+INFO:root:Train Epoch: 76 [0/60000 (0%)]	Loss: 95.026840
+INFO:root:====> Epoch: 76 Average loss: 94.6120
+INFO:root:Train Epoch: 77 [0/60000 (0%)]	Loss: 96.581970
+INFO:root:====> Epoch: 77 Average loss: 94.5513
+INFO:root:Train Epoch: 78 [0/60000 (0%)]	Loss: 96.302063
+INFO:root:====> Epoch: 78 Average loss: 94.4911
+INFO:root:Train Epoch: 79 [0/60000 (0%)]	Loss: 98.173553
+INFO:root:====> Epoch: 79 Average loss: 94.4590
+INFO:root:Train Epoch: 80 [0/60000 (0%)]	Loss: 92.089058
+INFO:root:====> Epoch: 80 Average loss: 94.4153
+INFO:root:Train Epoch: 81 [0/60000 (0%)]	Loss: 96.061707
+INFO:root:====> Epoch: 81 Average loss: 94.3900
+INFO:root:====> Test set loss: 88.3850
+INFO:root:Train Epoch: 82 [0/60000 (0%)]	Loss: 94.481697
+INFO:root:====> Epoch: 82 Average loss: 94.3823
+INFO:root:Train Epoch: 83 [0/60000 (0%)]	Loss: 97.728653
+INFO:root:====> Epoch: 83 Average loss: 94.3427
+INFO:root:Train Epoch: 84 [0/60000 (0%)]	Loss: 96.169441
+INFO:root:====> Epoch: 84 Average loss: 94.3044
+INFO:root:Train Epoch: 85 [0/60000 (0%)]	Loss: 93.680954
+INFO:root:====> Epoch: 85 Average loss: 94.2926
+INFO:root:Train Epoch: 86 [0/60000 (0%)]	Loss: 90.354813
+INFO:root:====> Epoch: 86 Average loss: 94.2450
+INFO:root:Train Epoch: 87 [0/60000 (0%)]	Loss: 94.323334
+INFO:root:====> Epoch: 87 Average loss: 94.2210
+INFO:root:Train Epoch: 88 [0/60000 (0%)]	Loss: 92.835350
+INFO:root:====> Epoch: 88 Average loss: 94.2124
+INFO:root:Train Epoch: 89 [0/60000 (0%)]	Loss: 94.617477
+INFO:root:====> Epoch: 89 Average loss: 94.1396
+INFO:root:Train Epoch: 90 [0/60000 (0%)]	Loss: 93.634224
+INFO:root:====> Epoch: 90 Average loss: 94.1722
+INFO:root:Train Epoch: 91 [0/60000 (0%)]	Loss: 93.639664
+INFO:root:====> Epoch: 91 Average loss: 94.1193
+INFO:root:Train Epoch: 92 [0/60000 (0%)]	Loss: 93.712517
+INFO:root:====> Epoch: 92 Average loss: 94.0519
+INFO:root:Train Epoch: 93 [0/60000 (0%)]	Loss: 94.351990
+INFO:root:====> Epoch: 93 Average loss: 94.0973
+INFO:root:Train Epoch: 94 [0/60000 (0%)]	Loss: 91.818390
+INFO:root:====> Epoch: 94 Average loss: 94.0541
+INFO:root:Train Epoch: 95 [0/60000 (0%)]	Loss: 93.658020
+INFO:root:====> Epoch: 95 Average loss: 93.9974
+INFO:root:Train Epoch: 96 [0/60000 (0%)]	Loss: 94.470253
+INFO:root:====> Epoch: 96 Average loss: 93.9895
+INFO:root:Train Epoch: 97 [0/60000 (0%)]	Loss: 95.329590
+INFO:root:====> Epoch: 97 Average loss: 94.0041
+INFO:root:Train Epoch: 98 [0/60000 (0%)]	Loss: 96.783997
+INFO:root:====> Epoch: 98 Average loss: 93.9304
+INFO:root:Train Epoch: 99 [0/60000 (0%)]	Loss: 95.936058
+INFO:root:====> Epoch: 99 Average loss: 93.9571
+INFO:root:Train Epoch: 100 [0/60000 (0%)]	Loss: 96.595200
+INFO:root:====> Epoch: 100 Average loss: 93.9238
+INFO:root:Train Epoch: 101 [0/60000 (0%)]	Loss: 91.037796
+INFO:root:====> Epoch: 101 Average loss: 93.9127
+INFO:root:====> Test set loss: 87.9634
+INFO:root:2020-04-13 10:16:05.156501
+INFO:root:training finished

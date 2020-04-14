@@ -1,0 +1,1103 @@
+INFO:root:2020-04-09 09:48:50.924215
+INFO:root:====== About to train for 1 epochs in round 0 with learning rate 0.0001========
+INFO:root:Round 0, Train Epoch: 0 [0/60000 (0%)]	Loss: 544.729346
+INFO:root:Round 0, Train Epoch: 0 [8000/60000 (13%)]	Loss: 211.569702
+INFO:root:Round 0, Train Epoch: 0 [16000/60000 (27%)]	Loss: 205.580664
+INFO:root:Round 0, Train Epoch: 0 [24000/60000 (40%)]	Loss: 207.520801
+INFO:root:Round 0, Train Epoch: 0 [32000/60000 (53%)]	Loss: 210.001831
+INFO:root:Round 0, Train Epoch: 0 [40000/60000 (67%)]	Loss: 184.168665
+INFO:root:Round 0, Train Epoch: 0 [48000/60000 (80%)]	Loss: 204.414197
+INFO:root:Round 0, Train Epoch: 0 [56000/60000 (93%)]	Loss: 189.150037
+INFO:root:====> Round 0, Epoch: 0 Average loss: 209.7998
+INFO:root:2020-04-09 09:49:47.532605
+INFO:root:====== About to train for 3 epochs in round 1 with learning rate 7.2e-05========
+INFO:root:Round 1, Train Epoch: 0 [0/60000 (0%)]	Loss: 194.548950
+INFO:root:Round 1, Train Epoch: 0 [8000/60000 (13%)]	Loss: 189.024390
+INFO:root:Round 1, Train Epoch: 0 [16000/60000 (27%)]	Loss: 194.390234
+INFO:root:Round 1, Train Epoch: 0 [24000/60000 (40%)]	Loss: 169.981409
+INFO:root:Round 1, Train Epoch: 0 [32000/60000 (53%)]	Loss: 174.235815
+INFO:root:Round 1, Train Epoch: 0 [40000/60000 (67%)]	Loss: 175.467346
+INFO:root:Round 1, Train Epoch: 0 [48000/60000 (80%)]	Loss: 185.348474
+INFO:root:Round 1, Train Epoch: 0 [56000/60000 (93%)]	Loss: 171.395142
+INFO:root:====> Round 1, Epoch: 0 Average loss: 180.6062
+INFO:root:Round 1, Train Epoch: 1 [0/60000 (0%)]	Loss: 178.027002
+INFO:root:Round 1, Train Epoch: 1 [8000/60000 (13%)]	Loss: 150.295154
+INFO:root:Round 1, Train Epoch: 1 [16000/60000 (27%)]	Loss: 164.583289
+INFO:root:Round 1, Train Epoch: 1 [24000/60000 (40%)]	Loss: 170.715576
+INFO:root:Round 1, Train Epoch: 1 [32000/60000 (53%)]	Loss: 155.234558
+INFO:root:Round 1, Train Epoch: 1 [40000/60000 (67%)]	Loss: 160.540515
+INFO:root:Round 1, Train Epoch: 1 [48000/60000 (80%)]	Loss: 172.398730
+INFO:root:Round 1, Train Epoch: 1 [56000/60000 (93%)]	Loss: 166.569751
+INFO:root:====> Round 1, Epoch: 1 Average loss: 164.6546
+INFO:root:Round 1, Train Epoch: 2 [0/60000 (0%)]	Loss: 168.498291
+INFO:root:Round 1, Train Epoch: 2 [8000/60000 (13%)]	Loss: 157.222437
+INFO:root:Round 1, Train Epoch: 2 [16000/60000 (27%)]	Loss: 154.364294
+INFO:root:Round 1, Train Epoch: 2 [24000/60000 (40%)]	Loss: 150.288525
+INFO:root:Round 1, Train Epoch: 2 [32000/60000 (53%)]	Loss: 152.112952
+INFO:root:Round 1, Train Epoch: 2 [40000/60000 (67%)]	Loss: 158.908044
+INFO:root:Round 1, Train Epoch: 2 [48000/60000 (80%)]	Loss: 143.750562
+INFO:root:Round 1, Train Epoch: 2 [56000/60000 (93%)]	Loss: 145.081848
+INFO:root:====> Round 1, Epoch: 2 Average loss: 153.9669
+INFO:root:2020-04-09 09:52:22.145191
+INFO:root:====== About to train for 9 epochs in round 2 with learning rate 5.18e-05========
+INFO:root:Round 2, Train Epoch: 0 [0/60000 (0%)]	Loss: 158.232751
+INFO:root:Round 2, Train Epoch: 0 [8000/60000 (13%)]	Loss: 153.834167
+INFO:root:Round 2, Train Epoch: 0 [16000/60000 (27%)]	Loss: 157.711890
+INFO:root:Round 2, Train Epoch: 0 [24000/60000 (40%)]	Loss: 133.632556
+INFO:root:Round 2, Train Epoch: 0 [32000/60000 (53%)]	Loss: 155.945801
+INFO:root:Round 2, Train Epoch: 0 [40000/60000 (67%)]	Loss: 140.658618
+INFO:root:Round 2, Train Epoch: 0 [48000/60000 (80%)]	Loss: 165.695630
+INFO:root:Round 2, Train Epoch: 0 [56000/60000 (93%)]	Loss: 145.064087
+INFO:root:====> Round 2, Epoch: 0 Average loss: 147.5157
+INFO:root:Round 2, Train Epoch: 1 [0/60000 (0%)]	Loss: 119.474438
+INFO:root:Round 2, Train Epoch: 1 [8000/60000 (13%)]	Loss: 141.154187
+INFO:root:Round 2, Train Epoch: 1 [16000/60000 (27%)]	Loss: 126.170251
+INFO:root:Round 2, Train Epoch: 1 [24000/60000 (40%)]	Loss: 137.138916
+INFO:root:Round 2, Train Epoch: 1 [32000/60000 (53%)]	Loss: 156.130713
+INFO:root:Round 2, Train Epoch: 1 [40000/60000 (67%)]	Loss: 150.049060
+INFO:root:Round 2, Train Epoch: 1 [48000/60000 (80%)]	Loss: 149.999023
+INFO:root:Round 2, Train Epoch: 1 [56000/60000 (93%)]	Loss: 152.386328
+INFO:root:====> Round 2, Epoch: 1 Average loss: 143.1606
+INFO:root:Round 2, Train Epoch: 2 [0/60000 (0%)]	Loss: 140.672375
+INFO:root:Round 2, Train Epoch: 2 [8000/60000 (13%)]	Loss: 145.231885
+INFO:root:Round 2, Train Epoch: 2 [16000/60000 (27%)]	Loss: 151.276721
+INFO:root:Round 2, Train Epoch: 2 [24000/60000 (40%)]	Loss: 130.517725
+INFO:root:Round 2, Train Epoch: 2 [32000/60000 (53%)]	Loss: 131.101270
+INFO:root:Round 2, Train Epoch: 2 [40000/60000 (67%)]	Loss: 137.261133
+INFO:root:Round 2, Train Epoch: 2 [48000/60000 (80%)]	Loss: 134.325037
+INFO:root:Round 2, Train Epoch: 2 [56000/60000 (93%)]	Loss: 127.899500
+INFO:root:====> Round 2, Epoch: 2 Average loss: 139.4065
+INFO:root:Round 2, Train Epoch: 3 [0/60000 (0%)]	Loss: 130.390894
+INFO:root:Round 2, Train Epoch: 3 [8000/60000 (13%)]	Loss: 135.667688
+INFO:root:Round 2, Train Epoch: 3 [16000/60000 (27%)]	Loss: 137.123096
+INFO:root:Round 2, Train Epoch: 3 [24000/60000 (40%)]	Loss: 145.026501
+INFO:root:Round 2, Train Epoch: 3 [32000/60000 (53%)]	Loss: 146.836230
+INFO:root:Round 2, Train Epoch: 3 [40000/60000 (67%)]	Loss: 142.834631
+INFO:root:Round 2, Train Epoch: 3 [48000/60000 (80%)]	Loss: 130.932019
+INFO:root:Round 2, Train Epoch: 3 [56000/60000 (93%)]	Loss: 132.114514
+INFO:root:====> Round 2, Epoch: 3 Average loss: 136.3469
+INFO:root:Round 2, Train Epoch: 4 [0/60000 (0%)]	Loss: 147.577454
+INFO:root:Round 2, Train Epoch: 4 [8000/60000 (13%)]	Loss: 138.130261
+INFO:root:Round 2, Train Epoch: 4 [16000/60000 (27%)]	Loss: 135.247852
+INFO:root:Round 2, Train Epoch: 4 [24000/60000 (40%)]	Loss: 126.253052
+INFO:root:Round 2, Train Epoch: 4 [32000/60000 (53%)]	Loss: 137.913599
+INFO:root:Round 2, Train Epoch: 4 [40000/60000 (67%)]	Loss: 129.101660
+INFO:root:Round 2, Train Epoch: 4 [48000/60000 (80%)]	Loss: 131.702686
+INFO:root:Round 2, Train Epoch: 4 [56000/60000 (93%)]	Loss: 123.747595
+INFO:root:====> Round 2, Epoch: 4 Average loss: 133.6865
+INFO:root:Round 2, Train Epoch: 5 [0/60000 (0%)]	Loss: 127.959949
+INFO:root:Round 2, Train Epoch: 5 [8000/60000 (13%)]	Loss: 124.244434
+INFO:root:Round 2, Train Epoch: 5 [16000/60000 (27%)]	Loss: 137.876440
+INFO:root:Round 2, Train Epoch: 5 [24000/60000 (40%)]	Loss: 132.795398
+INFO:root:Round 2, Train Epoch: 5 [32000/60000 (53%)]	Loss: 150.135754
+INFO:root:Round 2, Train Epoch: 5 [40000/60000 (67%)]	Loss: 126.330249
+INFO:root:Round 2, Train Epoch: 5 [48000/60000 (80%)]	Loss: 127.285510
+INFO:root:Round 2, Train Epoch: 5 [56000/60000 (93%)]	Loss: 127.016406
+INFO:root:====> Round 2, Epoch: 5 Average loss: 131.4040
+INFO:root:Round 2, Train Epoch: 6 [0/60000 (0%)]	Loss: 133.928833
+INFO:root:Round 2, Train Epoch: 6 [8000/60000 (13%)]	Loss: 123.767188
+INFO:root:Round 2, Train Epoch: 6 [16000/60000 (27%)]	Loss: 145.753430
+INFO:root:Round 2, Train Epoch: 6 [24000/60000 (40%)]	Loss: 133.593896
+INFO:root:Round 2, Train Epoch: 6 [32000/60000 (53%)]	Loss: 131.007031
+INFO:root:Round 2, Train Epoch: 6 [40000/60000 (67%)]	Loss: 137.989563
+INFO:root:Round 2, Train Epoch: 6 [48000/60000 (80%)]	Loss: 122.909326
+INFO:root:Round 2, Train Epoch: 6 [56000/60000 (93%)]	Loss: 115.722998
+INFO:root:====> Round 2, Epoch: 6 Average loss: 129.5003
+INFO:root:Round 2, Train Epoch: 7 [0/60000 (0%)]	Loss: 110.159229
+INFO:root:Round 2, Train Epoch: 7 [8000/60000 (13%)]	Loss: 137.062488
+INFO:root:Round 2, Train Epoch: 7 [16000/60000 (27%)]	Loss: 132.134094
+INFO:root:Round 2, Train Epoch: 7 [24000/60000 (40%)]	Loss: 111.763245
+INFO:root:Round 2, Train Epoch: 7 [32000/60000 (53%)]	Loss: 125.506494
+INFO:root:Round 2, Train Epoch: 7 [40000/60000 (67%)]	Loss: 142.832117
+INFO:root:Round 2, Train Epoch: 7 [48000/60000 (80%)]	Loss: 114.268384
+INFO:root:Round 2, Train Epoch: 7 [56000/60000 (93%)]	Loss: 121.487878
+INFO:root:====> Round 2, Epoch: 7 Average loss: 127.8803
+INFO:root:Round 2, Train Epoch: 8 [0/60000 (0%)]	Loss: 130.428589
+INFO:root:Round 2, Train Epoch: 8 [8000/60000 (13%)]	Loss: 131.832251
+INFO:root:Round 2, Train Epoch: 8 [16000/60000 (27%)]	Loss: 145.156506
+INFO:root:Round 2, Train Epoch: 8 [24000/60000 (40%)]	Loss: 120.562683
+INFO:root:Round 2, Train Epoch: 8 [32000/60000 (53%)]	Loss: 132.730823
+INFO:root:Round 2, Train Epoch: 8 [40000/60000 (67%)]	Loss: 134.291711
+INFO:root:Round 2, Train Epoch: 8 [48000/60000 (80%)]	Loss: 122.074158
+INFO:root:Round 2, Train Epoch: 8 [56000/60000 (93%)]	Loss: 113.322156
+INFO:root:====> Round 2, Epoch: 8 Average loss: 126.4124
+INFO:root:2020-04-09 09:59:49.095716
+INFO:root:====== About to train for 27 epochs in round 3 with learning rate 3.73e-05========
+INFO:root:Round 3, Train Epoch: 0 [0/60000 (0%)]	Loss: 120.745911
+INFO:root:Round 3, Train Epoch: 0 [8000/60000 (13%)]	Loss: 124.436646
+INFO:root:Round 3, Train Epoch: 0 [16000/60000 (27%)]	Loss: 126.519397
+INFO:root:Round 3, Train Epoch: 0 [24000/60000 (40%)]	Loss: 137.237207
+INFO:root:Round 3, Train Epoch: 0 [32000/60000 (53%)]	Loss: 115.960803
+INFO:root:Round 3, Train Epoch: 0 [40000/60000 (67%)]	Loss: 115.817627
+INFO:root:Round 3, Train Epoch: 0 [48000/60000 (80%)]	Loss: 124.489185
+INFO:root:Round 3, Train Epoch: 0 [56000/60000 (93%)]	Loss: 127.435425
+INFO:root:====> Round 3, Epoch: 0 Average loss: 125.2163
+INFO:root:Round 3, Train Epoch: 1 [0/60000 (0%)]	Loss: 127.785730
+INFO:root:Round 3, Train Epoch: 1 [8000/60000 (13%)]	Loss: 142.097607
+INFO:root:Round 3, Train Epoch: 1 [16000/60000 (27%)]	Loss: 134.066418
+INFO:root:Round 3, Train Epoch: 1 [24000/60000 (40%)]	Loss: 130.104456
+INFO:root:Round 3, Train Epoch: 1 [32000/60000 (53%)]	Loss: 117.284509
+INFO:root:Round 3, Train Epoch: 1 [40000/60000 (67%)]	Loss: 133.583435
+INFO:root:Round 3, Train Epoch: 1 [48000/60000 (80%)]	Loss: 132.304028
+INFO:root:Round 3, Train Epoch: 1 [56000/60000 (93%)]	Loss: 133.324854
+INFO:root:====> Round 3, Epoch: 1 Average loss: 124.3273
+INFO:root:Round 3, Train Epoch: 2 [0/60000 (0%)]	Loss: 127.602808
+INFO:root:Round 3, Train Epoch: 2 [8000/60000 (13%)]	Loss: 123.913306
+INFO:root:Round 3, Train Epoch: 2 [16000/60000 (27%)]	Loss: 120.422852
+INFO:root:Round 3, Train Epoch: 2 [24000/60000 (40%)]	Loss: 117.091357
+INFO:root:Round 3, Train Epoch: 2 [32000/60000 (53%)]	Loss: 131.505933
+INFO:root:Round 3, Train Epoch: 2 [40000/60000 (67%)]	Loss: 129.591675
+INFO:root:Round 3, Train Epoch: 2 [48000/60000 (80%)]	Loss: 114.097144
+INFO:root:Round 3, Train Epoch: 2 [56000/60000 (93%)]	Loss: 117.081555
+INFO:root:====> Round 3, Epoch: 2 Average loss: 123.4586
+INFO:root:Round 3, Train Epoch: 3 [0/60000 (0%)]	Loss: 122.984778
+INFO:root:Round 3, Train Epoch: 3 [8000/60000 (13%)]	Loss: 133.087781
+INFO:root:Round 3, Train Epoch: 3 [16000/60000 (27%)]	Loss: 115.010413
+INFO:root:Round 3, Train Epoch: 3 [24000/60000 (40%)]	Loss: 107.126868
+INFO:root:Round 3, Train Epoch: 3 [32000/60000 (53%)]	Loss: 119.025708
+INFO:root:Round 3, Train Epoch: 3 [40000/60000 (67%)]	Loss: 127.927795
+INFO:root:Round 3, Train Epoch: 3 [48000/60000 (80%)]	Loss: 113.499658
+INFO:root:Round 3, Train Epoch: 3 [56000/60000 (93%)]	Loss: 123.487292
+INFO:root:====> Round 3, Epoch: 3 Average loss: 122.5840
+INFO:root:Round 3, Train Epoch: 4 [0/60000 (0%)]	Loss: 120.095239
+INFO:root:Round 3, Train Epoch: 4 [8000/60000 (13%)]	Loss: 130.249231
+INFO:root:Round 3, Train Epoch: 4 [16000/60000 (27%)]	Loss: 125.413159
+INFO:root:Round 3, Train Epoch: 4 [24000/60000 (40%)]	Loss: 130.493140
+INFO:root:Round 3, Train Epoch: 4 [32000/60000 (53%)]	Loss: 121.555176
+INFO:root:Round 3, Train Epoch: 4 [40000/60000 (67%)]	Loss: 124.679810
+INFO:root:Round 3, Train Epoch: 4 [48000/60000 (80%)]	Loss: 120.769849
+INFO:root:Round 3, Train Epoch: 4 [56000/60000 (93%)]	Loss: 123.307874
+INFO:root:====> Round 3, Epoch: 4 Average loss: 121.6732
+INFO:root:Round 3, Train Epoch: 5 [0/60000 (0%)]	Loss: 128.400574
+INFO:root:Round 3, Train Epoch: 5 [8000/60000 (13%)]	Loss: 126.025305
+INFO:root:Round 3, Train Epoch: 5 [16000/60000 (27%)]	Loss: 126.176721
+INFO:root:Round 3, Train Epoch: 5 [24000/60000 (40%)]	Loss: 115.948267
+INFO:root:Round 3, Train Epoch: 5 [32000/60000 (53%)]	Loss: 123.535840
+INFO:root:Round 3, Train Epoch: 5 [40000/60000 (67%)]	Loss: 110.052112
+INFO:root:Round 3, Train Epoch: 5 [48000/60000 (80%)]	Loss: 125.489612
+INFO:root:Round 3, Train Epoch: 5 [56000/60000 (93%)]	Loss: 117.273840
+INFO:root:====> Round 3, Epoch: 5 Average loss: 120.7774
+INFO:root:Round 3, Train Epoch: 6 [0/60000 (0%)]	Loss: 121.390686
+INFO:root:Round 3, Train Epoch: 6 [8000/60000 (13%)]	Loss: 111.876477
+INFO:root:Round 3, Train Epoch: 6 [16000/60000 (27%)]	Loss: 115.996411
+INFO:root:Round 3, Train Epoch: 6 [24000/60000 (40%)]	Loss: 111.705872
+INFO:root:Round 3, Train Epoch: 6 [32000/60000 (53%)]	Loss: 127.731848
+INFO:root:Round 3, Train Epoch: 6 [40000/60000 (67%)]	Loss: 123.586377
+INFO:root:Round 3, Train Epoch: 6 [48000/60000 (80%)]	Loss: 109.545508
+INFO:root:Round 3, Train Epoch: 6 [56000/60000 (93%)]	Loss: 128.683093
+INFO:root:====> Round 3, Epoch: 6 Average loss: 119.9301
+INFO:root:Round 3, Train Epoch: 7 [0/60000 (0%)]	Loss: 121.617188
+INFO:root:Round 3, Train Epoch: 7 [8000/60000 (13%)]	Loss: 118.545959
+INFO:root:Round 3, Train Epoch: 7 [16000/60000 (27%)]	Loss: 114.226367
+INFO:root:Round 3, Train Epoch: 7 [24000/60000 (40%)]	Loss: 126.765076
+INFO:root:Round 3, Train Epoch: 7 [32000/60000 (53%)]	Loss: 109.262341
+INFO:root:Round 3, Train Epoch: 7 [40000/60000 (67%)]	Loss: 129.117773
+INFO:root:Round 3, Train Epoch: 7 [48000/60000 (80%)]	Loss: 125.645166
+INFO:root:Round 3, Train Epoch: 7 [56000/60000 (93%)]	Loss: 112.466638
+INFO:root:====> Round 3, Epoch: 7 Average loss: 119.1805
+INFO:root:Round 3, Train Epoch: 8 [0/60000 (0%)]	Loss: 119.678333
+INFO:root:Round 3, Train Epoch: 8 [8000/60000 (13%)]	Loss: 118.218701
+INFO:root:Round 3, Train Epoch: 8 [16000/60000 (27%)]	Loss: 117.050146
+INFO:root:Round 3, Train Epoch: 8 [24000/60000 (40%)]	Loss: 121.128613
+INFO:root:Round 3, Train Epoch: 8 [32000/60000 (53%)]	Loss: 125.929431
+INFO:root:Round 3, Train Epoch: 8 [40000/60000 (67%)]	Loss: 117.580176
+INFO:root:Round 3, Train Epoch: 8 [48000/60000 (80%)]	Loss: 118.355127
+INFO:root:Round 3, Train Epoch: 8 [56000/60000 (93%)]	Loss: 120.063672
+INFO:root:====> Round 3, Epoch: 8 Average loss: 118.4981
+INFO:root:Round 3, Train Epoch: 9 [0/60000 (0%)]	Loss: 124.886975
+INFO:root:Round 3, Train Epoch: 9 [8000/60000 (13%)]	Loss: 105.599609
+INFO:root:Round 3, Train Epoch: 9 [16000/60000 (27%)]	Loss: 111.215601
+INFO:root:Round 3, Train Epoch: 9 [24000/60000 (40%)]	Loss: 125.421631
+INFO:root:Round 3, Train Epoch: 9 [32000/60000 (53%)]	Loss: 124.267554
+INFO:root:Round 3, Train Epoch: 9 [40000/60000 (67%)]	Loss: 119.959656
+INFO:root:Round 3, Train Epoch: 9 [48000/60000 (80%)]	Loss: 109.578357
+INFO:root:Round 3, Train Epoch: 9 [56000/60000 (93%)]	Loss: 109.323364
+INFO:root:====> Round 3, Epoch: 9 Average loss: 117.9056
+INFO:root:Round 3, Train Epoch: 10 [0/60000 (0%)]	Loss: 115.696790
+INFO:root:Round 3, Train Epoch: 10 [8000/60000 (13%)]	Loss: 108.756091
+INFO:root:Round 3, Train Epoch: 10 [16000/60000 (27%)]	Loss: 125.830811
+INFO:root:Round 3, Train Epoch: 10 [24000/60000 (40%)]	Loss: 110.716650
+INFO:root:Round 3, Train Epoch: 10 [32000/60000 (53%)]	Loss: 124.464038
+INFO:root:Round 3, Train Epoch: 10 [40000/60000 (67%)]	Loss: 120.779456
+INFO:root:Round 3, Train Epoch: 10 [48000/60000 (80%)]	Loss: 102.463501
+INFO:root:Round 3, Train Epoch: 10 [56000/60000 (93%)]	Loss: 111.471545
+INFO:root:====> Round 3, Epoch: 10 Average loss: 117.3697
+INFO:root:Round 3, Train Epoch: 11 [0/60000 (0%)]	Loss: 119.355408
+INFO:root:Round 3, Train Epoch: 11 [8000/60000 (13%)]	Loss: 109.334644
+INFO:root:Round 3, Train Epoch: 11 [16000/60000 (27%)]	Loss: 115.791626
+INFO:root:Round 3, Train Epoch: 11 [24000/60000 (40%)]	Loss: 113.522803
+INFO:root:Round 3, Train Epoch: 11 [32000/60000 (53%)]	Loss: 109.713757
+INFO:root:Round 3, Train Epoch: 11 [40000/60000 (67%)]	Loss: 116.508838
+INFO:root:Round 3, Train Epoch: 11 [48000/60000 (80%)]	Loss: 107.474011
+INFO:root:Round 3, Train Epoch: 11 [56000/60000 (93%)]	Loss: 130.850342
+INFO:root:====> Round 3, Epoch: 11 Average loss: 116.8593
+INFO:root:Round 3, Train Epoch: 12 [0/60000 (0%)]	Loss: 120.814966
+INFO:root:Round 3, Train Epoch: 12 [8000/60000 (13%)]	Loss: 115.657104
+INFO:root:Round 3, Train Epoch: 12 [16000/60000 (27%)]	Loss: 107.578638
+INFO:root:Round 3, Train Epoch: 12 [24000/60000 (40%)]	Loss: 115.703735
+INFO:root:Round 3, Train Epoch: 12 [32000/60000 (53%)]	Loss: 127.168054
+INFO:root:Round 3, Train Epoch: 12 [40000/60000 (67%)]	Loss: 115.419629
+INFO:root:Round 3, Train Epoch: 12 [48000/60000 (80%)]	Loss: 112.308521
+INFO:root:Round 3, Train Epoch: 12 [56000/60000 (93%)]	Loss: 112.559229
+INFO:root:====> Round 3, Epoch: 12 Average loss: 116.4070
+INFO:root:Round 3, Train Epoch: 13 [0/60000 (0%)]	Loss: 110.823926
+INFO:root:Round 3, Train Epoch: 13 [8000/60000 (13%)]	Loss: 106.702722
+INFO:root:Round 3, Train Epoch: 13 [16000/60000 (27%)]	Loss: 108.212427
+INFO:root:Round 3, Train Epoch: 13 [24000/60000 (40%)]	Loss: 113.338257
+INFO:root:Round 3, Train Epoch: 13 [32000/60000 (53%)]	Loss: 116.647351
+INFO:root:Round 3, Train Epoch: 13 [40000/60000 (67%)]	Loss: 114.294092
+INFO:root:Round 3, Train Epoch: 13 [48000/60000 (80%)]	Loss: 116.825366
+INFO:root:Round 3, Train Epoch: 13 [56000/60000 (93%)]	Loss: 108.637195
+INFO:root:====> Round 3, Epoch: 13 Average loss: 115.9503
+INFO:root:Round 3, Train Epoch: 14 [0/60000 (0%)]	Loss: 117.884888
+INFO:root:Round 3, Train Epoch: 14 [8000/60000 (13%)]	Loss: 113.236572
+INFO:root:Round 3, Train Epoch: 14 [16000/60000 (27%)]	Loss: 110.656067
+INFO:root:Round 3, Train Epoch: 14 [24000/60000 (40%)]	Loss: 130.803186
+INFO:root:Round 3, Train Epoch: 14 [32000/60000 (53%)]	Loss: 114.951465
+INFO:root:Round 3, Train Epoch: 14 [40000/60000 (67%)]	Loss: 116.473792
+INFO:root:Round 3, Train Epoch: 14 [48000/60000 (80%)]	Loss: 96.323120
+INFO:root:Round 3, Train Epoch: 14 [56000/60000 (93%)]	Loss: 116.802161
+INFO:root:====> Round 3, Epoch: 14 Average loss: 115.5353
+INFO:root:Round 3, Train Epoch: 15 [0/60000 (0%)]	Loss: 116.053345
+INFO:root:Round 3, Train Epoch: 15 [8000/60000 (13%)]	Loss: 110.442432
+INFO:root:Round 3, Train Epoch: 15 [16000/60000 (27%)]	Loss: 122.104810
+INFO:root:Round 3, Train Epoch: 15 [24000/60000 (40%)]	Loss: 111.419019
+INFO:root:Round 3, Train Epoch: 15 [32000/60000 (53%)]	Loss: 119.052795
+INFO:root:Round 3, Train Epoch: 15 [40000/60000 (67%)]	Loss: 104.178223
+INFO:root:Round 3, Train Epoch: 15 [48000/60000 (80%)]	Loss: 124.585449
+INFO:root:Round 3, Train Epoch: 15 [56000/60000 (93%)]	Loss: 125.648022
+INFO:root:====> Round 3, Epoch: 15 Average loss: 115.1252
+INFO:root:Round 3, Train Epoch: 16 [0/60000 (0%)]	Loss: 118.777930
+INFO:root:Round 3, Train Epoch: 16 [8000/60000 (13%)]	Loss: 122.622913
+INFO:root:Round 3, Train Epoch: 16 [16000/60000 (27%)]	Loss: 119.805774
+INFO:root:Round 3, Train Epoch: 16 [24000/60000 (40%)]	Loss: 115.282007
+INFO:root:Round 3, Train Epoch: 16 [32000/60000 (53%)]	Loss: 107.184131
+INFO:root:Round 3, Train Epoch: 16 [40000/60000 (67%)]	Loss: 113.915979
+INFO:root:Round 3, Train Epoch: 16 [48000/60000 (80%)]	Loss: 113.746326
+INFO:root:Round 3, Train Epoch: 16 [56000/60000 (93%)]	Loss: 109.907471
+INFO:root:====> Round 3, Epoch: 16 Average loss: 114.7613
+INFO:root:Round 3, Train Epoch: 17 [0/60000 (0%)]	Loss: 106.423328
+INFO:root:Round 3, Train Epoch: 17 [8000/60000 (13%)]	Loss: 112.963550
+INFO:root:Round 3, Train Epoch: 17 [16000/60000 (27%)]	Loss: 108.118921
+INFO:root:Round 3, Train Epoch: 17 [24000/60000 (40%)]	Loss: 109.657410
+INFO:root:Round 3, Train Epoch: 17 [32000/60000 (53%)]	Loss: 119.961743
+INFO:root:Round 3, Train Epoch: 17 [40000/60000 (67%)]	Loss: 98.539240
+INFO:root:Round 3, Train Epoch: 17 [48000/60000 (80%)]	Loss: 105.812048
+INFO:root:Round 3, Train Epoch: 17 [56000/60000 (93%)]	Loss: 113.838940
+INFO:root:====> Round 3, Epoch: 17 Average loss: 114.3966
+INFO:root:Round 3, Train Epoch: 18 [0/60000 (0%)]	Loss: 116.519165
+INFO:root:Round 3, Train Epoch: 18 [8000/60000 (13%)]	Loss: 122.925574
+INFO:root:Round 3, Train Epoch: 18 [16000/60000 (27%)]	Loss: 123.114331
+INFO:root:Round 3, Train Epoch: 18 [24000/60000 (40%)]	Loss: 111.462048
+INFO:root:Round 3, Train Epoch: 18 [32000/60000 (53%)]	Loss: 112.411450
+INFO:root:Round 3, Train Epoch: 18 [40000/60000 (67%)]	Loss: 113.590674
+INFO:root:Round 3, Train Epoch: 18 [48000/60000 (80%)]	Loss: 122.357874
+INFO:root:Round 3, Train Epoch: 18 [56000/60000 (93%)]	Loss: 129.990015
+INFO:root:====> Round 3, Epoch: 18 Average loss: 114.0475
+INFO:root:Round 3, Train Epoch: 19 [0/60000 (0%)]	Loss: 109.103894
+INFO:root:Round 3, Train Epoch: 19 [8000/60000 (13%)]	Loss: 120.021851
+INFO:root:Round 3, Train Epoch: 19 [16000/60000 (27%)]	Loss: 94.488446
+INFO:root:Round 3, Train Epoch: 19 [24000/60000 (40%)]	Loss: 119.246875
+INFO:root:Round 3, Train Epoch: 19 [32000/60000 (53%)]	Loss: 120.857935
+INFO:root:Round 3, Train Epoch: 19 [40000/60000 (67%)]	Loss: 105.330530
+INFO:root:Round 3, Train Epoch: 19 [48000/60000 (80%)]	Loss: 109.630444
+INFO:root:Round 3, Train Epoch: 19 [56000/60000 (93%)]	Loss: 111.912292
+INFO:root:====> Round 3, Epoch: 19 Average loss: 113.7109
+INFO:root:Round 3, Train Epoch: 20 [0/60000 (0%)]	Loss: 110.775476
+INFO:root:Round 3, Train Epoch: 20 [8000/60000 (13%)]	Loss: 110.955334
+INFO:root:Round 3, Train Epoch: 20 [16000/60000 (27%)]	Loss: 109.868091
+INFO:root:Round 3, Train Epoch: 20 [24000/60000 (40%)]	Loss: 125.847144
+INFO:root:Round 3, Train Epoch: 20 [32000/60000 (53%)]	Loss: 111.973962
+INFO:root:Round 3, Train Epoch: 20 [40000/60000 (67%)]	Loss: 108.194788
+INFO:root:Round 3, Train Epoch: 20 [48000/60000 (80%)]	Loss: 110.184241
+INFO:root:Round 3, Train Epoch: 20 [56000/60000 (93%)]	Loss: 116.619727
+INFO:root:====> Round 3, Epoch: 20 Average loss: 113.4025
+INFO:root:Round 3, Train Epoch: 21 [0/60000 (0%)]	Loss: 107.477368
+INFO:root:Round 3, Train Epoch: 21 [8000/60000 (13%)]	Loss: 105.829431
+INFO:root:Round 3, Train Epoch: 21 [16000/60000 (27%)]	Loss: 119.530505
+INFO:root:Round 3, Train Epoch: 21 [24000/60000 (40%)]	Loss: 124.668994
+INFO:root:Round 3, Train Epoch: 21 [32000/60000 (53%)]	Loss: 104.262927
+INFO:root:Round 3, Train Epoch: 21 [40000/60000 (67%)]	Loss: 103.504065
+INFO:root:Round 3, Train Epoch: 21 [48000/60000 (80%)]	Loss: 113.730017
+INFO:root:Round 3, Train Epoch: 21 [56000/60000 (93%)]	Loss: 120.473901
+INFO:root:====> Round 3, Epoch: 21 Average loss: 113.0986
+INFO:root:Round 3, Train Epoch: 22 [0/60000 (0%)]	Loss: 122.969531
+INFO:root:Round 3, Train Epoch: 22 [8000/60000 (13%)]	Loss: 112.193176
+INFO:root:Round 3, Train Epoch: 22 [16000/60000 (27%)]	Loss: 123.485999
+INFO:root:Round 3, Train Epoch: 22 [24000/60000 (40%)]	Loss: 110.155493
+INFO:root:Round 3, Train Epoch: 22 [32000/60000 (53%)]	Loss: 110.517908
+INFO:root:Round 3, Train Epoch: 22 [40000/60000 (67%)]	Loss: 122.364587
+INFO:root:Round 3, Train Epoch: 22 [48000/60000 (80%)]	Loss: 110.852087
+INFO:root:Round 3, Train Epoch: 22 [56000/60000 (93%)]	Loss: 115.909302
+INFO:root:====> Round 3, Epoch: 22 Average loss: 112.7878
+INFO:root:Round 3, Train Epoch: 23 [0/60000 (0%)]	Loss: 102.288959
+INFO:root:Round 3, Train Epoch: 23 [8000/60000 (13%)]	Loss: 120.862695
+INFO:root:Round 3, Train Epoch: 23 [16000/60000 (27%)]	Loss: 105.529602
+INFO:root:Round 3, Train Epoch: 23 [24000/60000 (40%)]	Loss: 125.236597
+INFO:root:Round 3, Train Epoch: 23 [32000/60000 (53%)]	Loss: 114.593750
+INFO:root:Round 3, Train Epoch: 23 [40000/60000 (67%)]	Loss: 116.315393
+INFO:root:Round 3, Train Epoch: 23 [48000/60000 (80%)]	Loss: 106.331323
+INFO:root:Round 3, Train Epoch: 23 [56000/60000 (93%)]	Loss: 107.402856
+INFO:root:====> Round 3, Epoch: 23 Average loss: 112.4784
+INFO:root:Round 3, Train Epoch: 24 [0/60000 (0%)]	Loss: 124.784888
+INFO:root:Round 3, Train Epoch: 24 [8000/60000 (13%)]	Loss: 119.317896
+INFO:root:Round 3, Train Epoch: 24 [16000/60000 (27%)]	Loss: 117.716956
+INFO:root:Round 3, Train Epoch: 24 [24000/60000 (40%)]	Loss: 116.235388
+INFO:root:Round 3, Train Epoch: 24 [32000/60000 (53%)]	Loss: 109.284351
+INFO:root:Round 3, Train Epoch: 24 [40000/60000 (67%)]	Loss: 112.539954
+INFO:root:Round 3, Train Epoch: 24 [48000/60000 (80%)]	Loss: 114.224280
+INFO:root:Round 3, Train Epoch: 24 [56000/60000 (93%)]	Loss: 124.111646
+INFO:root:====> Round 3, Epoch: 24 Average loss: 112.1872
+INFO:root:Round 3, Train Epoch: 25 [0/60000 (0%)]	Loss: 118.132007
+INFO:root:Round 3, Train Epoch: 25 [8000/60000 (13%)]	Loss: 118.428687
+INFO:root:Round 3, Train Epoch: 25 [16000/60000 (27%)]	Loss: 116.230688
+INFO:root:Round 3, Train Epoch: 25 [24000/60000 (40%)]	Loss: 108.691077
+INFO:root:Round 3, Train Epoch: 25 [32000/60000 (53%)]	Loss: 112.356177
+INFO:root:Round 3, Train Epoch: 25 [40000/60000 (67%)]	Loss: 117.406189
+INFO:root:Round 3, Train Epoch: 25 [48000/60000 (80%)]	Loss: 100.670709
+INFO:root:Round 3, Train Epoch: 25 [56000/60000 (93%)]	Loss: 119.538831
+INFO:root:====> Round 3, Epoch: 25 Average loss: 111.9020
+INFO:root:Round 3, Train Epoch: 26 [0/60000 (0%)]	Loss: 113.717468
+INFO:root:Round 3, Train Epoch: 26 [8000/60000 (13%)]	Loss: 111.013171
+INFO:root:Round 3, Train Epoch: 26 [16000/60000 (27%)]	Loss: 114.692090
+INFO:root:Round 3, Train Epoch: 26 [24000/60000 (40%)]	Loss: 116.681409
+INFO:root:Round 3, Train Epoch: 26 [32000/60000 (53%)]	Loss: 124.677136
+INFO:root:Round 3, Train Epoch: 26 [40000/60000 (67%)]	Loss: 124.836438
+INFO:root:Round 3, Train Epoch: 26 [48000/60000 (80%)]	Loss: 120.264270
+INFO:root:Round 3, Train Epoch: 26 [56000/60000 (93%)]	Loss: 108.906580
+INFO:root:====> Round 3, Epoch: 26 Average loss: 111.6157
+INFO:root:2020-04-09 10:22:47.079914
+INFO:root:====== About to train for 81 epochs in round 4 with learning rate 2.68e-05========
+INFO:root:Round 4, Train Epoch: 0 [0/60000 (0%)]	Loss: 119.331262
+INFO:root:Round 4, Train Epoch: 0 [8000/60000 (13%)]	Loss: 95.305121
+INFO:root:Round 4, Train Epoch: 0 [16000/60000 (27%)]	Loss: 120.545569
+INFO:root:Round 4, Train Epoch: 0 [24000/60000 (40%)]	Loss: 99.642645
+INFO:root:Round 4, Train Epoch: 0 [32000/60000 (53%)]	Loss: 104.538660
+INFO:root:Round 4, Train Epoch: 0 [40000/60000 (67%)]	Loss: 105.236182
+INFO:root:Round 4, Train Epoch: 0 [48000/60000 (80%)]	Loss: 116.320239
+INFO:root:Round 4, Train Epoch: 0 [56000/60000 (93%)]	Loss: 107.180457
+INFO:root:====> Round 4, Epoch: 0 Average loss: 111.3168
+INFO:root:Round 4, Train Epoch: 1 [0/60000 (0%)]	Loss: 109.343872
+INFO:root:Round 4, Train Epoch: 1 [8000/60000 (13%)]	Loss: 106.488135
+INFO:root:Round 4, Train Epoch: 1 [16000/60000 (27%)]	Loss: 100.881219
+INFO:root:Round 4, Train Epoch: 1 [24000/60000 (40%)]	Loss: 122.421948
+INFO:root:Round 4, Train Epoch: 1 [32000/60000 (53%)]	Loss: 118.660388
+INFO:root:Round 4, Train Epoch: 1 [40000/60000 (67%)]	Loss: 105.163818
+INFO:root:Round 4, Train Epoch: 1 [48000/60000 (80%)]	Loss: 111.696619
+INFO:root:Round 4, Train Epoch: 1 [56000/60000 (93%)]	Loss: 114.568604
+INFO:root:====> Round 4, Epoch: 1 Average loss: 111.1283
+INFO:root:Round 4, Train Epoch: 2 [0/60000 (0%)]	Loss: 107.429785
+INFO:root:Round 4, Train Epoch: 2 [8000/60000 (13%)]	Loss: 110.639160
+INFO:root:Round 4, Train Epoch: 2 [16000/60000 (27%)]	Loss: 99.627313
+INFO:root:Round 4, Train Epoch: 2 [24000/60000 (40%)]	Loss: 100.310822
+INFO:root:Round 4, Train Epoch: 2 [32000/60000 (53%)]	Loss: 115.649719
+INFO:root:Round 4, Train Epoch: 2 [40000/60000 (67%)]	Loss: 113.212695
+INFO:root:Round 4, Train Epoch: 2 [48000/60000 (80%)]	Loss: 104.137683
+INFO:root:Round 4, Train Epoch: 2 [56000/60000 (93%)]	Loss: 100.074188
+INFO:root:====> Round 4, Epoch: 2 Average loss: 110.9162
+INFO:root:Round 4, Train Epoch: 3 [0/60000 (0%)]	Loss: 101.319928
+INFO:root:Round 4, Train Epoch: 3 [8000/60000 (13%)]	Loss: 113.353564
+INFO:root:Round 4, Train Epoch: 3 [16000/60000 (27%)]	Loss: 117.075854
+INFO:root:Round 4, Train Epoch: 3 [24000/60000 (40%)]	Loss: 115.899487
+INFO:root:Round 4, Train Epoch: 3 [32000/60000 (53%)]	Loss: 111.790845
+INFO:root:Round 4, Train Epoch: 3 [40000/60000 (67%)]	Loss: 113.302808
+INFO:root:Round 4, Train Epoch: 3 [48000/60000 (80%)]	Loss: 111.187012
+INFO:root:Round 4, Train Epoch: 3 [56000/60000 (93%)]	Loss: 110.528125
+INFO:root:====> Round 4, Epoch: 3 Average loss: 110.7417
+INFO:root:Round 4, Train Epoch: 4 [0/60000 (0%)]	Loss: 102.603674
+INFO:root:Round 4, Train Epoch: 4 [8000/60000 (13%)]	Loss: 111.342529
+INFO:root:Round 4, Train Epoch: 4 [16000/60000 (27%)]	Loss: 115.085461
+INFO:root:Round 4, Train Epoch: 4 [24000/60000 (40%)]	Loss: 105.896826
+INFO:root:Round 4, Train Epoch: 4 [32000/60000 (53%)]	Loss: 103.557483
+INFO:root:Round 4, Train Epoch: 4 [40000/60000 (67%)]	Loss: 105.489819
+INFO:root:Round 4, Train Epoch: 4 [48000/60000 (80%)]	Loss: 113.911194
+INFO:root:Round 4, Train Epoch: 4 [56000/60000 (93%)]	Loss: 109.433740
+INFO:root:====> Round 4, Epoch: 4 Average loss: 110.5474
+INFO:root:Round 4, Train Epoch: 5 [0/60000 (0%)]	Loss: 108.708533
+INFO:root:Round 4, Train Epoch: 5 [8000/60000 (13%)]	Loss: 118.014319
+INFO:root:Round 4, Train Epoch: 5 [16000/60000 (27%)]	Loss: 113.165588
+INFO:root:Round 4, Train Epoch: 5 [24000/60000 (40%)]	Loss: 104.195398
+INFO:root:Round 4, Train Epoch: 5 [32000/60000 (53%)]	Loss: 110.266846
+INFO:root:Round 4, Train Epoch: 5 [40000/60000 (67%)]	Loss: 112.594519
+INFO:root:Round 4, Train Epoch: 5 [48000/60000 (80%)]	Loss: 117.393115
+INFO:root:Round 4, Train Epoch: 5 [56000/60000 (93%)]	Loss: 96.698895
+INFO:root:====> Round 4, Epoch: 5 Average loss: 110.3958
+INFO:root:Round 4, Train Epoch: 6 [0/60000 (0%)]	Loss: 107.153149
+INFO:root:Round 4, Train Epoch: 6 [8000/60000 (13%)]	Loss: 114.418823
+INFO:root:Round 4, Train Epoch: 6 [16000/60000 (27%)]	Loss: 99.125171
+INFO:root:Round 4, Train Epoch: 6 [24000/60000 (40%)]	Loss: 108.077197
+INFO:root:Round 4, Train Epoch: 6 [32000/60000 (53%)]	Loss: 114.189221
+INFO:root:Round 4, Train Epoch: 6 [40000/60000 (67%)]	Loss: 106.068982
+INFO:root:Round 4, Train Epoch: 6 [48000/60000 (80%)]	Loss: 114.566052
+INFO:root:Round 4, Train Epoch: 6 [56000/60000 (93%)]	Loss: 108.700330
+INFO:root:====> Round 4, Epoch: 6 Average loss: 110.2164
+INFO:root:Round 4, Train Epoch: 7 [0/60000 (0%)]	Loss: 113.101990
+INFO:root:Round 4, Train Epoch: 7 [8000/60000 (13%)]	Loss: 96.349194
+INFO:root:Round 4, Train Epoch: 7 [16000/60000 (27%)]	Loss: 106.602808
+INFO:root:Round 4, Train Epoch: 7 [24000/60000 (40%)]	Loss: 107.935107
+INFO:root:Round 4, Train Epoch: 7 [32000/60000 (53%)]	Loss: 100.226733
+INFO:root:Round 4, Train Epoch: 7 [40000/60000 (67%)]	Loss: 113.967786
+INFO:root:Round 4, Train Epoch: 7 [48000/60000 (80%)]	Loss: 106.738171
+INFO:root:Round 4, Train Epoch: 7 [56000/60000 (93%)]	Loss: 119.858508
+INFO:root:====> Round 4, Epoch: 7 Average loss: 110.0353
+INFO:root:Round 4, Train Epoch: 8 [0/60000 (0%)]	Loss: 101.607281
+INFO:root:Round 4, Train Epoch: 8 [8000/60000 (13%)]	Loss: 116.117822
+INFO:root:Round 4, Train Epoch: 8 [16000/60000 (27%)]	Loss: 116.892236
+INFO:root:Round 4, Train Epoch: 8 [24000/60000 (40%)]	Loss: 110.215332
+INFO:root:Round 4, Train Epoch: 8 [32000/60000 (53%)]	Loss: 121.491101
+INFO:root:Round 4, Train Epoch: 8 [40000/60000 (67%)]	Loss: 105.064441
+INFO:root:Round 4, Train Epoch: 8 [48000/60000 (80%)]	Loss: 105.761230
+INFO:root:Round 4, Train Epoch: 8 [56000/60000 (93%)]	Loss: 95.938733
+INFO:root:====> Round 4, Epoch: 8 Average loss: 109.8762
+INFO:root:Round 4, Train Epoch: 9 [0/60000 (0%)]	Loss: 105.345361
+INFO:root:Round 4, Train Epoch: 9 [8000/60000 (13%)]	Loss: 103.031995
+INFO:root:Round 4, Train Epoch: 9 [16000/60000 (27%)]	Loss: 117.885840
+INFO:root:Round 4, Train Epoch: 9 [24000/60000 (40%)]	Loss: 99.919202
+INFO:root:Round 4, Train Epoch: 9 [32000/60000 (53%)]	Loss: 96.364014
+INFO:root:Round 4, Train Epoch: 9 [40000/60000 (67%)]	Loss: 109.606006
+INFO:root:Round 4, Train Epoch: 9 [48000/60000 (80%)]	Loss: 112.162549
+INFO:root:Round 4, Train Epoch: 9 [56000/60000 (93%)]	Loss: 105.689575
+INFO:root:====> Round 4, Epoch: 9 Average loss: 109.7174
+INFO:root:Round 4, Train Epoch: 10 [0/60000 (0%)]	Loss: 104.414038
+INFO:root:Round 4, Train Epoch: 10 [8000/60000 (13%)]	Loss: 102.700867
+INFO:root:Round 4, Train Epoch: 10 [16000/60000 (27%)]	Loss: 123.591736
+INFO:root:Round 4, Train Epoch: 10 [24000/60000 (40%)]	Loss: 107.009766
+INFO:root:Round 4, Train Epoch: 10 [32000/60000 (53%)]	Loss: 123.078650
+INFO:root:Round 4, Train Epoch: 10 [40000/60000 (67%)]	Loss: 114.452478
+INFO:root:Round 4, Train Epoch: 10 [48000/60000 (80%)]	Loss: 112.838391
+INFO:root:Round 4, Train Epoch: 10 [56000/60000 (93%)]	Loss: 109.632703
+INFO:root:====> Round 4, Epoch: 10 Average loss: 109.5772
+INFO:root:Round 4, Train Epoch: 11 [0/60000 (0%)]	Loss: 111.420471
+INFO:root:Round 4, Train Epoch: 11 [8000/60000 (13%)]	Loss: 107.482727
+INFO:root:Round 4, Train Epoch: 11 [16000/60000 (27%)]	Loss: 121.397681
+INFO:root:Round 4, Train Epoch: 11 [24000/60000 (40%)]	Loss: 106.967200
+INFO:root:Round 4, Train Epoch: 11 [32000/60000 (53%)]	Loss: 118.235767
+INFO:root:Round 4, Train Epoch: 11 [40000/60000 (67%)]	Loss: 105.006116
+INFO:root:Round 4, Train Epoch: 11 [48000/60000 (80%)]	Loss: 120.614819
+INFO:root:Round 4, Train Epoch: 11 [56000/60000 (93%)]	Loss: 104.250342
+INFO:root:====> Round 4, Epoch: 11 Average loss: 109.3988
+INFO:root:Round 4, Train Epoch: 12 [0/60000 (0%)]	Loss: 119.385474
+INFO:root:Round 4, Train Epoch: 12 [8000/60000 (13%)]	Loss: 107.979993
+INFO:root:Round 4, Train Epoch: 12 [16000/60000 (27%)]	Loss: 123.564441
+INFO:root:Round 4, Train Epoch: 12 [24000/60000 (40%)]	Loss: 103.481897
+INFO:root:Round 4, Train Epoch: 12 [32000/60000 (53%)]	Loss: 115.656897
+INFO:root:Round 4, Train Epoch: 12 [40000/60000 (67%)]	Loss: 113.491870
+INFO:root:Round 4, Train Epoch: 12 [48000/60000 (80%)]	Loss: 105.763281
+INFO:root:Round 4, Train Epoch: 12 [56000/60000 (93%)]	Loss: 106.382959
+INFO:root:====> Round 4, Epoch: 12 Average loss: 109.2098
+INFO:root:Round 4, Train Epoch: 13 [0/60000 (0%)]	Loss: 112.695264
+INFO:root:Round 4, Train Epoch: 13 [8000/60000 (13%)]	Loss: 108.406494
+INFO:root:Round 4, Train Epoch: 13 [16000/60000 (27%)]	Loss: 102.309625
+INFO:root:Round 4, Train Epoch: 13 [24000/60000 (40%)]	Loss: 106.311230
+INFO:root:Round 4, Train Epoch: 13 [32000/60000 (53%)]	Loss: 112.728503
+INFO:root:Round 4, Train Epoch: 13 [40000/60000 (67%)]	Loss: 106.491455
+INFO:root:Round 4, Train Epoch: 13 [48000/60000 (80%)]	Loss: 122.072595
+INFO:root:Round 4, Train Epoch: 13 [56000/60000 (93%)]	Loss: 104.997522
+INFO:root:====> Round 4, Epoch: 13 Average loss: 109.0732
+INFO:root:Round 4, Train Epoch: 14 [0/60000 (0%)]	Loss: 113.667871
+INFO:root:Round 4, Train Epoch: 14 [8000/60000 (13%)]	Loss: 105.821594
+INFO:root:Round 4, Train Epoch: 14 [16000/60000 (27%)]	Loss: 105.540625
+INFO:root:Round 4, Train Epoch: 14 [24000/60000 (40%)]	Loss: 108.117627
+INFO:root:Round 4, Train Epoch: 14 [32000/60000 (53%)]	Loss: 111.967932
+INFO:root:Round 4, Train Epoch: 14 [40000/60000 (67%)]	Loss: 93.342688
+INFO:root:Round 4, Train Epoch: 14 [48000/60000 (80%)]	Loss: 111.387097
+INFO:root:Round 4, Train Epoch: 14 [56000/60000 (93%)]	Loss: 105.844763
+INFO:root:====> Round 4, Epoch: 14 Average loss: 108.9052
+INFO:root:Round 4, Train Epoch: 15 [0/60000 (0%)]	Loss: 108.091919
+INFO:root:Round 4, Train Epoch: 15 [8000/60000 (13%)]	Loss: 122.941077
+INFO:root:Round 4, Train Epoch: 15 [16000/60000 (27%)]	Loss: 103.877734
+INFO:root:Round 4, Train Epoch: 15 [24000/60000 (40%)]	Loss: 105.561780
+INFO:root:Round 4, Train Epoch: 15 [32000/60000 (53%)]	Loss: 89.791583
+INFO:root:Round 4, Train Epoch: 15 [40000/60000 (67%)]	Loss: 115.238745
+INFO:root:Round 4, Train Epoch: 15 [48000/60000 (80%)]	Loss: 110.864441
+INFO:root:Round 4, Train Epoch: 15 [56000/60000 (93%)]	Loss: 91.493817
+INFO:root:====> Round 4, Epoch: 15 Average loss: 108.7597
+INFO:root:Round 4, Train Epoch: 16 [0/60000 (0%)]	Loss: 112.717004
+INFO:root:Round 4, Train Epoch: 16 [8000/60000 (13%)]	Loss: 110.557727
+INFO:root:Round 4, Train Epoch: 16 [16000/60000 (27%)]	Loss: 108.075818
+INFO:root:Round 4, Train Epoch: 16 [24000/60000 (40%)]	Loss: 116.619080
+INFO:root:Round 4, Train Epoch: 16 [32000/60000 (53%)]	Loss: 115.154663
+INFO:root:Round 4, Train Epoch: 16 [40000/60000 (67%)]	Loss: 110.079297
+INFO:root:Round 4, Train Epoch: 16 [48000/60000 (80%)]	Loss: 99.964661
+INFO:root:Round 4, Train Epoch: 16 [56000/60000 (93%)]	Loss: 113.781897
+INFO:root:====> Round 4, Epoch: 16 Average loss: 108.6125
+INFO:root:Round 4, Train Epoch: 17 [0/60000 (0%)]	Loss: 101.928278
+INFO:root:Round 4, Train Epoch: 17 [8000/60000 (13%)]	Loss: 104.884619
+INFO:root:Round 4, Train Epoch: 17 [16000/60000 (27%)]	Loss: 107.102820
+INFO:root:Round 4, Train Epoch: 17 [24000/60000 (40%)]	Loss: 120.181824
+INFO:root:Round 4, Train Epoch: 17 [32000/60000 (53%)]	Loss: 121.424268
+INFO:root:Round 4, Train Epoch: 17 [40000/60000 (67%)]	Loss: 111.659729
+INFO:root:Round 4, Train Epoch: 17 [48000/60000 (80%)]	Loss: 112.315234
+INFO:root:Round 4, Train Epoch: 17 [56000/60000 (93%)]	Loss: 98.510388
+INFO:root:====> Round 4, Epoch: 17 Average loss: 108.4438
+INFO:root:Round 4, Train Epoch: 18 [0/60000 (0%)]	Loss: 104.436047
+INFO:root:Round 4, Train Epoch: 18 [8000/60000 (13%)]	Loss: 104.041113
+INFO:root:Round 4, Train Epoch: 18 [16000/60000 (27%)]	Loss: 118.045117
+INFO:root:Round 4, Train Epoch: 18 [24000/60000 (40%)]	Loss: 103.542627
+INFO:root:Round 4, Train Epoch: 18 [32000/60000 (53%)]	Loss: 96.048969
+INFO:root:Round 4, Train Epoch: 18 [40000/60000 (67%)]	Loss: 112.337488
+INFO:root:Round 4, Train Epoch: 18 [48000/60000 (80%)]	Loss: 103.076013
+INFO:root:Round 4, Train Epoch: 18 [56000/60000 (93%)]	Loss: 108.493469
+INFO:root:====> Round 4, Epoch: 18 Average loss: 108.2890
+INFO:root:Round 4, Train Epoch: 19 [0/60000 (0%)]	Loss: 110.784106
+INFO:root:Round 4, Train Epoch: 19 [8000/60000 (13%)]	Loss: 95.800970
+INFO:root:Round 4, Train Epoch: 19 [16000/60000 (27%)]	Loss: 116.259314
+INFO:root:Round 4, Train Epoch: 19 [24000/60000 (40%)]	Loss: 112.381543
+INFO:root:Round 4, Train Epoch: 19 [32000/60000 (53%)]	Loss: 109.546301
+INFO:root:Round 4, Train Epoch: 19 [40000/60000 (67%)]	Loss: 105.469702
+INFO:root:Round 4, Train Epoch: 19 [48000/60000 (80%)]	Loss: 112.604761
+INFO:root:Round 4, Train Epoch: 19 [56000/60000 (93%)]	Loss: 106.238733
+INFO:root:====> Round 4, Epoch: 19 Average loss: 108.1269
+INFO:root:Round 4, Train Epoch: 20 [0/60000 (0%)]	Loss: 107.482800
+INFO:root:Round 4, Train Epoch: 20 [8000/60000 (13%)]	Loss: 102.266589
+INFO:root:Round 4, Train Epoch: 20 [16000/60000 (27%)]	Loss: 102.776257
+INFO:root:Round 4, Train Epoch: 20 [24000/60000 (40%)]	Loss: 103.742688
+INFO:root:Round 4, Train Epoch: 20 [32000/60000 (53%)]	Loss: 104.197083
+INFO:root:Round 4, Train Epoch: 20 [40000/60000 (67%)]	Loss: 116.485742
+INFO:root:Round 4, Train Epoch: 20 [48000/60000 (80%)]	Loss: 94.604553
+INFO:root:Round 4, Train Epoch: 20 [56000/60000 (93%)]	Loss: 101.284766
+INFO:root:====> Round 4, Epoch: 20 Average loss: 107.9990
+INFO:root:Round 4, Train Epoch: 21 [0/60000 (0%)]	Loss: 102.627234
+INFO:root:Round 4, Train Epoch: 21 [8000/60000 (13%)]	Loss: 102.577832
+INFO:root:Round 4, Train Epoch: 21 [16000/60000 (27%)]	Loss: 106.641772
+INFO:root:Round 4, Train Epoch: 21 [24000/60000 (40%)]	Loss: 113.782629
+INFO:root:Round 4, Train Epoch: 21 [32000/60000 (53%)]	Loss: 114.927527
+INFO:root:Round 4, Train Epoch: 21 [40000/60000 (67%)]	Loss: 98.894305
+INFO:root:Round 4, Train Epoch: 21 [48000/60000 (80%)]	Loss: 111.714185
+INFO:root:Round 4, Train Epoch: 21 [56000/60000 (93%)]	Loss: 104.085925
+INFO:root:====> Round 4, Epoch: 21 Average loss: 107.8221
+INFO:root:Round 4, Train Epoch: 22 [0/60000 (0%)]	Loss: 95.670898
+INFO:root:Round 4, Train Epoch: 22 [8000/60000 (13%)]	Loss: 109.972412
+INFO:root:Round 4, Train Epoch: 22 [16000/60000 (27%)]	Loss: 99.365363
+INFO:root:Round 4, Train Epoch: 22 [24000/60000 (40%)]	Loss: 98.490002
+INFO:root:Round 4, Train Epoch: 22 [32000/60000 (53%)]	Loss: 89.180341
+INFO:root:Round 4, Train Epoch: 22 [40000/60000 (67%)]	Loss: 115.387610
+INFO:root:Round 4, Train Epoch: 22 [48000/60000 (80%)]	Loss: 107.315503
+INFO:root:Round 4, Train Epoch: 22 [56000/60000 (93%)]	Loss: 117.449377
+INFO:root:====> Round 4, Epoch: 22 Average loss: 107.6746
+INFO:root:Round 4, Train Epoch: 23 [0/60000 (0%)]	Loss: 108.558667
+INFO:root:Round 4, Train Epoch: 23 [8000/60000 (13%)]	Loss: 102.288123
+INFO:root:Round 4, Train Epoch: 23 [16000/60000 (27%)]	Loss: 98.909552
+INFO:root:Round 4, Train Epoch: 23 [24000/60000 (40%)]	Loss: 121.286255
+INFO:root:Round 4, Train Epoch: 23 [32000/60000 (53%)]	Loss: 114.273877
+INFO:root:Round 4, Train Epoch: 23 [40000/60000 (67%)]	Loss: 115.181262
+INFO:root:Round 4, Train Epoch: 23 [48000/60000 (80%)]	Loss: 105.044873
+INFO:root:Round 4, Train Epoch: 23 [56000/60000 (93%)]	Loss: 107.178833
+INFO:root:====> Round 4, Epoch: 23 Average loss: 107.5303
+INFO:root:Round 4, Train Epoch: 24 [0/60000 (0%)]	Loss: 115.475195
+INFO:root:Round 4, Train Epoch: 24 [8000/60000 (13%)]	Loss: 102.971777
+INFO:root:Round 4, Train Epoch: 24 [16000/60000 (27%)]	Loss: 98.637225
+INFO:root:Round 4, Train Epoch: 24 [24000/60000 (40%)]	Loss: 110.518628
+INFO:root:Round 4, Train Epoch: 24 [32000/60000 (53%)]	Loss: 110.007092
+INFO:root:Round 4, Train Epoch: 24 [40000/60000 (67%)]	Loss: 107.624609
+INFO:root:Round 4, Train Epoch: 24 [48000/60000 (80%)]	Loss: 116.308240
+INFO:root:Round 4, Train Epoch: 24 [56000/60000 (93%)]	Loss: 120.422937
+INFO:root:====> Round 4, Epoch: 24 Average loss: 107.3758
+INFO:root:Round 4, Train Epoch: 25 [0/60000 (0%)]	Loss: 113.977844
+INFO:root:Round 4, Train Epoch: 25 [8000/60000 (13%)]	Loss: 105.461316
+INFO:root:Round 4, Train Epoch: 25 [16000/60000 (27%)]	Loss: 107.751392
+INFO:root:Round 4, Train Epoch: 25 [24000/60000 (40%)]	Loss: 109.026294
+INFO:root:Round 4, Train Epoch: 25 [32000/60000 (53%)]	Loss: 104.547095
+INFO:root:Round 4, Train Epoch: 25 [40000/60000 (67%)]	Loss: 110.194226
+INFO:root:Round 4, Train Epoch: 25 [48000/60000 (80%)]	Loss: 104.248962
+INFO:root:Round 4, Train Epoch: 25 [56000/60000 (93%)]	Loss: 115.516565
+INFO:root:====> Round 4, Epoch: 25 Average loss: 107.2333
+INFO:root:Round 4, Train Epoch: 26 [0/60000 (0%)]	Loss: 119.051038
+INFO:root:Round 4, Train Epoch: 26 [8000/60000 (13%)]	Loss: 106.125513
+INFO:root:Round 4, Train Epoch: 26 [16000/60000 (27%)]	Loss: 92.672479
+INFO:root:Round 4, Train Epoch: 26 [24000/60000 (40%)]	Loss: 100.720825
+INFO:root:Round 4, Train Epoch: 26 [32000/60000 (53%)]	Loss: 107.739905
+INFO:root:Round 4, Train Epoch: 26 [40000/60000 (67%)]	Loss: 108.332788
+INFO:root:Round 4, Train Epoch: 26 [48000/60000 (80%)]	Loss: 113.833252
+INFO:root:Round 4, Train Epoch: 26 [56000/60000 (93%)]	Loss: 110.711243
+INFO:root:====> Round 4, Epoch: 26 Average loss: 107.1087
+INFO:root:Round 4, Train Epoch: 27 [0/60000 (0%)]	Loss: 90.498755
+INFO:root:Round 4, Train Epoch: 27 [8000/60000 (13%)]	Loss: 100.168066
+INFO:root:Round 4, Train Epoch: 27 [16000/60000 (27%)]	Loss: 115.640210
+INFO:root:Round 4, Train Epoch: 27 [24000/60000 (40%)]	Loss: 115.550916
+INFO:root:Round 4, Train Epoch: 27 [32000/60000 (53%)]	Loss: 107.821973
+INFO:root:Round 4, Train Epoch: 27 [40000/60000 (67%)]	Loss: 108.682544
+INFO:root:Round 4, Train Epoch: 27 [48000/60000 (80%)]	Loss: 115.700549
+INFO:root:Round 4, Train Epoch: 27 [56000/60000 (93%)]	Loss: 108.630750
+INFO:root:====> Round 4, Epoch: 27 Average loss: 106.9707
+INFO:root:Round 4, Train Epoch: 28 [0/60000 (0%)]	Loss: 112.040576
+INFO:root:Round 4, Train Epoch: 28 [8000/60000 (13%)]	Loss: 107.358789
+INFO:root:Round 4, Train Epoch: 28 [16000/60000 (27%)]	Loss: 104.596973
+INFO:root:Round 4, Train Epoch: 28 [24000/60000 (40%)]	Loss: 102.192114
+INFO:root:Round 4, Train Epoch: 28 [32000/60000 (53%)]	Loss: 108.410364
+INFO:root:Round 4, Train Epoch: 28 [40000/60000 (67%)]	Loss: 99.233527
+INFO:root:Round 4, Train Epoch: 28 [48000/60000 (80%)]	Loss: 111.999890
+INFO:root:Round 4, Train Epoch: 28 [56000/60000 (93%)]	Loss: 108.870081
+INFO:root:====> Round 4, Epoch: 28 Average loss: 106.8139
+INFO:root:Round 4, Train Epoch: 29 [0/60000 (0%)]	Loss: 109.633142
+INFO:root:Round 4, Train Epoch: 29 [8000/60000 (13%)]	Loss: 98.571008
+INFO:root:Round 4, Train Epoch: 29 [16000/60000 (27%)]	Loss: 113.474426
+INFO:root:Round 4, Train Epoch: 29 [24000/60000 (40%)]	Loss: 112.721082
+INFO:root:Round 4, Train Epoch: 29 [32000/60000 (53%)]	Loss: 101.113666
+INFO:root:Round 4, Train Epoch: 29 [40000/60000 (67%)]	Loss: 109.713708
+INFO:root:Round 4, Train Epoch: 29 [48000/60000 (80%)]	Loss: 106.455786
+INFO:root:Round 4, Train Epoch: 29 [56000/60000 (93%)]	Loss: 112.180164
+INFO:root:====> Round 4, Epoch: 29 Average loss: 106.7008
+INFO:root:Round 4, Train Epoch: 30 [0/60000 (0%)]	Loss: 99.796661
+INFO:root:Round 4, Train Epoch: 30 [8000/60000 (13%)]	Loss: 104.725391
+INFO:root:Round 4, Train Epoch: 30 [16000/60000 (27%)]	Loss: 108.586841
+INFO:root:Round 4, Train Epoch: 30 [24000/60000 (40%)]	Loss: 101.665460
+INFO:root:Round 4, Train Epoch: 30 [32000/60000 (53%)]	Loss: 103.768518
+INFO:root:Round 4, Train Epoch: 30 [40000/60000 (67%)]	Loss: 115.216528
+INFO:root:Round 4, Train Epoch: 30 [48000/60000 (80%)]	Loss: 109.266687
+INFO:root:Round 4, Train Epoch: 30 [56000/60000 (93%)]	Loss: 118.325916
+INFO:root:====> Round 4, Epoch: 30 Average loss: 106.5888
+INFO:root:Round 4, Train Epoch: 31 [0/60000 (0%)]	Loss: 111.180615
+INFO:root:Round 4, Train Epoch: 31 [8000/60000 (13%)]	Loss: 103.536194
+INFO:root:Round 4, Train Epoch: 31 [16000/60000 (27%)]	Loss: 105.486267
+INFO:root:Round 4, Train Epoch: 31 [24000/60000 (40%)]	Loss: 118.064868
+INFO:root:Round 4, Train Epoch: 31 [32000/60000 (53%)]	Loss: 104.255933
+INFO:root:Round 4, Train Epoch: 31 [40000/60000 (67%)]	Loss: 95.104449
+INFO:root:Round 4, Train Epoch: 31 [48000/60000 (80%)]	Loss: 113.346216
+INFO:root:Round 4, Train Epoch: 31 [56000/60000 (93%)]	Loss: 118.632629
+INFO:root:====> Round 4, Epoch: 31 Average loss: 106.4740
+INFO:root:Round 4, Train Epoch: 32 [0/60000 (0%)]	Loss: 100.266199
+INFO:root:Round 4, Train Epoch: 32 [8000/60000 (13%)]	Loss: 111.061169
+INFO:root:Round 4, Train Epoch: 32 [16000/60000 (27%)]	Loss: 98.094812
+INFO:root:Round 4, Train Epoch: 32 [24000/60000 (40%)]	Loss: 112.788574
+INFO:root:Round 4, Train Epoch: 32 [32000/60000 (53%)]	Loss: 105.922644
+INFO:root:Round 4, Train Epoch: 32 [40000/60000 (67%)]	Loss: 103.182471
+INFO:root:Round 4, Train Epoch: 32 [48000/60000 (80%)]	Loss: 104.563647
+INFO:root:Round 4, Train Epoch: 32 [56000/60000 (93%)]	Loss: 102.724170
+INFO:root:====> Round 4, Epoch: 32 Average loss: 106.3276
+INFO:root:Round 4, Train Epoch: 33 [0/60000 (0%)]	Loss: 105.620142
+INFO:root:Round 4, Train Epoch: 33 [8000/60000 (13%)]	Loss: 105.326794
+INFO:root:Round 4, Train Epoch: 33 [16000/60000 (27%)]	Loss: 97.317157
+INFO:root:Round 4, Train Epoch: 33 [24000/60000 (40%)]	Loss: 122.179932
+INFO:root:Round 4, Train Epoch: 33 [32000/60000 (53%)]	Loss: 105.268201
+INFO:root:Round 4, Train Epoch: 33 [40000/60000 (67%)]	Loss: 94.242535
+INFO:root:Round 4, Train Epoch: 33 [48000/60000 (80%)]	Loss: 109.286182
+INFO:root:Round 4, Train Epoch: 33 [56000/60000 (93%)]	Loss: 94.746899
+INFO:root:====> Round 4, Epoch: 33 Average loss: 106.2168
+INFO:root:Round 4, Train Epoch: 34 [0/60000 (0%)]	Loss: 101.227979
+INFO:root:Round 4, Train Epoch: 34 [8000/60000 (13%)]	Loss: 108.655969
+INFO:root:Round 4, Train Epoch: 34 [16000/60000 (27%)]	Loss: 112.153552
+INFO:root:Round 4, Train Epoch: 34 [24000/60000 (40%)]	Loss: 99.467255
+INFO:root:Round 4, Train Epoch: 34 [32000/60000 (53%)]	Loss: 108.212500
+INFO:root:Round 4, Train Epoch: 34 [40000/60000 (67%)]	Loss: 107.031042
+INFO:root:Round 4, Train Epoch: 34 [48000/60000 (80%)]	Loss: 98.760870
+INFO:root:Round 4, Train Epoch: 34 [56000/60000 (93%)]	Loss: 96.744214
+INFO:root:====> Round 4, Epoch: 34 Average loss: 106.1119
+INFO:root:Round 4, Train Epoch: 35 [0/60000 (0%)]	Loss: 111.694470
+INFO:root:Round 4, Train Epoch: 35 [8000/60000 (13%)]	Loss: 107.698169
+INFO:root:Round 4, Train Epoch: 35 [16000/60000 (27%)]	Loss: 112.753040
+INFO:root:Round 4, Train Epoch: 35 [24000/60000 (40%)]	Loss: 115.872681
+INFO:root:Round 4, Train Epoch: 35 [32000/60000 (53%)]	Loss: 108.414526
+INFO:root:Round 4, Train Epoch: 35 [40000/60000 (67%)]	Loss: 99.470111
+INFO:root:Round 4, Train Epoch: 35 [48000/60000 (80%)]	Loss: 99.366913
+INFO:root:Round 4, Train Epoch: 35 [56000/60000 (93%)]	Loss: 103.855774
+INFO:root:====> Round 4, Epoch: 35 Average loss: 106.0063
+INFO:root:Round 4, Train Epoch: 36 [0/60000 (0%)]	Loss: 106.800806
+INFO:root:Round 4, Train Epoch: 36 [8000/60000 (13%)]	Loss: 103.601160
+INFO:root:Round 4, Train Epoch: 36 [16000/60000 (27%)]	Loss: 93.091150
+INFO:root:Round 4, Train Epoch: 36 [24000/60000 (40%)]	Loss: 105.839905
+INFO:root:Round 4, Train Epoch: 36 [32000/60000 (53%)]	Loss: 103.881580
+INFO:root:Round 4, Train Epoch: 36 [40000/60000 (67%)]	Loss: 107.539160
+INFO:root:Round 4, Train Epoch: 36 [48000/60000 (80%)]	Loss: 107.569727
+INFO:root:Round 4, Train Epoch: 36 [56000/60000 (93%)]	Loss: 112.446582
+INFO:root:====> Round 4, Epoch: 36 Average loss: 105.8917
+INFO:root:Round 4, Train Epoch: 37 [0/60000 (0%)]	Loss: 110.559229
+INFO:root:Round 4, Train Epoch: 37 [8000/60000 (13%)]	Loss: 109.399707
+INFO:root:Round 4, Train Epoch: 37 [16000/60000 (27%)]	Loss: 98.726965
+INFO:root:Round 4, Train Epoch: 37 [24000/60000 (40%)]	Loss: 109.675574
+INFO:root:Round 4, Train Epoch: 37 [32000/60000 (53%)]	Loss: 100.862903
+INFO:root:Round 4, Train Epoch: 37 [40000/60000 (67%)]	Loss: 113.780286
+INFO:root:Round 4, Train Epoch: 37 [48000/60000 (80%)]	Loss: 107.425232
+INFO:root:Round 4, Train Epoch: 37 [56000/60000 (93%)]	Loss: 109.670776
+INFO:root:====> Round 4, Epoch: 37 Average loss: 105.7701
+INFO:root:Round 4, Train Epoch: 38 [0/60000 (0%)]	Loss: 111.700403
+INFO:root:Round 4, Train Epoch: 38 [8000/60000 (13%)]	Loss: 94.238361
+INFO:root:Round 4, Train Epoch: 38 [16000/60000 (27%)]	Loss: 104.265576
+INFO:root:Round 4, Train Epoch: 38 [24000/60000 (40%)]	Loss: 106.910132
+INFO:root:Round 4, Train Epoch: 38 [32000/60000 (53%)]	Loss: 92.945898
+INFO:root:Round 4, Train Epoch: 38 [40000/60000 (67%)]	Loss: 104.528870
+INFO:root:Round 4, Train Epoch: 38 [48000/60000 (80%)]	Loss: 122.840369
+INFO:root:Round 4, Train Epoch: 38 [56000/60000 (93%)]	Loss: 110.296704
+INFO:root:====> Round 4, Epoch: 38 Average loss: 105.6678
+INFO:root:Round 4, Train Epoch: 39 [0/60000 (0%)]	Loss: 100.000140
+INFO:root:Round 4, Train Epoch: 39 [8000/60000 (13%)]	Loss: 114.200671
+INFO:root:Round 4, Train Epoch: 39 [16000/60000 (27%)]	Loss: 101.196716
+INFO:root:Round 4, Train Epoch: 39 [24000/60000 (40%)]	Loss: 109.476990
+INFO:root:Round 4, Train Epoch: 39 [32000/60000 (53%)]	Loss: 106.408081
+INFO:root:Round 4, Train Epoch: 39 [40000/60000 (67%)]	Loss: 106.428638
+INFO:root:Round 4, Train Epoch: 39 [48000/60000 (80%)]	Loss: 105.162891
+INFO:root:Round 4, Train Epoch: 39 [56000/60000 (93%)]	Loss: 89.107849
+INFO:root:====> Round 4, Epoch: 39 Average loss: 105.5568
+INFO:root:Round 4, Train Epoch: 40 [0/60000 (0%)]	Loss: 103.256372
+INFO:root:Round 4, Train Epoch: 40 [8000/60000 (13%)]	Loss: 95.659802
+INFO:root:Round 4, Train Epoch: 40 [16000/60000 (27%)]	Loss: 97.034961
+INFO:root:Round 4, Train Epoch: 40 [24000/60000 (40%)]	Loss: 103.673181
+INFO:root:Round 4, Train Epoch: 40 [32000/60000 (53%)]	Loss: 93.178442
+INFO:root:Round 4, Train Epoch: 40 [40000/60000 (67%)]	Loss: 94.314673
+INFO:root:Round 4, Train Epoch: 40 [48000/60000 (80%)]	Loss: 113.782336
+INFO:root:Round 4, Train Epoch: 40 [56000/60000 (93%)]	Loss: 114.274133
+INFO:root:====> Round 4, Epoch: 40 Average loss: 105.4971
+INFO:root:Round 4, Train Epoch: 41 [0/60000 (0%)]	Loss: 111.187842
+INFO:root:Round 4, Train Epoch: 41 [8000/60000 (13%)]	Loss: 113.633472
+INFO:root:Round 4, Train Epoch: 41 [16000/60000 (27%)]	Loss: 105.871692
+INFO:root:Round 4, Train Epoch: 41 [24000/60000 (40%)]	Loss: 99.694623
+INFO:root:Round 4, Train Epoch: 41 [32000/60000 (53%)]	Loss: 111.136804
+INFO:root:Round 4, Train Epoch: 41 [40000/60000 (67%)]	Loss: 97.822424
+INFO:root:Round 4, Train Epoch: 41 [48000/60000 (80%)]	Loss: 102.571997
+INFO:root:Round 4, Train Epoch: 41 [56000/60000 (93%)]	Loss: 112.006006
+INFO:root:====> Round 4, Epoch: 41 Average loss: 105.3636
+INFO:root:Round 4, Train Epoch: 42 [0/60000 (0%)]	Loss: 102.927673
+INFO:root:Round 4, Train Epoch: 42 [8000/60000 (13%)]	Loss: 108.038428
+INFO:root:Round 4, Train Epoch: 42 [16000/60000 (27%)]	Loss: 107.199048
+INFO:root:Round 4, Train Epoch: 42 [24000/60000 (40%)]	Loss: 107.802576
+INFO:root:Round 4, Train Epoch: 42 [32000/60000 (53%)]	Loss: 107.253528
+INFO:root:Round 4, Train Epoch: 42 [40000/60000 (67%)]	Loss: 98.060291
+INFO:root:Round 4, Train Epoch: 42 [48000/60000 (80%)]	Loss: 110.095935
+INFO:root:Round 4, Train Epoch: 42 [56000/60000 (93%)]	Loss: 111.432703
+INFO:root:====> Round 4, Epoch: 42 Average loss: 105.2449
+INFO:root:Round 4, Train Epoch: 43 [0/60000 (0%)]	Loss: 100.989471
+INFO:root:Round 4, Train Epoch: 43 [8000/60000 (13%)]	Loss: 94.797260
+INFO:root:Round 4, Train Epoch: 43 [16000/60000 (27%)]	Loss: 104.517688
+INFO:root:Round 4, Train Epoch: 43 [24000/60000 (40%)]	Loss: 102.710120
+INFO:root:Round 4, Train Epoch: 43 [32000/60000 (53%)]	Loss: 95.248779
+INFO:root:Round 4, Train Epoch: 43 [40000/60000 (67%)]	Loss: 107.171252
+INFO:root:Round 4, Train Epoch: 43 [48000/60000 (80%)]	Loss: 105.186145
+INFO:root:Round 4, Train Epoch: 43 [56000/60000 (93%)]	Loss: 112.613562
+INFO:root:====> Round 4, Epoch: 43 Average loss: 105.1615
+INFO:root:Round 4, Train Epoch: 44 [0/60000 (0%)]	Loss: 100.574896
+INFO:root:Round 4, Train Epoch: 44 [8000/60000 (13%)]	Loss: 101.493536
+INFO:root:Round 4, Train Epoch: 44 [16000/60000 (27%)]	Loss: 110.241626
+INFO:root:Round 4, Train Epoch: 44 [24000/60000 (40%)]	Loss: 108.036511
+INFO:root:Round 4, Train Epoch: 44 [32000/60000 (53%)]	Loss: 105.318555
+INFO:root:Round 4, Train Epoch: 44 [40000/60000 (67%)]	Loss: 115.485608
+INFO:root:Round 4, Train Epoch: 44 [48000/60000 (80%)]	Loss: 115.088953
+INFO:root:Round 4, Train Epoch: 44 [56000/60000 (93%)]	Loss: 100.383813
+INFO:root:====> Round 4, Epoch: 44 Average loss: 105.0535
+INFO:root:Round 4, Train Epoch: 45 [0/60000 (0%)]	Loss: 107.033948
+INFO:root:Round 4, Train Epoch: 45 [8000/60000 (13%)]	Loss: 106.491321
+INFO:root:Round 4, Train Epoch: 45 [16000/60000 (27%)]	Loss: 100.195227
+INFO:root:Round 4, Train Epoch: 45 [24000/60000 (40%)]	Loss: 101.797980
+INFO:root:Round 4, Train Epoch: 45 [32000/60000 (53%)]	Loss: 110.230786
+INFO:root:Round 4, Train Epoch: 45 [40000/60000 (67%)]	Loss: 98.288440
+INFO:root:Round 4, Train Epoch: 45 [48000/60000 (80%)]	Loss: 100.747321
+INFO:root:Round 4, Train Epoch: 45 [56000/60000 (93%)]	Loss: 103.342578
+INFO:root:====> Round 4, Epoch: 45 Average loss: 104.9631
+INFO:root:Round 4, Train Epoch: 46 [0/60000 (0%)]	Loss: 104.013501
+INFO:root:Round 4, Train Epoch: 46 [8000/60000 (13%)]	Loss: 109.980505
+INFO:root:Round 4, Train Epoch: 46 [16000/60000 (27%)]	Loss: 95.274915
+INFO:root:Round 4, Train Epoch: 46 [24000/60000 (40%)]	Loss: 101.006213
+INFO:root:Round 4, Train Epoch: 46 [32000/60000 (53%)]	Loss: 101.451196
+INFO:root:Round 4, Train Epoch: 46 [40000/60000 (67%)]	Loss: 112.298730
+INFO:root:Round 4, Train Epoch: 46 [48000/60000 (80%)]	Loss: 126.710400
+INFO:root:Round 4, Train Epoch: 46 [56000/60000 (93%)]	Loss: 101.647559
+INFO:root:====> Round 4, Epoch: 46 Average loss: 104.8870
+INFO:root:Round 4, Train Epoch: 47 [0/60000 (0%)]	Loss: 102.634509
+INFO:root:Round 4, Train Epoch: 47 [8000/60000 (13%)]	Loss: 106.362964
+INFO:root:Round 4, Train Epoch: 47 [16000/60000 (27%)]	Loss: 90.381140
+INFO:root:Round 4, Train Epoch: 47 [24000/60000 (40%)]	Loss: 99.834216
+INFO:root:Round 4, Train Epoch: 47 [32000/60000 (53%)]	Loss: 110.290894
+INFO:root:Round 4, Train Epoch: 47 [40000/60000 (67%)]	Loss: 100.610522
+INFO:root:Round 4, Train Epoch: 47 [48000/60000 (80%)]	Loss: 106.641492
+INFO:root:Round 4, Train Epoch: 47 [56000/60000 (93%)]	Loss: 97.481281
+INFO:root:====> Round 4, Epoch: 47 Average loss: 104.7762
+INFO:root:Round 4, Train Epoch: 48 [0/60000 (0%)]	Loss: 101.744983
+INFO:root:Round 4, Train Epoch: 48 [8000/60000 (13%)]	Loss: 93.337665
+INFO:root:Round 4, Train Epoch: 48 [16000/60000 (27%)]	Loss: 112.967383
+INFO:root:Round 4, Train Epoch: 48 [24000/60000 (40%)]	Loss: 110.741394
+INFO:root:Round 4, Train Epoch: 48 [32000/60000 (53%)]	Loss: 110.727478
+INFO:root:Round 4, Train Epoch: 48 [40000/60000 (67%)]	Loss: 98.941248
+INFO:root:Round 4, Train Epoch: 48 [48000/60000 (80%)]	Loss: 103.758069
+INFO:root:Round 4, Train Epoch: 48 [56000/60000 (93%)]	Loss: 108.880334
+INFO:root:====> Round 4, Epoch: 48 Average loss: 104.6800
+INFO:root:Round 4, Train Epoch: 49 [0/60000 (0%)]	Loss: 107.942017
+INFO:root:Round 4, Train Epoch: 49 [8000/60000 (13%)]	Loss: 101.006732
+INFO:root:Round 4, Train Epoch: 49 [16000/60000 (27%)]	Loss: 104.811548
+INFO:root:Round 4, Train Epoch: 49 [24000/60000 (40%)]	Loss: 97.632239
+INFO:root:Round 4, Train Epoch: 49 [32000/60000 (53%)]	Loss: 98.979120
+INFO:root:Round 4, Train Epoch: 49 [40000/60000 (67%)]	Loss: 106.889343
+INFO:root:Round 4, Train Epoch: 49 [48000/60000 (80%)]	Loss: 106.459534
+INFO:root:Round 4, Train Epoch: 49 [56000/60000 (93%)]	Loss: 100.069153
+INFO:root:====> Round 4, Epoch: 49 Average loss: 104.5888
+INFO:root:Round 4, Train Epoch: 50 [0/60000 (0%)]	Loss: 104.188647
+INFO:root:Round 4, Train Epoch: 50 [8000/60000 (13%)]	Loss: 106.180310
+INFO:root:Round 4, Train Epoch: 50 [16000/60000 (27%)]	Loss: 105.362415
+INFO:root:Round 4, Train Epoch: 50 [24000/60000 (40%)]	Loss: 96.481116
+INFO:root:Round 4, Train Epoch: 50 [32000/60000 (53%)]	Loss: 99.766138
+INFO:root:Round 4, Train Epoch: 50 [40000/60000 (67%)]	Loss: 108.446558
+INFO:root:Round 4, Train Epoch: 50 [48000/60000 (80%)]	Loss: 97.213617
+INFO:root:Round 4, Train Epoch: 50 [56000/60000 (93%)]	Loss: 100.104230
+INFO:root:====> Round 4, Epoch: 50 Average loss: 104.4857
+INFO:root:Round 4, Train Epoch: 51 [0/60000 (0%)]	Loss: 102.322083
+INFO:root:Round 4, Train Epoch: 51 [8000/60000 (13%)]	Loss: 100.218427
+INFO:root:Round 4, Train Epoch: 51 [16000/60000 (27%)]	Loss: 105.026074
+INFO:root:Round 4, Train Epoch: 51 [24000/60000 (40%)]	Loss: 96.952124
+INFO:root:Round 4, Train Epoch: 51 [32000/60000 (53%)]	Loss: 109.567175
+INFO:root:Round 4, Train Epoch: 51 [40000/60000 (67%)]	Loss: 112.824609
+INFO:root:Round 4, Train Epoch: 51 [48000/60000 (80%)]	Loss: 110.896558
+INFO:root:Round 4, Train Epoch: 51 [56000/60000 (93%)]	Loss: 101.719360
+INFO:root:====> Round 4, Epoch: 51 Average loss: 104.3882
+INFO:root:Round 4, Train Epoch: 52 [0/60000 (0%)]	Loss: 108.137573
+INFO:root:Round 4, Train Epoch: 52 [8000/60000 (13%)]	Loss: 98.134814
+INFO:root:Round 4, Train Epoch: 52 [16000/60000 (27%)]	Loss: 102.425562
+INFO:root:Round 4, Train Epoch: 52 [24000/60000 (40%)]	Loss: 105.217017
+INFO:root:Round 4, Train Epoch: 52 [32000/60000 (53%)]	Loss: 104.778723
+INFO:root:Round 4, Train Epoch: 52 [40000/60000 (67%)]	Loss: 108.721960
+INFO:root:Round 4, Train Epoch: 52 [48000/60000 (80%)]	Loss: 111.204663
+INFO:root:Round 4, Train Epoch: 52 [56000/60000 (93%)]	Loss: 112.199951
+INFO:root:====> Round 4, Epoch: 52 Average loss: 104.3093
+INFO:root:Round 4, Train Epoch: 53 [0/60000 (0%)]	Loss: 90.291150
+INFO:root:Round 4, Train Epoch: 53 [8000/60000 (13%)]	Loss: 106.152075
+INFO:root:Round 4, Train Epoch: 53 [16000/60000 (27%)]	Loss: 109.095459
+INFO:root:Round 4, Train Epoch: 53 [24000/60000 (40%)]	Loss: 104.072400
+INFO:root:Round 4, Train Epoch: 53 [32000/60000 (53%)]	Loss: 119.821118
+INFO:root:Round 4, Train Epoch: 53 [40000/60000 (67%)]	Loss: 103.154187
+INFO:root:Round 4, Train Epoch: 53 [48000/60000 (80%)]	Loss: 106.032324
+INFO:root:Round 4, Train Epoch: 53 [56000/60000 (93%)]	Loss: 95.767786
+INFO:root:====> Round 4, Epoch: 53 Average loss: 104.2192
+INFO:root:Round 4, Train Epoch: 54 [0/60000 (0%)]	Loss: 89.239093
+INFO:root:Round 4, Train Epoch: 54 [8000/60000 (13%)]	Loss: 96.840924
+INFO:root:Round 4, Train Epoch: 54 [16000/60000 (27%)]	Loss: 94.870514
+INFO:root:Round 4, Train Epoch: 54 [24000/60000 (40%)]	Loss: 103.534766
+INFO:root:Round 4, Train Epoch: 54 [32000/60000 (53%)]	Loss: 113.758032
+INFO:root:Round 4, Train Epoch: 54 [40000/60000 (67%)]	Loss: 101.119781
+INFO:root:Round 4, Train Epoch: 54 [48000/60000 (80%)]	Loss: 99.253137
+INFO:root:Round 4, Train Epoch: 54 [56000/60000 (93%)]	Loss: 103.938452
+INFO:root:====> Round 4, Epoch: 54 Average loss: 104.1314
+INFO:root:Round 4, Train Epoch: 55 [0/60000 (0%)]	Loss: 98.909320
+INFO:root:Round 4, Train Epoch: 55 [8000/60000 (13%)]	Loss: 103.087524
+INFO:root:Round 4, Train Epoch: 55 [16000/60000 (27%)]	Loss: 101.684259
+INFO:root:Round 4, Train Epoch: 55 [24000/60000 (40%)]	Loss: 101.330011
+INFO:root:Round 4, Train Epoch: 55 [32000/60000 (53%)]	Loss: 102.052783
+INFO:root:Round 4, Train Epoch: 55 [40000/60000 (67%)]	Loss: 106.435815
+INFO:root:Round 4, Train Epoch: 55 [48000/60000 (80%)]	Loss: 98.391840
+INFO:root:Round 4, Train Epoch: 55 [56000/60000 (93%)]	Loss: 109.784766
+INFO:root:====> Round 4, Epoch: 55 Average loss: 104.0511
+INFO:root:Round 4, Train Epoch: 56 [0/60000 (0%)]	Loss: 108.384924
+INFO:root:Round 4, Train Epoch: 56 [8000/60000 (13%)]	Loss: 87.647675
+INFO:root:Round 4, Train Epoch: 56 [16000/60000 (27%)]	Loss: 102.957983
+INFO:root:Round 4, Train Epoch: 56 [24000/60000 (40%)]	Loss: 88.701593
+INFO:root:Round 4, Train Epoch: 56 [32000/60000 (53%)]	Loss: 101.518866
+INFO:root:Round 4, Train Epoch: 56 [40000/60000 (67%)]	Loss: 98.737378
+INFO:root:Round 4, Train Epoch: 56 [48000/60000 (80%)]	Loss: 96.334766
+INFO:root:Round 4, Train Epoch: 56 [56000/60000 (93%)]	Loss: 99.094360
+INFO:root:====> Round 4, Epoch: 56 Average loss: 103.9621
+INFO:root:Round 4, Train Epoch: 57 [0/60000 (0%)]	Loss: 105.393591
+INFO:root:Round 4, Train Epoch: 57 [8000/60000 (13%)]	Loss: 104.012598
+INFO:root:Round 4, Train Epoch: 57 [16000/60000 (27%)]	Loss: 111.464819
+INFO:root:Round 4, Train Epoch: 57 [24000/60000 (40%)]	Loss: 109.058081
+INFO:root:Round 4, Train Epoch: 57 [32000/60000 (53%)]	Loss: 105.404651
+INFO:root:Round 4, Train Epoch: 57 [40000/60000 (67%)]	Loss: 96.125116
+INFO:root:Round 4, Train Epoch: 57 [48000/60000 (80%)]	Loss: 100.147449
+INFO:root:Round 4, Train Epoch: 57 [56000/60000 (93%)]	Loss: 103.582690
+INFO:root:====> Round 4, Epoch: 57 Average loss: 103.8916
+INFO:root:Round 4, Train Epoch: 58 [0/60000 (0%)]	Loss: 93.665100
+INFO:root:Round 4, Train Epoch: 58 [8000/60000 (13%)]	Loss: 102.616040
+INFO:root:Round 4, Train Epoch: 58 [16000/60000 (27%)]	Loss: 103.791040
+INFO:root:Round 4, Train Epoch: 58 [24000/60000 (40%)]	Loss: 109.846167
+INFO:root:Round 4, Train Epoch: 58 [32000/60000 (53%)]	Loss: 96.140503
+INFO:root:Round 4, Train Epoch: 58 [40000/60000 (67%)]	Loss: 115.908350
+INFO:root:Round 4, Train Epoch: 58 [48000/60000 (80%)]	Loss: 103.464600
+INFO:root:Round 4, Train Epoch: 58 [56000/60000 (93%)]	Loss: 100.783905
+INFO:root:====> Round 4, Epoch: 58 Average loss: 103.7870
+INFO:root:Round 4, Train Epoch: 59 [0/60000 (0%)]	Loss: 105.220776
+INFO:root:Round 4, Train Epoch: 59 [8000/60000 (13%)]	Loss: 112.329358
+INFO:root:Round 4, Train Epoch: 59 [16000/60000 (27%)]	Loss: 103.180090
+INFO:root:Round 4, Train Epoch: 59 [24000/60000 (40%)]	Loss: 102.829370
+INFO:root:Round 4, Train Epoch: 59 [32000/60000 (53%)]	Loss: 109.506873
+INFO:root:Round 4, Train Epoch: 59 [40000/60000 (67%)]	Loss: 109.004688
+INFO:root:Round 4, Train Epoch: 59 [48000/60000 (80%)]	Loss: 104.061279
+INFO:root:Round 4, Train Epoch: 59 [56000/60000 (93%)]	Loss: 99.048273
+INFO:root:====> Round 4, Epoch: 59 Average loss: 103.7091
+INFO:root:Round 4, Train Epoch: 60 [0/60000 (0%)]	Loss: 97.847864
+INFO:root:Round 4, Train Epoch: 60 [8000/60000 (13%)]	Loss: 109.254126
+INFO:root:Round 4, Train Epoch: 60 [16000/60000 (27%)]	Loss: 100.334399
+INFO:root:Round 4, Train Epoch: 60 [24000/60000 (40%)]	Loss: 103.278699
+INFO:root:Round 4, Train Epoch: 60 [32000/60000 (53%)]	Loss: 88.364044
+INFO:root:Round 4, Train Epoch: 60 [40000/60000 (67%)]	Loss: 100.262671
+INFO:root:Round 4, Train Epoch: 60 [48000/60000 (80%)]	Loss: 110.978699
+INFO:root:Round 4, Train Epoch: 60 [56000/60000 (93%)]	Loss: 117.245642
+INFO:root:====> Round 4, Epoch: 60 Average loss: 103.6453
+INFO:root:Round 4, Train Epoch: 61 [0/60000 (0%)]	Loss: 117.688965
+INFO:root:Round 4, Train Epoch: 61 [8000/60000 (13%)]	Loss: 105.087402
+INFO:root:Round 4, Train Epoch: 61 [16000/60000 (27%)]	Loss: 99.310498
+INFO:root:Round 4, Train Epoch: 61 [24000/60000 (40%)]	Loss: 110.432202
+INFO:root:Round 4, Train Epoch: 61 [32000/60000 (53%)]	Loss: 113.634021
+INFO:root:Round 4, Train Epoch: 61 [40000/60000 (67%)]	Loss: 109.347449
+INFO:root:Round 4, Train Epoch: 61 [48000/60000 (80%)]	Loss: 107.064429
+INFO:root:Round 4, Train Epoch: 61 [56000/60000 (93%)]	Loss: 104.486804
+INFO:root:====> Round 4, Epoch: 61 Average loss: 103.5407
+INFO:root:Round 4, Train Epoch: 62 [0/60000 (0%)]	Loss: 93.738110
+INFO:root:Round 4, Train Epoch: 62 [8000/60000 (13%)]	Loss: 105.630139
+INFO:root:Round 4, Train Epoch: 62 [16000/60000 (27%)]	Loss: 106.429858
+INFO:root:Round 4, Train Epoch: 62 [24000/60000 (40%)]	Loss: 107.884619
+INFO:root:Round 4, Train Epoch: 62 [32000/60000 (53%)]	Loss: 95.915082
+INFO:root:Round 4, Train Epoch: 62 [40000/60000 (67%)]	Loss: 111.333923
+INFO:root:Round 4, Train Epoch: 62 [48000/60000 (80%)]	Loss: 89.726886
+INFO:root:Round 4, Train Epoch: 62 [56000/60000 (93%)]	Loss: 94.918176
+INFO:root:====> Round 4, Epoch: 62 Average loss: 103.4661
+INFO:root:Round 4, Train Epoch: 63 [0/60000 (0%)]	Loss: 102.117761
+INFO:root:Round 4, Train Epoch: 63 [8000/60000 (13%)]	Loss: 98.182690
+INFO:root:Round 4, Train Epoch: 63 [16000/60000 (27%)]	Loss: 116.624451
+INFO:root:Round 4, Train Epoch: 63 [24000/60000 (40%)]	Loss: 102.748364
+INFO:root:Round 4, Train Epoch: 63 [32000/60000 (53%)]	Loss: 97.356116
+INFO:root:Round 4, Train Epoch: 63 [40000/60000 (67%)]	Loss: 108.150391
+INFO:root:Round 4, Train Epoch: 63 [48000/60000 (80%)]	Loss: 105.559351
+INFO:root:Round 4, Train Epoch: 63 [56000/60000 (93%)]	Loss: 107.964746
+INFO:root:====> Round 4, Epoch: 63 Average loss: 103.3885
+INFO:root:Round 4, Train Epoch: 64 [0/60000 (0%)]	Loss: 99.665839
+INFO:root:Round 4, Train Epoch: 64 [8000/60000 (13%)]	Loss: 103.204700
+INFO:root:Round 4, Train Epoch: 64 [16000/60000 (27%)]	Loss: 95.609137
+INFO:root:Round 4, Train Epoch: 64 [24000/60000 (40%)]	Loss: 100.593835
+INFO:root:Round 4, Train Epoch: 64 [32000/60000 (53%)]	Loss: 92.865466
+INFO:root:Round 4, Train Epoch: 64 [40000/60000 (67%)]	Loss: 97.133331
+INFO:root:Round 4, Train Epoch: 64 [48000/60000 (80%)]	Loss: 110.075940
+INFO:root:Round 4, Train Epoch: 64 [56000/60000 (93%)]	Loss: 103.606750
+INFO:root:====> Round 4, Epoch: 64 Average loss: 103.3232
+INFO:root:Round 4, Train Epoch: 65 [0/60000 (0%)]	Loss: 104.648779
+INFO:root:Round 4, Train Epoch: 65 [8000/60000 (13%)]	Loss: 102.218848
+INFO:root:Round 4, Train Epoch: 65 [16000/60000 (27%)]	Loss: 109.206152
+INFO:root:Round 4, Train Epoch: 65 [24000/60000 (40%)]	Loss: 110.791003
+INFO:root:Round 4, Train Epoch: 65 [32000/60000 (53%)]	Loss: 95.674274
+INFO:root:Round 4, Train Epoch: 65 [40000/60000 (67%)]	Loss: 100.133618
+INFO:root:Round 4, Train Epoch: 65 [48000/60000 (80%)]	Loss: 102.217712
+INFO:root:Round 4, Train Epoch: 65 [56000/60000 (93%)]	Loss: 99.731934
+INFO:root:====> Round 4, Epoch: 65 Average loss: 103.2640
+INFO:root:Round 4, Train Epoch: 66 [0/60000 (0%)]	Loss: 97.866461
+INFO:root:Round 4, Train Epoch: 66 [8000/60000 (13%)]	Loss: 102.944336
+INFO:root:Round 4, Train Epoch: 66 [16000/60000 (27%)]	Loss: 94.530695
+INFO:root:Round 4, Train Epoch: 66 [24000/60000 (40%)]	Loss: 89.857330
+INFO:root:Round 4, Train Epoch: 66 [32000/60000 (53%)]	Loss: 109.864697
+INFO:root:Round 4, Train Epoch: 66 [40000/60000 (67%)]	Loss: 105.271191
+INFO:root:Round 4, Train Epoch: 66 [48000/60000 (80%)]	Loss: 100.539612
+INFO:root:Round 4, Train Epoch: 66 [56000/60000 (93%)]	Loss: 101.270947
+INFO:root:====> Round 4, Epoch: 66 Average loss: 103.1780
+INFO:root:Round 4, Train Epoch: 67 [0/60000 (0%)]	Loss: 108.288464
+INFO:root:Round 4, Train Epoch: 67 [8000/60000 (13%)]	Loss: 99.305237
+INFO:root:Round 4, Train Epoch: 67 [16000/60000 (27%)]	Loss: 110.641833
+INFO:root:Round 4, Train Epoch: 67 [24000/60000 (40%)]	Loss: 88.578717
+INFO:root:Round 4, Train Epoch: 67 [32000/60000 (53%)]	Loss: 106.477148
+INFO:root:Round 4, Train Epoch: 67 [40000/60000 (67%)]	Loss: 107.298230
+INFO:root:Round 4, Train Epoch: 67 [48000/60000 (80%)]	Loss: 97.547015
+INFO:root:Round 4, Train Epoch: 67 [56000/60000 (93%)]	Loss: 101.954303
+INFO:root:====> Round 4, Epoch: 67 Average loss: 103.0903
+INFO:root:Round 4, Train Epoch: 68 [0/60000 (0%)]	Loss: 106.541992
+INFO:root:Round 4, Train Epoch: 68 [8000/60000 (13%)]	Loss: 94.933423
+INFO:root:Round 4, Train Epoch: 68 [16000/60000 (27%)]	Loss: 104.728455
+INFO:root:Round 4, Train Epoch: 68 [24000/60000 (40%)]	Loss: 115.266272
+INFO:root:Round 4, Train Epoch: 68 [32000/60000 (53%)]	Loss: 101.043591
+INFO:root:Round 4, Train Epoch: 68 [40000/60000 (67%)]	Loss: 88.401794
+INFO:root:Round 4, Train Epoch: 68 [48000/60000 (80%)]	Loss: 100.358057
+INFO:root:Round 4, Train Epoch: 68 [56000/60000 (93%)]	Loss: 103.761768
+INFO:root:====> Round 4, Epoch: 68 Average loss: 103.0536
+INFO:root:Round 4, Train Epoch: 69 [0/60000 (0%)]	Loss: 109.370740
+INFO:root:Round 4, Train Epoch: 69 [8000/60000 (13%)]	Loss: 104.520691
+INFO:root:Round 4, Train Epoch: 69 [16000/60000 (27%)]	Loss: 112.051172
+INFO:root:Round 4, Train Epoch: 69 [24000/60000 (40%)]	Loss: 102.205109
+INFO:root:Round 4, Train Epoch: 69 [32000/60000 (53%)]	Loss: 107.289575
+INFO:root:Round 4, Train Epoch: 69 [40000/60000 (67%)]	Loss: 106.637622
+INFO:root:Round 4, Train Epoch: 69 [48000/60000 (80%)]	Loss: 88.044757
+INFO:root:Round 4, Train Epoch: 69 [56000/60000 (93%)]	Loss: 102.834924
+INFO:root:====> Round 4, Epoch: 69 Average loss: 102.9592
+INFO:root:Round 4, Train Epoch: 70 [0/60000 (0%)]	Loss: 115.661975
+INFO:root:Round 4, Train Epoch: 70 [8000/60000 (13%)]	Loss: 109.152332
+INFO:root:Round 4, Train Epoch: 70 [16000/60000 (27%)]	Loss: 99.796796
+INFO:root:Round 4, Train Epoch: 70 [24000/60000 (40%)]	Loss: 105.202612
+INFO:root:Round 4, Train Epoch: 70 [32000/60000 (53%)]	Loss: 105.163831
+INFO:root:Round 4, Train Epoch: 70 [40000/60000 (67%)]	Loss: 103.300220
+INFO:root:Round 4, Train Epoch: 70 [48000/60000 (80%)]	Loss: 115.362659
+INFO:root:Round 4, Train Epoch: 70 [56000/60000 (93%)]	Loss: 105.337366
+INFO:root:====> Round 4, Epoch: 70 Average loss: 102.9049
+INFO:root:Round 4, Train Epoch: 71 [0/60000 (0%)]	Loss: 97.745349
+INFO:root:Round 4, Train Epoch: 71 [8000/60000 (13%)]	Loss: 97.576862
+INFO:root:Round 4, Train Epoch: 71 [16000/60000 (27%)]	Loss: 109.675366
+INFO:root:Round 4, Train Epoch: 71 [24000/60000 (40%)]	Loss: 99.541040
+INFO:root:Round 4, Train Epoch: 71 [32000/60000 (53%)]	Loss: 94.885944
+INFO:root:Round 4, Train Epoch: 71 [40000/60000 (67%)]	Loss: 104.862219
+INFO:root:Round 4, Train Epoch: 71 [48000/60000 (80%)]	Loss: 91.268921
+INFO:root:Round 4, Train Epoch: 71 [56000/60000 (93%)]	Loss: 98.360010
+INFO:root:====> Round 4, Epoch: 71 Average loss: 102.8212
+INFO:root:Round 4, Train Epoch: 72 [0/60000 (0%)]	Loss: 88.574475
+INFO:root:Round 4, Train Epoch: 72 [8000/60000 (13%)]	Loss: 101.330200
+INFO:root:Round 4, Train Epoch: 72 [16000/60000 (27%)]	Loss: 102.569592
+INFO:root:Round 4, Train Epoch: 72 [24000/60000 (40%)]	Loss: 106.489612
+INFO:root:Round 4, Train Epoch: 72 [32000/60000 (53%)]	Loss: 97.151385
+INFO:root:Round 4, Train Epoch: 72 [40000/60000 (67%)]	Loss: 106.544861
+INFO:root:Round 4, Train Epoch: 72 [48000/60000 (80%)]	Loss: 98.082715
+INFO:root:Round 4, Train Epoch: 72 [56000/60000 (93%)]	Loss: 112.003760
+INFO:root:====> Round 4, Epoch: 72 Average loss: 102.7499
+INFO:root:Round 4, Train Epoch: 73 [0/60000 (0%)]	Loss: 108.853796
+INFO:root:Round 4, Train Epoch: 73 [8000/60000 (13%)]	Loss: 99.675464
+INFO:root:Round 4, Train Epoch: 73 [16000/60000 (27%)]	Loss: 98.813715
+INFO:root:Round 4, Train Epoch: 73 [24000/60000 (40%)]	Loss: 107.199841
+INFO:root:Round 4, Train Epoch: 73 [32000/60000 (53%)]	Loss: 98.577625
+INFO:root:Round 4, Train Epoch: 73 [40000/60000 (67%)]	Loss: 104.688867
+INFO:root:Round 4, Train Epoch: 73 [48000/60000 (80%)]	Loss: 107.482532
+INFO:root:Round 4, Train Epoch: 73 [56000/60000 (93%)]	Loss: 108.765149
+INFO:root:====> Round 4, Epoch: 73 Average loss: 102.6716
+INFO:root:Round 4, Train Epoch: 74 [0/60000 (0%)]	Loss: 98.901190
+INFO:root:Round 4, Train Epoch: 74 [8000/60000 (13%)]	Loss: 106.118872
+INFO:root:Round 4, Train Epoch: 74 [16000/60000 (27%)]	Loss: 104.481201
+INFO:root:Round 4, Train Epoch: 74 [24000/60000 (40%)]	Loss: 107.455371
+INFO:root:Round 4, Train Epoch: 74 [32000/60000 (53%)]	Loss: 96.350311
+INFO:root:Round 4, Train Epoch: 74 [40000/60000 (67%)]	Loss: 91.842017
+INFO:root:Round 4, Train Epoch: 74 [48000/60000 (80%)]	Loss: 98.833704
+INFO:root:Round 4, Train Epoch: 74 [56000/60000 (93%)]	Loss: 109.564246
+INFO:root:====> Round 4, Epoch: 74 Average loss: 102.6030
+INFO:root:Round 4, Train Epoch: 75 [0/60000 (0%)]	Loss: 100.461304
+INFO:root:Round 4, Train Epoch: 75 [8000/60000 (13%)]	Loss: 89.136609
+INFO:root:Round 4, Train Epoch: 75 [16000/60000 (27%)]	Loss: 94.188971
+INFO:root:Round 4, Train Epoch: 75 [24000/60000 (40%)]	Loss: 90.222736
+INFO:root:Round 4, Train Epoch: 75 [32000/60000 (53%)]	Loss: 113.389673
+INFO:root:Round 4, Train Epoch: 75 [40000/60000 (67%)]	Loss: 98.796924
+INFO:root:Round 4, Train Epoch: 75 [48000/60000 (80%)]	Loss: 99.314313
+INFO:root:Round 4, Train Epoch: 75 [56000/60000 (93%)]	Loss: 104.366406
+INFO:root:====> Round 4, Epoch: 75 Average loss: 102.5535
+INFO:root:Round 4, Train Epoch: 76 [0/60000 (0%)]	Loss: 96.740228
+INFO:root:Round 4, Train Epoch: 76 [8000/60000 (13%)]	Loss: 99.125299
+INFO:root:Round 4, Train Epoch: 76 [16000/60000 (27%)]	Loss: 98.299420
+INFO:root:Round 4, Train Epoch: 76 [24000/60000 (40%)]	Loss: 103.149780
+INFO:root:Round 4, Train Epoch: 76 [32000/60000 (53%)]	Loss: 102.403137
+INFO:root:Round 4, Train Epoch: 76 [40000/60000 (67%)]	Loss: 101.568384
+INFO:root:Round 4, Train Epoch: 76 [48000/60000 (80%)]	Loss: 105.314453
+INFO:root:Round 4, Train Epoch: 76 [56000/60000 (93%)]	Loss: 102.327539
+INFO:root:====> Round 4, Epoch: 76 Average loss: 102.4862
+INFO:root:Round 4, Train Epoch: 77 [0/60000 (0%)]	Loss: 103.118286
+INFO:root:Round 4, Train Epoch: 77 [8000/60000 (13%)]	Loss: 105.119763
+INFO:root:Round 4, Train Epoch: 77 [16000/60000 (27%)]	Loss: 94.556445
+INFO:root:Round 4, Train Epoch: 77 [24000/60000 (40%)]	Loss: 97.103772
+INFO:root:Round 4, Train Epoch: 77 [32000/60000 (53%)]	Loss: 107.650732
+INFO:root:Round 4, Train Epoch: 77 [40000/60000 (67%)]	Loss: 113.984778
+INFO:root:Round 4, Train Epoch: 77 [48000/60000 (80%)]	Loss: 101.529712
+INFO:root:Round 4, Train Epoch: 77 [56000/60000 (93%)]	Loss: 106.185840
+INFO:root:====> Round 4, Epoch: 77 Average loss: 102.4286
+INFO:root:Round 4, Train Epoch: 78 [0/60000 (0%)]	Loss: 94.969434
+INFO:root:Round 4, Train Epoch: 78 [8000/60000 (13%)]	Loss: 106.284875
+INFO:root:Round 4, Train Epoch: 78 [16000/60000 (27%)]	Loss: 101.949103
+INFO:root:Round 4, Train Epoch: 78 [24000/60000 (40%)]	Loss: 89.341119
+INFO:root:Round 4, Train Epoch: 78 [32000/60000 (53%)]	Loss: 101.861926
+INFO:root:Round 4, Train Epoch: 78 [40000/60000 (67%)]	Loss: 106.469702
+INFO:root:Round 4, Train Epoch: 78 [48000/60000 (80%)]	Loss: 102.459265
+INFO:root:Round 4, Train Epoch: 78 [56000/60000 (93%)]	Loss: 110.099622
+INFO:root:====> Round 4, Epoch: 78 Average loss: 102.3386
+INFO:root:Round 4, Train Epoch: 79 [0/60000 (0%)]	Loss: 105.523730
+INFO:root:Round 4, Train Epoch: 79 [8000/60000 (13%)]	Loss: 100.613770
+INFO:root:Round 4, Train Epoch: 79 [16000/60000 (27%)]	Loss: 108.554736
+INFO:root:Round 4, Train Epoch: 79 [24000/60000 (40%)]	Loss: 107.286414
+INFO:root:Round 4, Train Epoch: 79 [32000/60000 (53%)]	Loss: 104.018506
+INFO:root:Round 4, Train Epoch: 79 [40000/60000 (67%)]	Loss: 99.740405
+INFO:root:Round 4, Train Epoch: 79 [48000/60000 (80%)]	Loss: 102.120044
+INFO:root:Round 4, Train Epoch: 79 [56000/60000 (93%)]	Loss: 98.466797
+INFO:root:====> Round 4, Epoch: 79 Average loss: 102.2839
+INFO:root:Round 4, Train Epoch: 80 [0/60000 (0%)]	Loss: 100.577710
+INFO:root:Round 4, Train Epoch: 80 [8000/60000 (13%)]	Loss: 105.520361
+INFO:root:Round 4, Train Epoch: 80 [16000/60000 (27%)]	Loss: 111.811499
+INFO:root:Round 4, Train Epoch: 80 [24000/60000 (40%)]	Loss: 115.182800
+INFO:root:Round 4, Train Epoch: 80 [32000/60000 (53%)]	Loss: 111.665576
+INFO:root:Round 4, Train Epoch: 80 [40000/60000 (67%)]	Loss: 106.888269
+INFO:root:Round 4, Train Epoch: 80 [48000/60000 (80%)]	Loss: 92.642584
+INFO:root:Round 4, Train Epoch: 80 [56000/60000 (93%)]	Loss: 98.165674
+INFO:root:====> Round 4, Epoch: 80 Average loss: 102.2246
+INFO:root:2020-04-09 11:29:55.879889
+INFO:root:====> Round 4 Test set loss: 96.1934
+INFO:root:2020-04-09 11:44:27.559934
+INFO:root:Training finished

@@ -1,0 +1,135 @@
+2020-04-09 13:31:49.714685
+====== About to train for 1 epochs in round 0 with learning rate 0.0001========
+====> Round 0, Epoch: 0 Average loss: 216.0657
+2020-04-09 13:32:42.178551
+====== About to train for 3 epochs in round 1 with learning rate 7.2e-05========
+/usr/local/lib/python3.6/dist-packages/torch/serialization.py:360: UserWarning: Couldn't retrieve source code for container of type mnist1_model. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+====> Round 1, Epoch: 0 Average loss: 183.7436
+====> Round 1, Epoch: 1 Average loss: 160.1001
+====> Round 1, Epoch: 2 Average loss: 146.9307
+2020-04-09 13:35:31.553641
+====== About to train for 9 epochs in round 2 with learning rate 5.18e-05========
+====> Round 2, Epoch: 0 Average loss: 140.4558
+====> Round 2, Epoch: 1 Average loss: 137.0232
+====> Round 2, Epoch: 2 Average loss: 134.1928
+====> Round 2, Epoch: 3 Average loss: 131.7078
+====> Round 2, Epoch: 4 Average loss: 129.8800
+====> Round 2, Epoch: 5 Average loss: 128.4002
+====> Round 2, Epoch: 6 Average loss: 127.0863
+====> Round 2, Epoch: 7 Average loss: 125.8205
+====> Round 2, Epoch: 8 Average loss: 124.5352
+2020-04-09 13:44:20.231776
+====== About to train for 27 epochs in round 3 with learning rate 3.73e-05========
+====> Round 3, Epoch: 0 Average loss: 123.4530
+====> Round 3, Epoch: 1 Average loss: 122.7628
+====> Round 3, Epoch: 2 Average loss: 122.1452
+====> Round 3, Epoch: 3 Average loss: 121.6022
+====> Round 3, Epoch: 4 Average loss: 121.0785
+====> Round 3, Epoch: 5 Average loss: 120.6186
+====> Round 3, Epoch: 6 Average loss: 120.1568
+====> Round 3, Epoch: 7 Average loss: 119.7363
+====> Round 3, Epoch: 8 Average loss: 119.3390
+====> Round 3, Epoch: 9 Average loss: 118.9574
+====> Round 3, Epoch: 10 Average loss: 118.5884
+====> Round 3, Epoch: 11 Average loss: 118.2339
+====> Round 3, Epoch: 12 Average loss: 117.8771
+====> Round 3, Epoch: 13 Average loss: 117.5307
+====> Round 3, Epoch: 14 Average loss: 117.1480
+====> Round 3, Epoch: 15 Average loss: 116.7313
+====> Round 3, Epoch: 16 Average loss: 116.2687
+====> Round 3, Epoch: 17 Average loss: 115.8194
+====> Round 3, Epoch: 18 Average loss: 115.4211
+====> Round 3, Epoch: 19 Average loss: 115.0733
+====> Round 3, Epoch: 20 Average loss: 114.7434
+====> Round 3, Epoch: 21 Average loss: 114.4522
+====> Round 3, Epoch: 22 Average loss: 114.1669
+====> Round 3, Epoch: 23 Average loss: 113.8750
+====> Round 3, Epoch: 24 Average loss: 113.6254
+====> Round 3, Epoch: 25 Average loss: 113.3751
+====> Round 3, Epoch: 26 Average loss: 113.1208
+2020-04-09 14:11:12.732097
+====== About to train for 81 epochs in round 4 with learning rate 2.68e-05========
+====> Round 4, Epoch: 0 Average loss: 112.8752
+====> Round 4, Epoch: 1 Average loss: 112.6898
+====> Round 4, Epoch: 2 Average loss: 112.5145
+====> Round 4, Epoch: 3 Average loss: 112.3530
+====> Round 4, Epoch: 4 Average loss: 112.1802
+====> Round 4, Epoch: 5 Average loss: 112.0078
+====> Round 4, Epoch: 6 Average loss: 111.8209
+====> Round 4, Epoch: 7 Average loss: 111.6490
+====> Round 4, Epoch: 8 Average loss: 111.4488
+====> Round 4, Epoch: 9 Average loss: 111.2702
+====> Round 4, Epoch: 10 Average loss: 111.0779
+====> Round 4, Epoch: 11 Average loss: 110.8953
+====> Round 4, Epoch: 12 Average loss: 110.6922
+====> Round 4, Epoch: 13 Average loss: 110.5052
+====> Round 4, Epoch: 14 Average loss: 110.3382
+====> Round 4, Epoch: 15 Average loss: 110.1795
+====> Round 4, Epoch: 16 Average loss: 110.0252
+====> Round 4, Epoch: 17 Average loss: 109.8770
+====> Round 4, Epoch: 18 Average loss: 109.7391
+====> Round 4, Epoch: 19 Average loss: 109.6096
+====> Round 4, Epoch: 20 Average loss: 109.4755
+====> Round 4, Epoch: 21 Average loss: 109.3492
+====> Round 4, Epoch: 22 Average loss: 109.2238
+====> Round 4, Epoch: 23 Average loss: 109.1019
+====> Round 4, Epoch: 24 Average loss: 108.9849
+====> Round 4, Epoch: 25 Average loss: 108.8633
+====> Round 4, Epoch: 26 Average loss: 108.7456
+====> Round 4, Epoch: 27 Average loss: 108.6432
+====> Round 4, Epoch: 28 Average loss: 108.5315
+====> Round 4, Epoch: 29 Average loss: 108.4267
+====> Round 4, Epoch: 30 Average loss: 108.3101
+====> Round 4, Epoch: 31 Average loss: 108.2031
+====> Round 4, Epoch: 32 Average loss: 108.1022
+====> Round 4, Epoch: 33 Average loss: 107.9987
+====> Round 4, Epoch: 34 Average loss: 107.8930
+====> Round 4, Epoch: 35 Average loss: 107.7970
+====> Round 4, Epoch: 36 Average loss: 107.7039
+====> Round 4, Epoch: 37 Average loss: 107.6037
+====> Round 4, Epoch: 38 Average loss: 107.5110
+====> Round 4, Epoch: 39 Average loss: 107.4174
+====> Round 4, Epoch: 40 Average loss: 107.3183
+====> Round 4, Epoch: 41 Average loss: 107.2327
+====> Round 4, Epoch: 42 Average loss: 107.1356
+====> Round 4, Epoch: 43 Average loss: 107.0489
+====> Round 4, Epoch: 44 Average loss: 106.9553
+====> Round 4, Epoch: 45 Average loss: 106.8718
+====> Round 4, Epoch: 46 Average loss: 106.7899
+====> Round 4, Epoch: 47 Average loss: 106.7084
+====> Round 4, Epoch: 48 Average loss: 106.6218
+====> Round 4, Epoch: 49 Average loss: 106.5394
+====> Round 4, Epoch: 50 Average loss: 106.4527
+====> Round 4, Epoch: 51 Average loss: 106.3792
+====> Round 4, Epoch: 52 Average loss: 106.2983
+====> Round 4, Epoch: 53 Average loss: 106.2278
+====> Round 4, Epoch: 54 Average loss: 106.1447
+====> Round 4, Epoch: 55 Average loss: 106.0715
+====> Round 4, Epoch: 56 Average loss: 105.9951
+====> Round 4, Epoch: 57 Average loss: 105.9254
+====> Round 4, Epoch: 58 Average loss: 105.8574
+====> Round 4, Epoch: 59 Average loss: 105.7787
+====> Round 4, Epoch: 60 Average loss: 105.7060
+====> Round 4, Epoch: 61 Average loss: 105.6373
+====> Round 4, Epoch: 62 Average loss: 105.5671
+====> Round 4, Epoch: 63 Average loss: 105.4981
+====> Round 4, Epoch: 64 Average loss: 105.4312
+====> Round 4, Epoch: 65 Average loss: 105.3571
+====> Round 4, Epoch: 66 Average loss: 105.3039
+====> Round 4, Epoch: 67 Average loss: 105.2374
+====> Round 4, Epoch: 68 Average loss: 105.1659
+====> Round 4, Epoch: 69 Average loss: 105.0969
+====> Round 4, Epoch: 70 Average loss: 105.0342
+====> Round 4, Epoch: 71 Average loss: 104.9728
+====> Round 4, Epoch: 72 Average loss: 104.9045
+====> Round 4, Epoch: 73 Average loss: 104.8346
+====> Round 4, Epoch: 74 Average loss: 104.7869
+====> Round 4, Epoch: 75 Average loss: 104.7126
+====> Round 4, Epoch: 76 Average loss: 104.6592
+====> Round 4, Epoch: 77 Average loss: 104.5930
+====> Round 4, Epoch: 78 Average loss: 104.5139
+====> Round 4, Epoch: 79 Average loss: 104.4609
+====> Round 4, Epoch: 80 Average loss: 104.3915
+2020-04-09 15:32:48.975740
+====> Round 4 Test set loss: 97.9429
