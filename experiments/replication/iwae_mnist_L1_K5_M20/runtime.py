@@ -1,4 +1,5 @@
 # Initialize a model and data loaders
+kwargs = {'num_workers': 1, 'pin_memory': True} if cuda else {}
 train_loader = torch.utils.data.DataLoader(
     datasets.MNIST('../data', train=True, download=True,
                    transform=transforms.ToTensor()),
