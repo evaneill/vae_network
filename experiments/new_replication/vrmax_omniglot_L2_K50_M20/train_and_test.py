@@ -9,7 +9,7 @@ def train(round_num,epoch,optimizer):
 
         #recon_batch, mu, logvar = model(data)
         #loss = loss_function(recon_batch, data, mu, logvar)
-        recon_batch, _, _, loss = model.compute_loss_for_batch(data, model)
+        _, loss = model.compute_loss_for_batch(data, model)
         loss.backward()
         train_loss += loss.item()
         optimizer.step()
