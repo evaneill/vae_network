@@ -11,6 +11,7 @@ if torch.cuda.is_available():
     logging.info("Training on GPU")
 
 os.makedirs(f'{model_type}_{data_name}_K{K}_M{batch_size}',exist_ok=True)
+os.makedirs(f'{model_type}_{data_name}_K{K}_M{batch_size}/results',exist_ok=True)
 os.makedirs(f'{model_type}_{data_name}_K{K}_M{batch_size}/samples',exist_ok=True)
 os.makedirs(f'{model_type}_{data_name}_K{K}_M{batch_size}/recons',exist_ok=True)
 
@@ -22,7 +23,7 @@ for r in range(num_rounds+1):
     print(f"====== About to train for {3**r} epochs in round {r} with learning rate {round(current_round_lr,7)}========")
     logging.info(f"====== About to train for {3**r} epochs in round {r} with learning rate {round(current_round_lr,7)}========")
     for epoch in range(3**r):
-        train(r,epoch)
+        train(r,epoch, optimizer)
     with open(f'{model_type}_{data_name}_K{K}_M{batch_size}/{model_type}_{data_name}_K{K}_M{batch_size}_LR0001.pt','wb') as f:
         print(datetime.datetime.now())
         logging.info(datetime.datetime.now())
@@ -31,8 +32,8 @@ for r in range(num_rounds+1):
     
     _test(r,epoch)
     with torch.no_grad():
-        sample = torch.randn(64, 200).to(device)
-        sample = model.decode(sample,test=True).cpu()
+        sample = torch.randn(64, 50).to(device)
+        sample = model.decode(sample).cpu()
         save_image(sample.view(64, 1, 28, 28),
                     f'{model_type}_{data_name}_K{K}_M{batch_size}/samples/sample_' +str(r)+'_'+ str(epoch) + '.png')
                 
