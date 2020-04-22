@@ -1,5 +1,5 @@
 batch_size = 128
-epochs = 101
+epochs = 501
 seed = 1
 log_interval = 1000
 testing_frequency = 20
