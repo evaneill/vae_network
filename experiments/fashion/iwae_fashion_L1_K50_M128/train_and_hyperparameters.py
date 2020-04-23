@@ -1,15 +1,15 @@
 batch_size = 128
-epochs = 101
+epochs = 151
 seed = 1
 log_interval = 1000
 testing_frequency = 20
-K = 5
+K = 50
 learning_rate = 1e-3
 discrete_data = True
-alpha = 1
+alpha = 0
 cuda = torch.cuda.is_available()
 test_batch_size = 32
-model_type = 'vae'
+model_type = 'iwae'
 torch.manual_seed(seed)
 
 data_name = 'mnist' 
