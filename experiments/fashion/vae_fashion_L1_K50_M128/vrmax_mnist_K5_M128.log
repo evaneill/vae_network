@@ -1,0 +1,167 @@
+INFO:root:Training on GPU
+INFO:root:2020-04-24 19:33:50.783125
+INFO:root:Training on GPU
+INFO:root:2020-04-24 19:33:53.614702
+INFO:root:Training on GPU
+INFO:root:2020-04-24 19:35:41.881883
+INFO:root:====> Epoch: 1 Average loss: 300.3223
+INFO:root:====> Test set loss: 260.3693
+INFO:root:====> Epoch: 2 Average loss: 262.1140
+INFO:root:====> Epoch: 3 Average loss: 253.5581
+INFO:root:====> Epoch: 4 Average loss: 249.4254
+INFO:root:====> Epoch: 5 Average loss: 247.0105
+INFO:root:====> Epoch: 6 Average loss: 245.5327
+INFO:root:====> Epoch: 7 Average loss: 244.5740
+INFO:root:====> Epoch: 8 Average loss: 243.6940
+INFO:root:====> Epoch: 9 Average loss: 243.0128
+INFO:root:====> Epoch: 10 Average loss: 242.4030
+INFO:root:====> Epoch: 11 Average loss: 241.9351
+INFO:root:====> Epoch: 12 Average loss: 241.5165
+INFO:root:====> Epoch: 13 Average loss: 241.1373
+INFO:root:====> Epoch: 14 Average loss: 240.7366
+INFO:root:====> Epoch: 15 Average loss: 240.5142
+INFO:root:====> Epoch: 16 Average loss: 240.2171
+INFO:root:====> Epoch: 17 Average loss: 239.9602
+INFO:root:====> Epoch: 18 Average loss: 239.6938
+INFO:root:====> Epoch: 19 Average loss: 239.6038
+INFO:root:====> Epoch: 20 Average loss: 239.3686
+INFO:root:====> Epoch: 21 Average loss: 239.0743
+INFO:root:====> Test set loss: 236.7883
+INFO:root:====> Epoch: 22 Average loss: 238.9439
+INFO:root:====> Epoch: 23 Average loss: 238.7883
+INFO:root:====> Epoch: 24 Average loss: 238.6757
+INFO:root:====> Epoch: 25 Average loss: 238.5374
+INFO:root:====> Epoch: 26 Average loss: 238.2981
+INFO:root:====> Epoch: 27 Average loss: 238.2482
+INFO:root:====> Epoch: 28 Average loss: 238.0579
+INFO:root:====> Epoch: 29 Average loss: 237.9937
+INFO:root:====> Epoch: 30 Average loss: 237.9088
+INFO:root:====> Epoch: 31 Average loss: 237.7666
+INFO:root:====> Epoch: 32 Average loss: 237.6857
+INFO:root:====> Epoch: 33 Average loss: 237.5828
+INFO:root:====> Epoch: 34 Average loss: 237.5173
+INFO:root:====> Epoch: 35 Average loss: 237.4977
+INFO:root:====> Epoch: 36 Average loss: 237.3887
+INFO:root:====> Epoch: 37 Average loss: 237.2798
+INFO:root:====> Epoch: 38 Average loss: 237.2403
+INFO:root:====> Epoch: 39 Average loss: 237.1837
+INFO:root:====> Epoch: 40 Average loss: 237.0939
+INFO:root:====> Epoch: 41 Average loss: 236.9989
+INFO:root:====> Test set loss: 235.0072
+INFO:root:====> Epoch: 42 Average loss: 236.9680
+INFO:root:====> Epoch: 43 Average loss: 236.9276
+INFO:root:====> Epoch: 44 Average loss: 236.8721
+INFO:root:====> Epoch: 45 Average loss: 236.8280
+INFO:root:====> Epoch: 46 Average loss: 236.7687
+INFO:root:====> Epoch: 47 Average loss: 236.6870
+INFO:root:====> Epoch: 48 Average loss: 236.6592
+INFO:root:====> Epoch: 49 Average loss: 236.6231
+INFO:root:====> Epoch: 50 Average loss: 236.5340
+INFO:root:====> Epoch: 51 Average loss: 236.5262
+INFO:root:====> Epoch: 52 Average loss: 236.5030
+INFO:root:====> Epoch: 53 Average loss: 236.4658
+INFO:root:====> Epoch: 54 Average loss: 236.3809
+INFO:root:====> Epoch: 55 Average loss: 236.3831
+INFO:root:====> Epoch: 56 Average loss: 236.3233
+INFO:root:====> Epoch: 57 Average loss: 236.3004
+INFO:root:====> Epoch: 58 Average loss: 236.2564
+INFO:root:====> Epoch: 59 Average loss: 236.2497
+INFO:root:====> Epoch: 60 Average loss: 236.2222
+INFO:root:====> Epoch: 61 Average loss: 236.1847
+INFO:root:====> Test set loss: 234.1939
+INFO:root:====> Epoch: 62 Average loss: 236.0827
+INFO:root:====> Epoch: 63 Average loss: 236.0957
+INFO:root:====> Epoch: 64 Average loss: 236.0592
+INFO:root:====> Epoch: 65 Average loss: 236.0635
+INFO:root:====> Epoch: 66 Average loss: 236.0647
+INFO:root:====> Epoch: 67 Average loss: 235.9864
+INFO:root:====> Epoch: 68 Average loss: 235.9503
+INFO:root:====> Epoch: 69 Average loss: 235.8871
+INFO:root:====> Epoch: 70 Average loss: 235.9135
+INFO:root:====> Epoch: 71 Average loss: 235.9018
+INFO:root:====> Epoch: 72 Average loss: 235.8918
+INFO:root:====> Epoch: 73 Average loss: 235.7931
+INFO:root:====> Epoch: 74 Average loss: 235.7665
+INFO:root:====> Epoch: 75 Average loss: 235.7698
+INFO:root:====> Epoch: 76 Average loss: 235.7602
+INFO:root:====> Epoch: 77 Average loss: 235.7050
+INFO:root:====> Epoch: 78 Average loss: 235.7025
+INFO:root:====> Epoch: 79 Average loss: 235.6903
+INFO:root:====> Epoch: 80 Average loss: 235.6353
+INFO:root:====> Epoch: 81 Average loss: 235.6418
+INFO:root:====> Test set loss: 233.5121
+INFO:root:====> Epoch: 82 Average loss: 235.6471
+INFO:root:====> Epoch: 83 Average loss: 235.5976
+INFO:root:====> Epoch: 84 Average loss: 235.5774
+INFO:root:====> Epoch: 85 Average loss: 235.5169
+INFO:root:====> Epoch: 86 Average loss: 235.5551
+INFO:root:====> Epoch: 87 Average loss: 235.5509
+INFO:root:====> Epoch: 88 Average loss: 235.4730
+INFO:root:====> Epoch: 89 Average loss: 235.5085
+INFO:root:====> Epoch: 90 Average loss: 235.4301
+INFO:root:====> Epoch: 91 Average loss: 235.4354
+INFO:root:====> Epoch: 92 Average loss: 235.4384
+INFO:root:====> Epoch: 93 Average loss: 235.3618
+INFO:root:====> Epoch: 94 Average loss: 235.3897
+INFO:root:====> Epoch: 95 Average loss: 235.3428
+INFO:root:====> Epoch: 96 Average loss: 235.3880
+INFO:root:====> Epoch: 97 Average loss: 235.3496
+INFO:root:====> Epoch: 98 Average loss: 235.3010
+INFO:root:====> Epoch: 99 Average loss: 235.3318
+INFO:root:====> Epoch: 100 Average loss: 235.2628
+INFO:root:====> Epoch: 101 Average loss: 235.2984
+INFO:root:====> Test set loss: 233.3357
+INFO:root:====> Epoch: 102 Average loss: 235.2714
+INFO:root:====> Epoch: 103 Average loss: 235.1888
+INFO:root:====> Epoch: 104 Average loss: 235.2200
+INFO:root:====> Epoch: 105 Average loss: 235.2168
+INFO:root:====> Epoch: 106 Average loss: 235.2255
+INFO:root:====> Epoch: 107 Average loss: 235.1417
+INFO:root:====> Epoch: 108 Average loss: 235.2025
+INFO:root:====> Epoch: 109 Average loss: 235.1584
+INFO:root:====> Epoch: 110 Average loss: 235.1615
+INFO:root:====> Epoch: 111 Average loss: 235.0963
+INFO:root:====> Epoch: 112 Average loss: 235.1159
+INFO:root:====> Epoch: 113 Average loss: 235.1237
+INFO:root:====> Epoch: 114 Average loss: 235.1020
+INFO:root:====> Epoch: 115 Average loss: 235.0737
+INFO:root:====> Epoch: 116 Average loss: 235.0748
+INFO:root:====> Epoch: 117 Average loss: 235.0469
+INFO:root:====> Epoch: 118 Average loss: 235.0068
+INFO:root:====> Epoch: 119 Average loss: 234.9740
+INFO:root:====> Epoch: 120 Average loss: 235.0303
+INFO:root:====> Epoch: 121 Average loss: 235.0421
+INFO:root:====> Test set loss: 233.0402
+INFO:root:====> Epoch: 122 Average loss: 235.0549
+INFO:root:====> Epoch: 123 Average loss: 234.9491
+INFO:root:====> Epoch: 124 Average loss: 234.9588
+INFO:root:====> Epoch: 125 Average loss: 234.9546
+INFO:root:====> Epoch: 126 Average loss: 234.9262
+INFO:root:====> Epoch: 127 Average loss: 234.9276
+INFO:root:====> Epoch: 128 Average loss: 234.9246
+INFO:root:====> Epoch: 129 Average loss: 234.9156
+INFO:root:====> Epoch: 130 Average loss: 234.9447
+INFO:root:====> Epoch: 131 Average loss: 234.8857
+INFO:root:====> Epoch: 132 Average loss: 234.8758
+INFO:root:====> Epoch: 133 Average loss: 234.8423
+INFO:root:====> Epoch: 134 Average loss: 234.8651
+INFO:root:====> Epoch: 135 Average loss: 234.8608
+INFO:root:====> Epoch: 136 Average loss: 234.8244
+INFO:root:====> Epoch: 137 Average loss: 234.8444
+INFO:root:====> Epoch: 138 Average loss: 234.7818
+INFO:root:====> Epoch: 139 Average loss: 234.7755
+INFO:root:====> Epoch: 140 Average loss: 234.8001
+INFO:root:====> Epoch: 141 Average loss: 234.7964
+INFO:root:====> Test set loss: 232.8759
+INFO:root:====> Epoch: 142 Average loss: 234.7780
+INFO:root:====> Epoch: 143 Average loss: 234.7770
+INFO:root:====> Epoch: 144 Average loss: 234.7575
+INFO:root:====> Epoch: 145 Average loss: 234.7470
+INFO:root:====> Epoch: 146 Average loss: 234.7483
+INFO:root:====> Epoch: 147 Average loss: 234.7625
+INFO:root:====> Epoch: 148 Average loss: 234.7029
+INFO:root:====> Epoch: 149 Average loss: 234.7225
+INFO:root:====> Epoch: 150 Average loss: 234.7109
+INFO:root:====> Epoch: 151 Average loss: 234.6568
+INFO:root:2020-04-24 20:10:02.517470
+INFO:root:training finished

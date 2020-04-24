@@ -1,0 +1,351 @@
+Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
+Training on GPU
+2020-04-24 11:05:47.856103
+====> Epoch: 1 Average loss: 301.0564
+====> Test set loss: 260.6803
+====> Epoch: 2 Average loss: 261.0166
+====> Epoch: 3 Average loss: 252.8098
+====> Epoch: 4 Average loss: 249.5974
+====> Epoch: 5 Average loss: 247.5943
+====> Epoch: 6 Average loss: 246.2326
+====> Epoch: 7 Average loss: 245.1971
+====> Epoch: 8 Average loss: 244.3239
+====> Epoch: 9 Average loss: 243.7361
+====> Epoch: 10 Average loss: 243.0809
+====> Epoch: 11 Average loss: 242.5500
+====> Epoch: 12 Average loss: 242.1272
+====> Epoch: 13 Average loss: 241.7376
+====> Epoch: 14 Average loss: 241.3945
+====> Epoch: 15 Average loss: 241.1119
+====> Epoch: 16 Average loss: 240.7948
+====> Epoch: 17 Average loss: 240.5644
+====> Epoch: 18 Average loss: 240.3446
+====> Epoch: 19 Average loss: 240.1748
+====> Epoch: 20 Average loss: 239.9803
+====> Epoch: 21 Average loss: 239.8064
+====> Test set loss: 236.8926
+====> Epoch: 22 Average loss: 239.6245
+====> Epoch: 23 Average loss: 239.4543
+====> Epoch: 24 Average loss: 239.3664
+====> Epoch: 25 Average loss: 239.1373
+====> Epoch: 26 Average loss: 239.0722
+====> Epoch: 27 Average loss: 238.9265
+====> Epoch: 28 Average loss: 238.8875
+====> Epoch: 29 Average loss: 238.7221
+====> Epoch: 30 Average loss: 238.6168
+====> Epoch: 31 Average loss: 238.5414
+====> Epoch: 32 Average loss: 238.4319
+====> Epoch: 33 Average loss: 238.3403
+====> Epoch: 34 Average loss: 238.2619
+====> Epoch: 35 Average loss: 238.1840
+====> Epoch: 36 Average loss: 238.1495
+====> Epoch: 37 Average loss: 238.0423
+====> Epoch: 38 Average loss: 237.9497
+====> Epoch: 39 Average loss: 237.9006
+====> Epoch: 40 Average loss: 237.8094
+====> Epoch: 41 Average loss: 237.7663
+====> Test set loss: 235.2792
+====> Epoch: 42 Average loss: 237.7125
+====> Epoch: 43 Average loss: 237.6800
+====> Epoch: 44 Average loss: 237.6042
+====> Epoch: 45 Average loss: 237.5199
+====> Epoch: 46 Average loss: 237.4809
+====> Epoch: 47 Average loss: 237.4042
+====> Epoch: 48 Average loss: 237.3955
+====> Epoch: 49 Average loss: 237.3191
+====> Epoch: 50 Average loss: 237.3092
+====> Epoch: 51 Average loss: 237.2501
+====> Epoch: 52 Average loss: 237.2181
+====> Epoch: 53 Average loss: 237.1577
+====> Epoch: 54 Average loss: 237.1479
+====> Epoch: 55 Average loss: 237.0897
+====> Epoch: 56 Average loss: 237.0403
+====> Epoch: 57 Average loss: 237.0467
+====> Epoch: 58 Average loss: 236.9914
+====> Epoch: 59 Average loss: 236.9242
+====> Epoch: 60 Average loss: 236.8953
+====> Epoch: 61 Average loss: 236.8787
+====> Test set loss: 234.4053
+====> Epoch: 62 Average loss: 236.8453
+====> Epoch: 63 Average loss: 236.8031
+====> Epoch: 64 Average loss: 236.7737
+====> Epoch: 65 Average loss: 236.7527
+====> Epoch: 66 Average loss: 236.6946
+====> Epoch: 67 Average loss: 236.7378
+====> Epoch: 68 Average loss: 236.6627
+====> Epoch: 69 Average loss: 236.6589
+====> Epoch: 70 Average loss: 236.6101
+====> Epoch: 71 Average loss: 236.6210
+====> Epoch: 72 Average loss: 236.5679
+====> Epoch: 73 Average loss: 236.5573
+====> Epoch: 74 Average loss: 236.4876
+====> Epoch: 75 Average loss: 236.5302
+====> Epoch: 76 Average loss: 236.4523
+====> Epoch: 77 Average loss: 236.4467
+====> Epoch: 78 Average loss: 236.4187
+====> Epoch: 79 Average loss: 236.4251
+====> Epoch: 80 Average loss: 236.3809
+====> Epoch: 81 Average loss: 236.3893
+====> Test set loss: 234.0725
+====> Epoch: 82 Average loss: 236.2995
+====> Epoch: 83 Average loss: 236.3323
+====> Epoch: 84 Average loss: 236.2841
+====> Epoch: 85 Average loss: 236.2711
+====> Epoch: 86 Average loss: 236.2290
+====> Epoch: 87 Average loss: 236.2374
+====> Epoch: 88 Average loss: 236.2153
+====> Epoch: 89 Average loss: 236.2402
+====> Epoch: 90 Average loss: 236.1920
+====> Epoch: 91 Average loss: 236.1935
+====> Epoch: 92 Average loss: 236.1440
+====> Epoch: 93 Average loss: 236.1145
+====> Epoch: 94 Average loss: 236.1286
+====> Epoch: 95 Average loss: 236.1033
+====> Epoch: 96 Average loss: 236.0971
+====> Epoch: 97 Average loss: 236.0808
+====> Epoch: 98 Average loss: 236.0379
+====> Epoch: 99 Average loss: 236.0237
+====> Epoch: 100 Average loss: 236.0104
+====> Epoch: 101 Average loss: 236.0251
+====> Test set loss: 233.8442
+====> Epoch: 102 Average loss: 235.9561
+====> Epoch: 103 Average loss: 235.9897
+====> Epoch: 104 Average loss: 235.9143
+====> Epoch: 105 Average loss: 235.9534
+====> Epoch: 106 Average loss: 235.9392
+====> Epoch: 107 Average loss: 235.9123
+====> Epoch: 108 Average loss: 235.9121
+====> Epoch: 109 Average loss: 235.8336
+====> Epoch: 110 Average loss: 235.8358
+====> Epoch: 111 Average loss: 235.8570
+====> Epoch: 112 Average loss: 235.8301
+====> Epoch: 113 Average loss: 235.8661
+====> Epoch: 114 Average loss: 235.8011
+====> Epoch: 115 Average loss: 235.7692
+====> Epoch: 116 Average loss: 235.8075
+====> Epoch: 117 Average loss: 235.7684
+====> Epoch: 118 Average loss: 235.7813
+====> Epoch: 119 Average loss: 235.7304
+====> Epoch: 120 Average loss: 235.7190
+====> Epoch: 121 Average loss: 235.7085
+====> Test set loss: 233.5278
+====> Epoch: 122 Average loss: 235.7088
+====> Epoch: 123 Average loss: 235.6971
+====> Epoch: 124 Average loss: 235.7199
+====> Epoch: 125 Average loss: 235.6630
+====> Epoch: 126 Average loss: 235.6877
+====> Epoch: 127 Average loss: 235.6539
+====> Epoch: 128 Average loss: 235.6778
+====> Epoch: 129 Average loss: 235.6172
+====> Epoch: 130 Average loss: 235.6041
+====> Epoch: 131 Average loss: 235.6231
+====> Epoch: 132 Average loss: 235.5946
+====> Epoch: 133 Average loss: 235.5613
+====> Epoch: 134 Average loss: 235.5850
+====> Epoch: 135 Average loss: 235.5514
+====> Epoch: 136 Average loss: 235.5888
+====> Epoch: 137 Average loss: 235.5136
+====> Epoch: 138 Average loss: 235.5678
+====> Epoch: 139 Average loss: 235.4971
+====> Epoch: 140 Average loss: 235.4888
+====> Epoch: 141 Average loss: 235.5196
+====> Test set loss: 233.2143
+====> Epoch: 142 Average loss: 235.5164
+====> Epoch: 143 Average loss: 235.4604
+====> Epoch: 144 Average loss: 235.4657
+====> Epoch: 145 Average loss: 235.4640
+====> Epoch: 146 Average loss: 235.4162
+====> Epoch: 147 Average loss: 235.4716
+====> Epoch: 148 Average loss: 235.4332
+====> Epoch: 149 Average loss: 235.4232
+====> Epoch: 150 Average loss: 235.4168
+====> Epoch: 151 Average loss: 235.4353
+====> Epoch: 152 Average loss: 235.3867
+====> Epoch: 153 Average loss: 235.3831
+====> Epoch: 154 Average loss: 235.4194
+====> Epoch: 155 Average loss: 235.3638
+====> Epoch: 156 Average loss: 235.3650
+====> Epoch: 157 Average loss: 235.3610
+====> Epoch: 158 Average loss: 235.3691
+====> Epoch: 159 Average loss: 235.3803
+====> Epoch: 160 Average loss: 235.3322
+====> Epoch: 161 Average loss: 235.3307
+====> Test set loss: 233.1943
+====> Epoch: 162 Average loss: 235.2953
+====> Epoch: 163 Average loss: 235.3332
+====> Epoch: 164 Average loss: 235.2816
+====> Epoch: 165 Average loss: 235.3139
+====> Epoch: 166 Average loss: 235.2808
+====> Epoch: 167 Average loss: 235.2597
+====> Epoch: 168 Average loss: 235.2673
+====> Epoch: 169 Average loss: 235.2874
+====> Epoch: 170 Average loss: 235.2680
+====> Epoch: 171 Average loss: 235.2388
+====> Epoch: 172 Average loss: 235.2002
+====> Epoch: 173 Average loss: 235.2601
+====> Epoch: 174 Average loss: 235.2685
+====> Epoch: 175 Average loss: 235.2540
+====> Epoch: 176 Average loss: 235.2390
+====> Epoch: 177 Average loss: 235.2186
+====> Epoch: 178 Average loss: 235.2121
+====> Epoch: 179 Average loss: 235.2172
+====> Epoch: 180 Average loss: 235.1722
+====> Epoch: 181 Average loss: 235.1994
+====> Test set loss: 232.9904
+====> Epoch: 182 Average loss: 235.1717
+====> Epoch: 183 Average loss: 235.1605
+====> Epoch: 184 Average loss: 235.1398
+====> Epoch: 185 Average loss: 235.1458
+====> Epoch: 186 Average loss: 235.1801
+====> Epoch: 187 Average loss: 235.1348
+====> Epoch: 188 Average loss: 235.1536
+====> Epoch: 189 Average loss: 235.1276
+====> Epoch: 190 Average loss: 235.1282
+====> Epoch: 191 Average loss: 235.1033
+====> Epoch: 192 Average loss: 235.1426
+====> Epoch: 193 Average loss: 235.1305
+====> Epoch: 194 Average loss: 235.1403
+====> Epoch: 195 Average loss: 235.0848
+====> Epoch: 196 Average loss: 235.0864
+====> Epoch: 197 Average loss: 235.1180
+====> Epoch: 198 Average loss: 235.1088
+====> Epoch: 199 Average loss: 235.0892
+====> Epoch: 200 Average loss: 235.0667
+====> Epoch: 201 Average loss: 235.0667
+====> Test set loss: 232.8344
+====> Epoch: 202 Average loss: 235.0665
+====> Epoch: 203 Average loss: 235.0603
+====> Epoch: 204 Average loss: 235.0308
+====> Epoch: 205 Average loss: 235.0456
+====> Epoch: 206 Average loss: 235.0310
+====> Epoch: 207 Average loss: 235.0107
+====> Epoch: 208 Average loss: 235.0445
+====> Epoch: 209 Average loss: 235.0031
+====> Epoch: 210 Average loss: 235.0063
+====> Epoch: 211 Average loss: 235.0305
+====> Epoch: 212 Average loss: 235.0335
+====> Epoch: 213 Average loss: 235.0046
+====> Epoch: 214 Average loss: 234.9954
+====> Epoch: 215 Average loss: 235.0140
+====> Epoch: 216 Average loss: 234.9821
+====> Epoch: 217 Average loss: 234.9757
+====> Epoch: 218 Average loss: 234.9667
+====> Epoch: 219 Average loss: 234.9852
+====> Epoch: 220 Average loss: 234.9435
+====> Epoch: 221 Average loss: 234.9465
+====> Test set loss: 232.7005
+====> Epoch: 222 Average loss: 234.9698
+====> Epoch: 223 Average loss: 234.9639
+====> Epoch: 224 Average loss: 234.9849
+====> Epoch: 225 Average loss: 234.9339
+====> Epoch: 226 Average loss: 234.9303
+====> Epoch: 227 Average loss: 234.9286
+====> Epoch: 228 Average loss: 234.9487
+====> Epoch: 229 Average loss: 234.9282
+====> Epoch: 230 Average loss: 234.9023
+====> Epoch: 231 Average loss: 234.9371
+====> Epoch: 232 Average loss: 234.9325
+====> Epoch: 233 Average loss: 234.8947
+====> Epoch: 234 Average loss: 234.8982
+====> Epoch: 235 Average loss: 234.8773
+====> Epoch: 236 Average loss: 234.8903
+====> Epoch: 237 Average loss: 234.8778
+====> Epoch: 238 Average loss: 234.8991
+====> Epoch: 239 Average loss: 234.8358
+====> Epoch: 240 Average loss: 234.8698
+====> Epoch: 241 Average loss: 234.8559
+====> Test set loss: 232.7156
+====> Epoch: 242 Average loss: 234.8752
+====> Epoch: 243 Average loss: 234.8457
+====> Epoch: 244 Average loss: 234.8398
+====> Epoch: 245 Average loss: 234.8847
+====> Epoch: 246 Average loss: 234.8483
+====> Epoch: 247 Average loss: 234.8629
+====> Epoch: 248 Average loss: 234.8530
+====> Epoch: 249 Average loss: 234.8313
+====> Epoch: 250 Average loss: 234.8159
+====> Epoch: 251 Average loss: 234.8090
+====> Epoch: 252 Average loss: 234.8413
+====> Epoch: 253 Average loss: 234.8200
+====> Epoch: 254 Average loss: 234.8174
+====> Epoch: 255 Average loss: 234.8125
+====> Epoch: 256 Average loss: 234.8044
+====> Epoch: 257 Average loss: 234.8201
+====> Epoch: 258 Average loss: 234.8037
+====> Epoch: 259 Average loss: 234.7903
+====> Epoch: 260 Average loss: 234.7779
+====> Epoch: 261 Average loss: 234.8173
+====> Test set loss: 232.5469
+====> Epoch: 262 Average loss: 234.7936
+====> Epoch: 263 Average loss: 234.8279
+====> Epoch: 264 Average loss: 234.7911
+====> Epoch: 265 Average loss: 234.8068
+====> Epoch: 266 Average loss: 234.7774
+====> Epoch: 267 Average loss: 234.7401
+====> Epoch: 268 Average loss: 234.7698
+====> Epoch: 269 Average loss: 234.7838
+====> Epoch: 270 Average loss: 234.7755
+====> Epoch: 271 Average loss: 234.7557
+====> Epoch: 272 Average loss: 234.7500
+====> Epoch: 273 Average loss: 234.7696
+====> Epoch: 274 Average loss: 234.7062
+====> Epoch: 275 Average loss: 234.7514
+====> Epoch: 276 Average loss: 234.7348
+====> Epoch: 277 Average loss: 234.6998
+====> Epoch: 278 Average loss: 234.7347
+====> Epoch: 279 Average loss: 234.7252
+====> Epoch: 280 Average loss: 234.7010
+====> Epoch: 281 Average loss: 234.7599
+====> Test set loss: 232.5167
+====> Epoch: 282 Average loss: 234.7200
+====> Epoch: 283 Average loss: 234.7090
+====> Epoch: 284 Average loss: 234.7122
+====> Epoch: 285 Average loss: 234.6859
+====> Epoch: 286 Average loss: 234.6888
+====> Epoch: 287 Average loss: 234.6749
+====> Epoch: 288 Average loss: 234.7108
+====> Epoch: 289 Average loss: 234.7104
+====> Epoch: 290 Average loss: 234.6955
+====> Epoch: 291 Average loss: 234.6837
+====> Epoch: 292 Average loss: 234.6888
+====> Epoch: 293 Average loss: 234.6743
+====> Epoch: 294 Average loss: 234.6687
+====> Epoch: 295 Average loss: 234.6556
+====> Epoch: 296 Average loss: 234.6760
+====> Epoch: 297 Average loss: 234.6682
+====> Epoch: 298 Average loss: 234.6675
+====> Epoch: 299 Average loss: 234.6917
+====> Epoch: 300 Average loss: 234.6823
+====> Epoch: 301 Average loss: 234.6778
+====> Test set loss: 232.4473
+====> Epoch: 302 Average loss: 234.6583
+====> Epoch: 303 Average loss: 234.6447
+====> Epoch: 304 Average loss: 234.6380
+====> Epoch: 305 Average loss: 234.6655
+====> Epoch: 306 Average loss: 234.6512
+====> Epoch: 307 Average loss: 234.6298
+====> Epoch: 308 Average loss: 234.6489
+====> Epoch: 309 Average loss: 234.6362
+====> Epoch: 310 Average loss: 234.6570
+====> Epoch: 311 Average loss: 234.6203
+====> Epoch: 312 Average loss: 234.6375
+---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+<ipython-input-12-fd646256765b> in <module>()
+      5 exec(open(f"{path}/likelihoods.py").read())
+      6 exec(open(f"{path}/train_and_test.py").read())
+----> 7 exec(open(f"{path}/runtime.py").read())
+
+<string> in <module>()
+
+<string> in train(epoch)
+
+5 frames
+/usr/lib/python3.6/threading.py in wait(self, timeout)
+    297             else:
+    298                 if timeout > 0:
+--> 299                     gotit = waiter.acquire(True, timeout)
+    300                 else:
+    301                     gotit = waiter.acquire(False)
+
+KeyboardInterrupt: 
