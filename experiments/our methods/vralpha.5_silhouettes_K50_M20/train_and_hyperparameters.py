@@ -14,10 +14,10 @@ cuda = torch.cuda.is_available()
 data_name = 'silhouettes' #@param['silhouettes','omniglot','freyfaces']
 
 alpha = .5 #@param [0, 1] {type:"raw"}
-model_type = 'general_alpha' #@param['iwae','vrmax','vae','general_alpha']
+model_type = 'vralpha' #@param['iwae','vrmax','vae','general_alpha']
 torch.manual_seed(seed)
 
-if model_type!="general_alpha":
+if model_type!="general_alpha" and model_type!="vralpha":
 	model_name=model_type
 else:
 	model_name = model_type+str(alpha)
