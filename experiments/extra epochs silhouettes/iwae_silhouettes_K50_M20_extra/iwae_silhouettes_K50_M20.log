@@ -1,539 +1,543 @@
-INFO:root:Training on GPU
-INFO:root:2020-04-03 17:06:57.572883
-INFO:root:====== About to train for 1 epochs in round 0 with learning rate 0.0001========
-INFO:root:Round number 0, Train Epoch: 0 [0/7803 (0%)]	Loss: 547.838965
-INFO:root:====> Round 0: Epoch: 0 Average loss: 369.5687
-INFO:root:2020-04-03 17:07:04.891021
-INFO:root:====> Round 0: Epoch 0: Test set loss: 280.9867
-INFO:root:====== About to train for 2 epochs in round 1 with learning rate 7.2e-05========
-INFO:root:Round number 1, Train Epoch: 0 [0/7803 (0%)]	Loss: 281.760352
-INFO:root:====> Round 1: Epoch: 0 Average loss: 260.5613
-INFO:root:Round number 1, Train Epoch: 1 [0/7803 (0%)]	Loss: 233.974902
-INFO:root:====> Round 1: Epoch: 1 Average loss: 230.0329
-INFO:root:2020-04-03 17:07:28.006521
-INFO:root:====> Round 1: Epoch 1: Test set loss: 212.5498
-INFO:root:====== About to train for 4 epochs in round 2 with learning rate 5.18e-05========
-INFO:root:Round number 2, Train Epoch: 0 [0/7803 (0%)]	Loss: 209.139429
-INFO:root:====> Round 2: Epoch: 0 Average loss: 215.4273
-INFO:root:Round number 2, Train Epoch: 1 [0/7803 (0%)]	Loss: 185.021240
-INFO:root:====> Round 2: Epoch: 1 Average loss: 208.0751
-INFO:root:Round number 2, Train Epoch: 2 [0/7803 (0%)]	Loss: 180.496680
-INFO:root:====> Round 2: Epoch: 2 Average loss: 202.1606
-INFO:root:Round number 2, Train Epoch: 3 [0/7803 (0%)]	Loss: 190.021082
-INFO:root:====> Round 2: Epoch: 3 Average loss: 197.6931
-INFO:root:2020-04-03 17:08:04.493809
-INFO:root:====> Round 2: Epoch 3: Test set loss: 185.0012
-INFO:root:====== About to train for 8 epochs in round 3 with learning rate 3.73e-05========
-INFO:root:Round number 3, Train Epoch: 0 [0/7803 (0%)]	Loss: 198.170740
-INFO:root:====> Round 3: Epoch: 0 Average loss: 193.9300
-INFO:root:Round number 3, Train Epoch: 1 [0/7803 (0%)]	Loss: 171.720825
-INFO:root:====> Round 3: Epoch: 1 Average loss: 191.8284
-INFO:root:Round number 3, Train Epoch: 2 [0/7803 (0%)]	Loss: 172.340454
-INFO:root:====> Round 3: Epoch: 2 Average loss: 190.0432
-INFO:root:Round number 3, Train Epoch: 3 [0/7803 (0%)]	Loss: 182.708484
-INFO:root:====> Round 3: Epoch: 3 Average loss: 188.8925
-INFO:root:Round number 3, Train Epoch: 4 [0/7803 (0%)]	Loss: 197.958167
-INFO:root:====> Round 3: Epoch: 4 Average loss: 187.4703
-INFO:root:Round number 3, Train Epoch: 5 [0/7803 (0%)]	Loss: 194.960034
-INFO:root:====> Round 3: Epoch: 5 Average loss: 186.3138
-INFO:root:Round number 3, Train Epoch: 6 [0/7803 (0%)]	Loss: 185.694043
-INFO:root:====> Round 3: Epoch: 6 Average loss: 185.2186
-INFO:root:Round number 3, Train Epoch: 7 [0/7803 (0%)]	Loss: 164.994763
-INFO:root:====> Round 3: Epoch: 7 Average loss: 183.7369
-INFO:root:2020-04-03 17:09:08.845407
-INFO:root:====> Round 3: Epoch 7: Test set loss: 170.8380
-INFO:root:====== About to train for 16 epochs in round 4 with learning rate 2.68e-05========
-INFO:root:Round number 4, Train Epoch: 0 [0/7803 (0%)]	Loss: 181.739661
-INFO:root:====> Round 4: Epoch: 0 Average loss: 182.6881
-INFO:root:Round number 4, Train Epoch: 1 [0/7803 (0%)]	Loss: 169.859766
-INFO:root:====> Round 4: Epoch: 1 Average loss: 181.5793
-INFO:root:Round number 4, Train Epoch: 2 [0/7803 (0%)]	Loss: 206.811646
-INFO:root:====> Round 4: Epoch: 2 Average loss: 180.7964
-INFO:root:Round number 4, Train Epoch: 3 [0/7803 (0%)]	Loss: 221.306177
-INFO:root:====> Round 4: Epoch: 3 Average loss: 179.8814
-INFO:root:Round number 4, Train Epoch: 4 [0/7803 (0%)]	Loss: 174.599426
-INFO:root:====> Round 4: Epoch: 4 Average loss: 178.9191
-INFO:root:Round number 4, Train Epoch: 5 [0/7803 (0%)]	Loss: 170.567261
-INFO:root:====> Round 4: Epoch: 5 Average loss: 177.9894
-INFO:root:Round number 4, Train Epoch: 6 [0/7803 (0%)]	Loss: 198.143872
-INFO:root:====> Round 4: Epoch: 6 Average loss: 177.1032
-INFO:root:Round number 4, Train Epoch: 7 [0/7803 (0%)]	Loss: 169.329431
-INFO:root:====> Round 4: Epoch: 7 Average loss: 176.2247
-INFO:root:Round number 4, Train Epoch: 8 [0/7803 (0%)]	Loss: 171.007300
-INFO:root:====> Round 4: Epoch: 8 Average loss: 175.5353
-INFO:root:Round number 4, Train Epoch: 9 [0/7803 (0%)]	Loss: 183.645093
-INFO:root:====> Round 4: Epoch: 9 Average loss: 174.7931
-INFO:root:Round number 4, Train Epoch: 10 [0/7803 (0%)]	Loss: 168.794922
-INFO:root:====> Round 4: Epoch: 10 Average loss: 173.9108
-INFO:root:Round number 4, Train Epoch: 11 [0/7803 (0%)]	Loss: 144.701941
-INFO:root:====> Round 4: Epoch: 11 Average loss: 173.3197
-INFO:root:Round number 4, Train Epoch: 12 [0/7803 (0%)]	Loss: 180.641895
-INFO:root:====> Round 4: Epoch: 12 Average loss: 172.7181
-INFO:root:Round number 4, Train Epoch: 13 [0/7803 (0%)]	Loss: 144.266187
-INFO:root:====> Round 4: Epoch: 13 Average loss: 172.1922
-INFO:root:Round number 4, Train Epoch: 14 [0/7803 (0%)]	Loss: 180.092273
-INFO:root:====> Round 4: Epoch: 14 Average loss: 171.5106
-INFO:root:Round number 4, Train Epoch: 15 [0/7803 (0%)]	Loss: 155.912451
-INFO:root:====> Round 4: Epoch: 15 Average loss: 171.0152
-INFO:root:2020-04-03 17:11:08.539061
-INFO:root:====> Round 4: Epoch 15: Test set loss: 157.5102
-INFO:root:====== About to train for 32 epochs in round 5 with learning rate 1.93e-05========
-INFO:root:Round number 5, Train Epoch: 0 [0/7803 (0%)]	Loss: 167.205811
-INFO:root:====> Round 5: Epoch: 0 Average loss: 170.3364
-INFO:root:Round number 5, Train Epoch: 1 [0/7803 (0%)]	Loss: 168.352026
-INFO:root:====> Round 5: Epoch: 1 Average loss: 169.9339
-INFO:root:Round number 5, Train Epoch: 2 [0/7803 (0%)]	Loss: 161.253723
-INFO:root:====> Round 5: Epoch: 2 Average loss: 169.4653
-INFO:root:Round number 5, Train Epoch: 3 [0/7803 (0%)]	Loss: 155.649194
-INFO:root:====> Round 5: Epoch: 3 Average loss: 169.2658
-INFO:root:Round number 5, Train Epoch: 4 [0/7803 (0%)]	Loss: 172.976733
-INFO:root:====> Round 5: Epoch: 4 Average loss: 168.7402
-INFO:root:Round number 5, Train Epoch: 5 [0/7803 (0%)]	Loss: 162.158594
-INFO:root:====> Round 5: Epoch: 5 Average loss: 168.4270
-INFO:root:Round number 5, Train Epoch: 6 [0/7803 (0%)]	Loss: 173.259204
-INFO:root:====> Round 5: Epoch: 6 Average loss: 167.9660
-INFO:root:Round number 5, Train Epoch: 7 [0/7803 (0%)]	Loss: 167.000488
-INFO:root:====> Round 5: Epoch: 7 Average loss: 167.6785
-INFO:root:Round number 5, Train Epoch: 8 [0/7803 (0%)]	Loss: 171.356641
-INFO:root:====> Round 5: Epoch: 8 Average loss: 167.2768
-INFO:root:Round number 5, Train Epoch: 9 [0/7803 (0%)]	Loss: 154.316626
-INFO:root:====> Round 5: Epoch: 9 Average loss: 166.9552
-INFO:root:Round number 5, Train Epoch: 10 [0/7803 (0%)]	Loss: 169.688062
-INFO:root:====> Round 5: Epoch: 10 Average loss: 166.5775
-INFO:root:Round number 5, Train Epoch: 11 [0/7803 (0%)]	Loss: 157.141016
-INFO:root:====> Round 5: Epoch: 11 Average loss: 166.2656
-INFO:root:Round number 5, Train Epoch: 12 [0/7803 (0%)]	Loss: 171.495605
-INFO:root:====> Round 5: Epoch: 12 Average loss: 165.8515
-INFO:root:Round number 5, Train Epoch: 13 [0/7803 (0%)]	Loss: 138.369385
-INFO:root:====> Round 5: Epoch: 13 Average loss: 165.6057
-INFO:root:Round number 5, Train Epoch: 14 [0/7803 (0%)]	Loss: 143.383350
-INFO:root:====> Round 5: Epoch: 14 Average loss: 165.1339
-INFO:root:Round number 5, Train Epoch: 15 [0/7803 (0%)]	Loss: 170.945068
-INFO:root:====> Round 5: Epoch: 15 Average loss: 164.8225
-INFO:root:Round number 5, Train Epoch: 16 [0/7803 (0%)]	Loss: 148.981470
-INFO:root:====> Round 5: Epoch: 16 Average loss: 164.5537
-INFO:root:Round number 5, Train Epoch: 17 [0/7803 (0%)]	Loss: 141.461841
-INFO:root:====> Round 5: Epoch: 17 Average loss: 164.3145
-INFO:root:Round number 5, Train Epoch: 18 [0/7803 (0%)]	Loss: 156.256311
-INFO:root:====> Round 5: Epoch: 18 Average loss: 163.8641
-INFO:root:Round number 5, Train Epoch: 19 [0/7803 (0%)]	Loss: 177.913013
-INFO:root:====> Round 5: Epoch: 19 Average loss: 163.5210
-INFO:root:Round number 5, Train Epoch: 20 [0/7803 (0%)]	Loss: 170.335571
-INFO:root:====> Round 5: Epoch: 20 Average loss: 163.2135
-INFO:root:Round number 5, Train Epoch: 21 [0/7803 (0%)]	Loss: 164.219507
-INFO:root:====> Round 5: Epoch: 21 Average loss: 163.0573
-INFO:root:Round number 5, Train Epoch: 22 [0/7803 (0%)]	Loss: 170.673389
-INFO:root:====> Round 5: Epoch: 22 Average loss: 162.6135
-INFO:root:Round number 5, Train Epoch: 23 [0/7803 (0%)]	Loss: 140.745874
-INFO:root:====> Round 5: Epoch: 23 Average loss: 162.4584
-INFO:root:Round number 5, Train Epoch: 24 [0/7803 (0%)]	Loss: 169.733643
-INFO:root:====> Round 5: Epoch: 24 Average loss: 162.1651
-INFO:root:Round number 5, Train Epoch: 25 [0/7803 (0%)]	Loss: 188.662524
-INFO:root:====> Round 5: Epoch: 25 Average loss: 161.7590
-INFO:root:Round number 5, Train Epoch: 26 [0/7803 (0%)]	Loss: 170.835864
-INFO:root:====> Round 5: Epoch: 26 Average loss: 161.5436
-INFO:root:Round number 5, Train Epoch: 27 [0/7803 (0%)]	Loss: 165.658716
-INFO:root:====> Round 5: Epoch: 27 Average loss: 161.3228
-INFO:root:Round number 5, Train Epoch: 28 [0/7803 (0%)]	Loss: 162.637134
-INFO:root:====> Round 5: Epoch: 28 Average loss: 160.8989
-INFO:root:Round number 5, Train Epoch: 29 [0/7803 (0%)]	Loss: 186.355725
-INFO:root:====> Round 5: Epoch: 29 Average loss: 160.5377
-INFO:root:Round number 5, Train Epoch: 30 [0/7803 (0%)]	Loss: 159.200024
-INFO:root:====> Round 5: Epoch: 30 Average loss: 160.4302
-INFO:root:Round number 5, Train Epoch: 31 [0/7803 (0%)]	Loss: 167.686389
-INFO:root:====> Round 5: Epoch: 31 Average loss: 160.0313
-INFO:root:2020-04-03 17:15:01.718419
-INFO:root:====> Round 5: Epoch 31: Test set loss: 146.9434
-INFO:root:====== About to train for 64 epochs in round 6 with learning rate 1.39e-05========
-INFO:root:Round number 6, Train Epoch: 0 [0/7803 (0%)]	Loss: 176.016614
-INFO:root:====> Round 6: Epoch: 0 Average loss: 159.7933
-INFO:root:Round number 6, Train Epoch: 1 [0/7803 (0%)]	Loss: 180.607825
-INFO:root:====> Round 6: Epoch: 1 Average loss: 159.6816
-INFO:root:Round number 6, Train Epoch: 2 [0/7803 (0%)]	Loss: 174.691028
-INFO:root:====> Round 6: Epoch: 2 Average loss: 159.4214
-INFO:root:Round number 6, Train Epoch: 3 [0/7803 (0%)]	Loss: 188.929199
-INFO:root:====> Round 6: Epoch: 3 Average loss: 159.1420
-INFO:root:Round number 6, Train Epoch: 4 [0/7803 (0%)]	Loss: 163.615137
-INFO:root:====> Round 6: Epoch: 4 Average loss: 159.0224
-INFO:root:Round number 6, Train Epoch: 5 [0/7803 (0%)]	Loss: 164.218359
-INFO:root:====> Round 6: Epoch: 5 Average loss: 158.8191
-INFO:root:Round number 6, Train Epoch: 6 [0/7803 (0%)]	Loss: 166.182019
-INFO:root:====> Round 6: Epoch: 6 Average loss: 158.8097
-INFO:root:Round number 6, Train Epoch: 7 [0/7803 (0%)]	Loss: 151.198901
-INFO:root:====> Round 6: Epoch: 7 Average loss: 158.4135
-INFO:root:Round number 6, Train Epoch: 8 [0/7803 (0%)]	Loss: 145.638184
-INFO:root:====> Round 6: Epoch: 8 Average loss: 158.4015
-INFO:root:Round number 6, Train Epoch: 9 [0/7803 (0%)]	Loss: 128.629980
-INFO:root:====> Round 6: Epoch: 9 Average loss: 158.0823
-INFO:root:Round number 6, Train Epoch: 10 [0/7803 (0%)]	Loss: 179.080103
-INFO:root:====> Round 6: Epoch: 10 Average loss: 158.0661
-INFO:root:Round number 6, Train Epoch: 11 [0/7803 (0%)]	Loss: 164.902222
-INFO:root:====> Round 6: Epoch: 11 Average loss: 157.6521
-INFO:root:Round number 6, Train Epoch: 12 [0/7803 (0%)]	Loss: 159.849133
-INFO:root:====> Round 6: Epoch: 12 Average loss: 157.5904
-INFO:root:Round number 6, Train Epoch: 13 [0/7803 (0%)]	Loss: 130.968127
-INFO:root:====> Round 6: Epoch: 13 Average loss: 157.4585
-INFO:root:Round number 6, Train Epoch: 14 [0/7803 (0%)]	Loss: 182.830444
-INFO:root:====> Round 6: Epoch: 14 Average loss: 157.2991
-INFO:root:Round number 6, Train Epoch: 15 [0/7803 (0%)]	Loss: 148.444189
-INFO:root:====> Round 6: Epoch: 15 Average loss: 157.0560
-INFO:root:Round number 6, Train Epoch: 16 [0/7803 (0%)]	Loss: 140.495239
-INFO:root:====> Round 6: Epoch: 16 Average loss: 156.9719
-INFO:root:Round number 6, Train Epoch: 17 [0/7803 (0%)]	Loss: 132.270850
-INFO:root:====> Round 6: Epoch: 17 Average loss: 156.6924
-INFO:root:Round number 6, Train Epoch: 18 [0/7803 (0%)]	Loss: 148.004639
-INFO:root:====> Round 6: Epoch: 18 Average loss: 156.7137
-INFO:root:Round number 6, Train Epoch: 19 [0/7803 (0%)]	Loss: 142.110278
-INFO:root:====> Round 6: Epoch: 19 Average loss: 156.4669
-INFO:root:Round number 6, Train Epoch: 20 [0/7803 (0%)]	Loss: 153.152783
-INFO:root:====> Round 6: Epoch: 20 Average loss: 156.3345
-INFO:root:Round number 6, Train Epoch: 21 [0/7803 (0%)]	Loss: 147.840344
-INFO:root:====> Round 6: Epoch: 21 Average loss: 156.1428
-INFO:root:Round number 6, Train Epoch: 22 [0/7803 (0%)]	Loss: 169.282861
-INFO:root:====> Round 6: Epoch: 22 Average loss: 156.0370
-INFO:root:Round number 6, Train Epoch: 23 [0/7803 (0%)]	Loss: 138.228699
-INFO:root:====> Round 6: Epoch: 23 Average loss: 155.8626
-INFO:root:Round number 6, Train Epoch: 24 [0/7803 (0%)]	Loss: 165.807959
-INFO:root:====> Round 6: Epoch: 24 Average loss: 155.7852
-INFO:root:Round number 6, Train Epoch: 25 [0/7803 (0%)]	Loss: 154.978467
-INFO:root:====> Round 6: Epoch: 25 Average loss: 155.5516
-INFO:root:Round number 6, Train Epoch: 26 [0/7803 (0%)]	Loss: 158.134131
-INFO:root:====> Round 6: Epoch: 26 Average loss: 155.3784
-INFO:root:Round number 6, Train Epoch: 27 [0/7803 (0%)]	Loss: 146.598999
-INFO:root:====> Round 6: Epoch: 27 Average loss: 155.2161
-INFO:root:Round number 6, Train Epoch: 28 [0/7803 (0%)]	Loss: 156.140259
-INFO:root:====> Round 6: Epoch: 28 Average loss: 155.0479
-INFO:root:Round number 6, Train Epoch: 29 [0/7803 (0%)]	Loss: 173.304956
-INFO:root:====> Round 6: Epoch: 29 Average loss: 154.9075
-INFO:root:Round number 6, Train Epoch: 30 [0/7803 (0%)]	Loss: 159.969824
-INFO:root:====> Round 6: Epoch: 30 Average loss: 154.7241
-INFO:root:Round number 6, Train Epoch: 31 [0/7803 (0%)]	Loss: 148.871826
-INFO:root:====> Round 6: Epoch: 31 Average loss: 154.6825
-INFO:root:Round number 6, Train Epoch: 32 [0/7803 (0%)]	Loss: 167.564331
-INFO:root:====> Round 6: Epoch: 32 Average loss: 154.4968
-INFO:root:Round number 6, Train Epoch: 33 [0/7803 (0%)]	Loss: 149.089917
-INFO:root:====> Round 6: Epoch: 33 Average loss: 154.3009
-INFO:root:Round number 6, Train Epoch: 34 [0/7803 (0%)]	Loss: 157.534631
-INFO:root:====> Round 6: Epoch: 34 Average loss: 154.3303
-INFO:root:Round number 6, Train Epoch: 35 [0/7803 (0%)]	Loss: 176.419336
-INFO:root:====> Round 6: Epoch: 35 Average loss: 154.0968
-INFO:root:Round number 6, Train Epoch: 36 [0/7803 (0%)]	Loss: 136.006006
-INFO:root:====> Round 6: Epoch: 36 Average loss: 153.8545
-INFO:root:Round number 6, Train Epoch: 37 [0/7803 (0%)]	Loss: 174.042200
-INFO:root:====> Round 6: Epoch: 37 Average loss: 153.9018
-INFO:root:Round number 6, Train Epoch: 38 [0/7803 (0%)]	Loss: 135.913696
-INFO:root:====> Round 6: Epoch: 38 Average loss: 153.6464
-INFO:root:Round number 6, Train Epoch: 39 [0/7803 (0%)]	Loss: 157.576648
-INFO:root:====> Round 6: Epoch: 39 Average loss: 153.5233
-INFO:root:Round number 6, Train Epoch: 40 [0/7803 (0%)]	Loss: 130.939587
-INFO:root:====> Round 6: Epoch: 40 Average loss: 153.2819
-INFO:root:Round number 6, Train Epoch: 41 [0/7803 (0%)]	Loss: 148.397705
-INFO:root:====> Round 6: Epoch: 41 Average loss: 153.3379
-INFO:root:Round number 6, Train Epoch: 42 [0/7803 (0%)]	Loss: 154.707019
-INFO:root:====> Round 6: Epoch: 42 Average loss: 153.2175
-INFO:root:Round number 6, Train Epoch: 43 [0/7803 (0%)]	Loss: 153.652100
-INFO:root:====> Round 6: Epoch: 43 Average loss: 152.9383
-INFO:root:Round number 6, Train Epoch: 44 [0/7803 (0%)]	Loss: 146.099756
-INFO:root:====> Round 6: Epoch: 44 Average loss: 152.9023
-INFO:root:Round number 6, Train Epoch: 45 [0/7803 (0%)]	Loss: 154.507910
-INFO:root:====> Round 6: Epoch: 45 Average loss: 152.6856
-INFO:root:Round number 6, Train Epoch: 46 [0/7803 (0%)]	Loss: 149.322461
-INFO:root:====> Round 6: Epoch: 46 Average loss: 152.5643
-INFO:root:Round number 6, Train Epoch: 47 [0/7803 (0%)]	Loss: 147.555200
-INFO:root:====> Round 6: Epoch: 47 Average loss: 152.4245
-INFO:root:Round number 6, Train Epoch: 48 [0/7803 (0%)]	Loss: 149.838574
-INFO:root:====> Round 6: Epoch: 48 Average loss: 152.3063
-INFO:root:Round number 6, Train Epoch: 49 [0/7803 (0%)]	Loss: 168.297522
-INFO:root:====> Round 6: Epoch: 49 Average loss: 152.3072
-INFO:root:Round number 6, Train Epoch: 50 [0/7803 (0%)]	Loss: 165.270825
-INFO:root:====> Round 6: Epoch: 50 Average loss: 152.2060
-INFO:root:Round number 6, Train Epoch: 51 [0/7803 (0%)]	Loss: 172.456995
-INFO:root:====> Round 6: Epoch: 51 Average loss: 152.1712
-INFO:root:Round number 6, Train Epoch: 52 [0/7803 (0%)]	Loss: 155.169763
-INFO:root:====> Round 6: Epoch: 52 Average loss: 151.8775
-INFO:root:Round number 6, Train Epoch: 53 [0/7803 (0%)]	Loss: 156.165234
-INFO:root:====> Round 6: Epoch: 53 Average loss: 151.7726
-INFO:root:Round number 6, Train Epoch: 54 [0/7803 (0%)]	Loss: 138.844397
-INFO:root:====> Round 6: Epoch: 54 Average loss: 151.5789
-INFO:root:Round number 6, Train Epoch: 55 [0/7803 (0%)]	Loss: 120.636084
-INFO:root:====> Round 6: Epoch: 55 Average loss: 151.7083
-INFO:root:Round number 6, Train Epoch: 56 [0/7803 (0%)]	Loss: 160.707007
-INFO:root:====> Round 6: Epoch: 56 Average loss: 151.4263
-INFO:root:Round number 6, Train Epoch: 57 [0/7803 (0%)]	Loss: 164.744995
-INFO:root:====> Round 6: Epoch: 57 Average loss: 151.2799
-INFO:root:Round number 6, Train Epoch: 58 [0/7803 (0%)]	Loss: 155.006006
-INFO:root:====> Round 6: Epoch: 58 Average loss: 151.2950
-INFO:root:Round number 6, Train Epoch: 59 [0/7803 (0%)]	Loss: 146.865405
-INFO:root:====> Round 6: Epoch: 59 Average loss: 151.1109
-INFO:root:Round number 6, Train Epoch: 60 [0/7803 (0%)]	Loss: 163.413855
-INFO:root:====> Round 6: Epoch: 60 Average loss: 151.1366
-INFO:root:Round number 6, Train Epoch: 61 [0/7803 (0%)]	Loss: 186.018469
-INFO:root:====> Round 6: Epoch: 61 Average loss: 151.1114
-INFO:root:Round number 6, Train Epoch: 62 [0/7803 (0%)]	Loss: 148.160535
-INFO:root:====> Round 6: Epoch: 62 Average loss: 150.8631
-INFO:root:Round number 6, Train Epoch: 63 [0/7803 (0%)]	Loss: 170.038013
-INFO:root:====> Round 6: Epoch: 63 Average loss: 150.7064
-INFO:root:2020-04-03 17:22:38.457818
-INFO:root:====> Round 6: Epoch 63: Test set loss: 138.4686
-INFO:root:====== About to train for 128 epochs in round 7 with learning rate 1e-05========
-INFO:root:Round number 7, Train Epoch: 0 [0/7803 (0%)]	Loss: 158.427734
-INFO:root:====> Round 7: Epoch: 0 Average loss: 150.7547
-INFO:root:Round number 7, Train Epoch: 1 [0/7803 (0%)]	Loss: 141.972522
-INFO:root:====> Round 7: Epoch: 1 Average loss: 150.4362
-INFO:root:Round number 7, Train Epoch: 2 [0/7803 (0%)]	Loss: 145.622571
-INFO:root:====> Round 7: Epoch: 2 Average loss: 150.4424
-INFO:root:Round number 7, Train Epoch: 3 [0/7803 (0%)]	Loss: 131.442334
-INFO:root:====> Round 7: Epoch: 3 Average loss: 150.3204
-INFO:root:Round number 7, Train Epoch: 4 [0/7803 (0%)]	Loss: 133.656702
-INFO:root:====> Round 7: Epoch: 4 Average loss: 150.3491
-INFO:root:Round number 7, Train Epoch: 5 [0/7803 (0%)]	Loss: 137.817285
-INFO:root:====> Round 7: Epoch: 5 Average loss: 150.2196
-INFO:root:Round number 7, Train Epoch: 6 [0/7803 (0%)]	Loss: 147.178540
-INFO:root:====> Round 7: Epoch: 6 Average loss: 150.2333
-INFO:root:Round number 7, Train Epoch: 7 [0/7803 (0%)]	Loss: 154.680396
-INFO:root:====> Round 7: Epoch: 7 Average loss: 150.0317
-INFO:root:Round number 7, Train Epoch: 8 [0/7803 (0%)]	Loss: 160.759558
-INFO:root:====> Round 7: Epoch: 8 Average loss: 149.9209
-INFO:root:Round number 7, Train Epoch: 9 [0/7803 (0%)]	Loss: 144.762476
-INFO:root:====> Round 7: Epoch: 9 Average loss: 150.0447
-INFO:root:Round number 7, Train Epoch: 10 [0/7803 (0%)]	Loss: 148.600232
-INFO:root:====> Round 7: Epoch: 10 Average loss: 150.1669
-INFO:root:Round number 7, Train Epoch: 11 [0/7803 (0%)]	Loss: 147.305579
-INFO:root:====> Round 7: Epoch: 11 Average loss: 149.9670
-INFO:root:Round number 7, Train Epoch: 12 [0/7803 (0%)]	Loss: 163.932983
-INFO:root:====> Round 7: Epoch: 12 Average loss: 149.7940
-INFO:root:Round number 7, Train Epoch: 13 [0/7803 (0%)]	Loss: 162.972144
-INFO:root:====> Round 7: Epoch: 13 Average loss: 149.7923
-INFO:root:Round number 7, Train Epoch: 14 [0/7803 (0%)]	Loss: 150.628613
-INFO:root:====> Round 7: Epoch: 14 Average loss: 149.7098
-INFO:root:Round number 7, Train Epoch: 15 [0/7803 (0%)]	Loss: 161.438928
-INFO:root:====> Round 7: Epoch: 15 Average loss: 149.6995
-INFO:root:Round number 7, Train Epoch: 16 [0/7803 (0%)]	Loss: 131.676001
-INFO:root:====> Round 7: Epoch: 16 Average loss: 149.5607
-INFO:root:Round number 7, Train Epoch: 17 [0/7803 (0%)]	Loss: 148.451904
-INFO:root:====> Round 7: Epoch: 17 Average loss: 149.4277
-INFO:root:Round number 7, Train Epoch: 18 [0/7803 (0%)]	Loss: 128.991382
-INFO:root:====> Round 7: Epoch: 18 Average loss: 149.4781
-INFO:root:Round number 7, Train Epoch: 19 [0/7803 (0%)]	Loss: 168.762305
-INFO:root:====> Round 7: Epoch: 19 Average loss: 149.3719
-INFO:root:Round number 7, Train Epoch: 20 [0/7803 (0%)]	Loss: 138.955371
-INFO:root:====> Round 7: Epoch: 20 Average loss: 149.1842
-INFO:root:Round number 7, Train Epoch: 21 [0/7803 (0%)]	Loss: 139.504382
-INFO:root:====> Round 7: Epoch: 21 Average loss: 149.1221
-INFO:root:Round number 7, Train Epoch: 22 [0/7803 (0%)]	Loss: 161.216724
-INFO:root:====> Round 7: Epoch: 22 Average loss: 149.0663
-INFO:root:Round number 7, Train Epoch: 23 [0/7803 (0%)]	Loss: 153.313965
-INFO:root:====> Round 7: Epoch: 23 Average loss: 149.1316
-INFO:root:Round number 7, Train Epoch: 24 [0/7803 (0%)]	Loss: 149.667212
-INFO:root:====> Round 7: Epoch: 24 Average loss: 149.0081
-INFO:root:Round number 7, Train Epoch: 25 [0/7803 (0%)]	Loss: 157.096838
-INFO:root:====> Round 7: Epoch: 25 Average loss: 148.9091
-INFO:root:Round number 7, Train Epoch: 26 [0/7803 (0%)]	Loss: 145.867700
-INFO:root:====> Round 7: Epoch: 26 Average loss: 148.9044
-INFO:root:Round number 7, Train Epoch: 27 [0/7803 (0%)]	Loss: 150.564331
-INFO:root:====> Round 7: Epoch: 27 Average loss: 148.7537
-INFO:root:Round number 7, Train Epoch: 28 [0/7803 (0%)]	Loss: 145.087585
-INFO:root:====> Round 7: Epoch: 28 Average loss: 148.8246
-INFO:root:Round number 7, Train Epoch: 29 [0/7803 (0%)]	Loss: 157.346899
-INFO:root:====> Round 7: Epoch: 29 Average loss: 148.7635
-INFO:root:Round number 7, Train Epoch: 30 [0/7803 (0%)]	Loss: 130.752649
-INFO:root:====> Round 7: Epoch: 30 Average loss: 148.7688
-INFO:root:Round number 7, Train Epoch: 31 [0/7803 (0%)]	Loss: 156.086768
-INFO:root:====> Round 7: Epoch: 31 Average loss: 148.7045
-INFO:root:Round number 7, Train Epoch: 32 [0/7803 (0%)]	Loss: 142.851062
-INFO:root:====> Round 7: Epoch: 32 Average loss: 148.6085
-INFO:root:Round number 7, Train Epoch: 33 [0/7803 (0%)]	Loss: 148.250989
-INFO:root:====> Round 7: Epoch: 33 Average loss: 148.5154
-INFO:root:Round number 7, Train Epoch: 34 [0/7803 (0%)]	Loss: 143.675159
-INFO:root:====> Round 7: Epoch: 34 Average loss: 148.3582
-INFO:root:Round number 7, Train Epoch: 35 [0/7803 (0%)]	Loss: 134.000732
-INFO:root:====> Round 7: Epoch: 35 Average loss: 148.4990
-INFO:root:Round number 7, Train Epoch: 36 [0/7803 (0%)]	Loss: 155.441187
-INFO:root:====> Round 7: Epoch: 36 Average loss: 148.1532
-INFO:root:Round number 7, Train Epoch: 37 [0/7803 (0%)]	Loss: 145.825488
-INFO:root:====> Round 7: Epoch: 37 Average loss: 148.2758
-INFO:root:Round number 7, Train Epoch: 38 [0/7803 (0%)]	Loss: 120.619312
-INFO:root:====> Round 7: Epoch: 38 Average loss: 148.1566
-INFO:root:Round number 7, Train Epoch: 39 [0/7803 (0%)]	Loss: 117.104968
-INFO:root:====> Round 7: Epoch: 39 Average loss: 148.1185
-INFO:root:Round number 7, Train Epoch: 40 [0/7803 (0%)]	Loss: 127.045630
-INFO:root:====> Round 7: Epoch: 40 Average loss: 147.9346
-INFO:root:Round number 7, Train Epoch: 41 [0/7803 (0%)]	Loss: 151.878760
-INFO:root:====> Round 7: Epoch: 41 Average loss: 147.9197
-INFO:root:Round number 7, Train Epoch: 42 [0/7803 (0%)]	Loss: 156.539990
-INFO:root:====> Round 7: Epoch: 42 Average loss: 147.8592
-INFO:root:Round number 7, Train Epoch: 43 [0/7803 (0%)]	Loss: 141.900806
-INFO:root:====> Round 7: Epoch: 43 Average loss: 147.9153
-INFO:root:Round number 7, Train Epoch: 44 [0/7803 (0%)]	Loss: 145.154541
-INFO:root:====> Round 7: Epoch: 44 Average loss: 147.8081
-INFO:root:Round number 7, Train Epoch: 45 [0/7803 (0%)]	Loss: 136.912183
-INFO:root:====> Round 7: Epoch: 45 Average loss: 147.6720
-INFO:root:Round number 7, Train Epoch: 46 [0/7803 (0%)]	Loss: 147.785852
-INFO:root:====> Round 7: Epoch: 46 Average loss: 147.7646
-INFO:root:Round number 7, Train Epoch: 47 [0/7803 (0%)]	Loss: 148.988037
-INFO:root:====> Round 7: Epoch: 47 Average loss: 147.5133
-INFO:root:Round number 7, Train Epoch: 48 [0/7803 (0%)]	Loss: 157.773828
-INFO:root:====> Round 7: Epoch: 48 Average loss: 147.7567
-INFO:root:Round number 7, Train Epoch: 49 [0/7803 (0%)]	Loss: 139.604932
-INFO:root:====> Round 7: Epoch: 49 Average loss: 147.4987
-INFO:root:Round number 7, Train Epoch: 50 [0/7803 (0%)]	Loss: 131.203247
-INFO:root:====> Round 7: Epoch: 50 Average loss: 147.5690
-INFO:root:Round number 7, Train Epoch: 51 [0/7803 (0%)]	Loss: 141.868628
-INFO:root:====> Round 7: Epoch: 51 Average loss: 147.4187
-INFO:root:Round number 7, Train Epoch: 52 [0/7803 (0%)]	Loss: 159.738647
-INFO:root:====> Round 7: Epoch: 52 Average loss: 147.4086
-INFO:root:Round number 7, Train Epoch: 53 [0/7803 (0%)]	Loss: 155.758948
-INFO:root:====> Round 7: Epoch: 53 Average loss: 147.3407
-INFO:root:Round number 7, Train Epoch: 54 [0/7803 (0%)]	Loss: 170.975415
-INFO:root:====> Round 7: Epoch: 54 Average loss: 147.2230
-INFO:root:Round number 7, Train Epoch: 55 [0/7803 (0%)]	Loss: 187.203101
-INFO:root:====> Round 7: Epoch: 55 Average loss: 147.2259
-INFO:root:Round number 7, Train Epoch: 56 [0/7803 (0%)]	Loss: 140.326245
-INFO:root:====> Round 7: Epoch: 56 Average loss: 147.1270
-INFO:root:Round number 7, Train Epoch: 57 [0/7803 (0%)]	Loss: 134.222058
-INFO:root:====> Round 7: Epoch: 57 Average loss: 147.1295
-INFO:root:Round number 7, Train Epoch: 58 [0/7803 (0%)]	Loss: 134.848047
-INFO:root:====> Round 7: Epoch: 58 Average loss: 147.0645
-INFO:root:Round number 7, Train Epoch: 59 [0/7803 (0%)]	Loss: 141.111279
-INFO:root:====> Round 7: Epoch: 59 Average loss: 146.8259
-INFO:root:Round number 7, Train Epoch: 60 [0/7803 (0%)]	Loss: 128.490698
-INFO:root:====> Round 7: Epoch: 60 Average loss: 146.9897
-INFO:root:Round number 7, Train Epoch: 61 [0/7803 (0%)]	Loss: 131.925439
-INFO:root:====> Round 7: Epoch: 61 Average loss: 146.8095
-INFO:root:Round number 7, Train Epoch: 62 [0/7803 (0%)]	Loss: 172.240845
-INFO:root:====> Round 7: Epoch: 62 Average loss: 146.7379
-INFO:root:Round number 7, Train Epoch: 63 [0/7803 (0%)]	Loss: 148.981177
-INFO:root:====> Round 7: Epoch: 63 Average loss: 146.8001
-INFO:root:Round number 7, Train Epoch: 64 [0/7803 (0%)]	Loss: 141.949597
-INFO:root:====> Round 7: Epoch: 64 Average loss: 146.5623
-INFO:root:Round number 7, Train Epoch: 65 [0/7803 (0%)]	Loss: 148.871777
-INFO:root:====> Round 7: Epoch: 65 Average loss: 146.5999
-INFO:root:Round number 7, Train Epoch: 66 [0/7803 (0%)]	Loss: 144.097839
-INFO:root:====> Round 7: Epoch: 66 Average loss: 146.5038
-INFO:root:Round number 7, Train Epoch: 67 [0/7803 (0%)]	Loss: 137.002502
-INFO:root:====> Round 7: Epoch: 67 Average loss: 146.3830
-INFO:root:Round number 7, Train Epoch: 68 [0/7803 (0%)]	Loss: 145.178845
-INFO:root:====> Round 7: Epoch: 68 Average loss: 146.4856
-INFO:root:Round number 7, Train Epoch: 69 [0/7803 (0%)]	Loss: 131.504871
-INFO:root:====> Round 7: Epoch: 69 Average loss: 146.3757
-INFO:root:Round number 7, Train Epoch: 70 [0/7803 (0%)]	Loss: 146.491821
-INFO:root:====> Round 7: Epoch: 70 Average loss: 146.4412
-INFO:root:Round number 7, Train Epoch: 71 [0/7803 (0%)]	Loss: 155.190161
-INFO:root:====> Round 7: Epoch: 71 Average loss: 146.2693
-INFO:root:Round number 7, Train Epoch: 72 [0/7803 (0%)]	Loss: 112.564941
-INFO:root:====> Round 7: Epoch: 72 Average loss: 146.1564
-INFO:root:Round number 7, Train Epoch: 73 [0/7803 (0%)]	Loss: 155.095215
-INFO:root:====> Round 7: Epoch: 73 Average loss: 146.0506
-INFO:root:Round number 7, Train Epoch: 74 [0/7803 (0%)]	Loss: 123.769775
-INFO:root:====> Round 7: Epoch: 74 Average loss: 146.0218
-INFO:root:Round number 7, Train Epoch: 75 [0/7803 (0%)]	Loss: 144.990210
-INFO:root:====> Round 7: Epoch: 75 Average loss: 146.0473
-INFO:root:Round number 7, Train Epoch: 76 [0/7803 (0%)]	Loss: 125.670935
-INFO:root:====> Round 7: Epoch: 76 Average loss: 146.0487
-INFO:root:Round number 7, Train Epoch: 77 [0/7803 (0%)]	Loss: 131.408850
-INFO:root:====> Round 7: Epoch: 77 Average loss: 145.9447
-INFO:root:Round number 7, Train Epoch: 78 [0/7803 (0%)]	Loss: 150.693018
-INFO:root:====> Round 7: Epoch: 78 Average loss: 145.9476
-INFO:root:Round number 7, Train Epoch: 79 [0/7803 (0%)]	Loss: 168.943127
-INFO:root:====> Round 7: Epoch: 79 Average loss: 145.7784
-INFO:root:Round number 7, Train Epoch: 80 [0/7803 (0%)]	Loss: 138.183337
-INFO:root:====> Round 7: Epoch: 80 Average loss: 145.8408
-INFO:root:Round number 7, Train Epoch: 81 [0/7803 (0%)]	Loss: 164.276538
-INFO:root:====> Round 7: Epoch: 81 Average loss: 145.6997
-INFO:root:Round number 7, Train Epoch: 82 [0/7803 (0%)]	Loss: 142.266870
-INFO:root:====> Round 7: Epoch: 82 Average loss: 145.5877
-INFO:root:Round number 7, Train Epoch: 83 [0/7803 (0%)]	Loss: 147.532300
-INFO:root:====> Round 7: Epoch: 83 Average loss: 145.6372
-INFO:root:Round number 7, Train Epoch: 84 [0/7803 (0%)]	Loss: 143.800586
-INFO:root:====> Round 7: Epoch: 84 Average loss: 145.5323
-INFO:root:Round number 7, Train Epoch: 85 [0/7803 (0%)]	Loss: 135.128943
-INFO:root:====> Round 7: Epoch: 85 Average loss: 145.6407
-INFO:root:Round number 7, Train Epoch: 86 [0/7803 (0%)]	Loss: 152.808008
-INFO:root:====> Round 7: Epoch: 86 Average loss: 145.3714
-INFO:root:Round number 7, Train Epoch: 87 [0/7803 (0%)]	Loss: 130.677039
-INFO:root:====> Round 7: Epoch: 87 Average loss: 145.4244
-INFO:root:Round number 7, Train Epoch: 88 [0/7803 (0%)]	Loss: 153.817517
-INFO:root:====> Round 7: Epoch: 88 Average loss: 145.3006
-INFO:root:Round number 7, Train Epoch: 89 [0/7803 (0%)]	Loss: 133.119946
-INFO:root:====> Round 7: Epoch: 89 Average loss: 145.2844
-INFO:root:Round number 7, Train Epoch: 90 [0/7803 (0%)]	Loss: 140.925708
-INFO:root:====> Round 7: Epoch: 90 Average loss: 145.1006
-INFO:root:Round number 7, Train Epoch: 91 [0/7803 (0%)]	Loss: 136.520239
-INFO:root:====> Round 7: Epoch: 91 Average loss: 145.1235
-INFO:root:Round number 7, Train Epoch: 92 [0/7803 (0%)]	Loss: 157.390747
-INFO:root:====> Round 7: Epoch: 92 Average loss: 145.1105
-INFO:root:Round number 7, Train Epoch: 93 [0/7803 (0%)]	Loss: 157.145288
-INFO:root:====> Round 7: Epoch: 93 Average loss: 145.0548
-INFO:root:Round number 7, Train Epoch: 94 [0/7803 (0%)]	Loss: 120.749451
-INFO:root:====> Round 7: Epoch: 94 Average loss: 145.1219
-INFO:root:Round number 7, Train Epoch: 95 [0/7803 (0%)]	Loss: 187.195557
-INFO:root:====> Round 7: Epoch: 95 Average loss: 145.0076
-INFO:root:Round number 7, Train Epoch: 96 [0/7803 (0%)]	Loss: 149.912500
-INFO:root:====> Round 7: Epoch: 96 Average loss: 144.9010
-INFO:root:Round number 7, Train Epoch: 97 [0/7803 (0%)]	Loss: 129.345959
-INFO:root:====> Round 7: Epoch: 97 Average loss: 144.9701
-INFO:root:Round number 7, Train Epoch: 98 [0/7803 (0%)]	Loss: 154.971887
-INFO:root:====> Round 7: Epoch: 98 Average loss: 144.7436
-INFO:root:Round number 7, Train Epoch: 99 [0/7803 (0%)]	Loss: 140.380029
-INFO:root:====> Round 7: Epoch: 99 Average loss: 144.7377
-INFO:root:Round number 7, Train Epoch: 100 [0/7803 (0%)]	Loss: 153.644055
-INFO:root:====> Round 7: Epoch: 100 Average loss: 144.7059
-INFO:root:Round number 7, Train Epoch: 101 [0/7803 (0%)]	Loss: 134.204932
-INFO:root:====> Round 7: Epoch: 101 Average loss: 144.7089
-INFO:root:Round number 7, Train Epoch: 102 [0/7803 (0%)]	Loss: 130.418726
-INFO:root:====> Round 7: Epoch: 102 Average loss: 144.6344
-INFO:root:Round number 7, Train Epoch: 103 [0/7803 (0%)]	Loss: 146.110156
-INFO:root:====> Round 7: Epoch: 103 Average loss: 144.5771
-INFO:root:Round number 7, Train Epoch: 104 [0/7803 (0%)]	Loss: 143.838538
-INFO:root:====> Round 7: Epoch: 104 Average loss: 144.4948
-INFO:root:Round number 7, Train Epoch: 105 [0/7803 (0%)]	Loss: 127.633862
-INFO:root:====> Round 7: Epoch: 105 Average loss: 144.3552
-INFO:root:Round number 7, Train Epoch: 106 [0/7803 (0%)]	Loss: 131.257373
-INFO:root:====> Round 7: Epoch: 106 Average loss: 144.5169
-INFO:root:Round number 7, Train Epoch: 107 [0/7803 (0%)]	Loss: 132.617212
-INFO:root:====> Round 7: Epoch: 107 Average loss: 144.3214
-INFO:root:Round number 7, Train Epoch: 108 [0/7803 (0%)]	Loss: 135.752881
-INFO:root:====> Round 7: Epoch: 108 Average loss: 144.3425
-INFO:root:Round number 7, Train Epoch: 109 [0/7803 (0%)]	Loss: 150.077588
-INFO:root:====> Round 7: Epoch: 109 Average loss: 144.1949
-INFO:root:Round number 7, Train Epoch: 110 [0/7803 (0%)]	Loss: 144.377917
-INFO:root:====> Round 7: Epoch: 110 Average loss: 144.2990
-INFO:root:Round number 7, Train Epoch: 111 [0/7803 (0%)]	Loss: 150.588367
-INFO:root:====> Round 7: Epoch: 111 Average loss: 144.0102
-INFO:root:Round number 7, Train Epoch: 112 [0/7803 (0%)]	Loss: 141.789551
-INFO:root:====> Round 7: Epoch: 112 Average loss: 144.1509
-INFO:root:Round number 7, Train Epoch: 113 [0/7803 (0%)]	Loss: 155.889551
-INFO:root:====> Round 7: Epoch: 113 Average loss: 143.9451
-INFO:root:Round number 7, Train Epoch: 114 [0/7803 (0%)]	Loss: 158.844312
-INFO:root:====> Round 7: Epoch: 114 Average loss: 144.0742
-INFO:root:Round number 7, Train Epoch: 115 [0/7803 (0%)]	Loss: 136.650757
-INFO:root:====> Round 7: Epoch: 115 Average loss: 143.9347
-INFO:root:Round number 7, Train Epoch: 116 [0/7803 (0%)]	Loss: 145.811963
-INFO:root:====> Round 7: Epoch: 116 Average loss: 143.9402
-INFO:root:Round number 7, Train Epoch: 117 [0/7803 (0%)]	Loss: 140.489526
-INFO:root:====> Round 7: Epoch: 117 Average loss: 143.8935
-INFO:root:Round number 7, Train Epoch: 118 [0/7803 (0%)]	Loss: 126.310034
-INFO:root:====> Round 7: Epoch: 118 Average loss: 143.9072
-INFO:root:Round number 7, Train Epoch: 119 [0/7803 (0%)]	Loss: 152.690649
-INFO:root:====> Round 7: Epoch: 119 Average loss: 143.7626
-INFO:root:Round number 7, Train Epoch: 120 [0/7803 (0%)]	Loss: 169.313086
-INFO:root:====> Round 7: Epoch: 120 Average loss: 143.6982
-INFO:root:Round number 7, Train Epoch: 121 [0/7803 (0%)]	Loss: 151.681641
-INFO:root:====> Round 7: Epoch: 121 Average loss: 143.7070
-INFO:root:Round number 7, Train Epoch: 122 [0/7803 (0%)]	Loss: 137.830591
-INFO:root:====> Round 7: Epoch: 122 Average loss: 143.7263
-INFO:root:Round number 7, Train Epoch: 123 [0/7803 (0%)]	Loss: 154.497461
-INFO:root:====> Round 7: Epoch: 123 Average loss: 143.5302
-INFO:root:Round number 7, Train Epoch: 124 [0/7803 (0%)]	Loss: 132.446411
-INFO:root:====> Round 7: Epoch: 124 Average loss: 143.5037
-INFO:root:Round number 7, Train Epoch: 125 [0/7803 (0%)]	Loss: 141.187744
-INFO:root:====> Round 7: Epoch: 125 Average loss: 143.4905
-INFO:root:Round number 7, Train Epoch: 126 [0/7803 (0%)]	Loss: 160.666675
-INFO:root:====> Round 7: Epoch: 126 Average loss: 143.3980
-INFO:root:Round number 7, Train Epoch: 127 [0/7803 (0%)]	Loss: 148.436084
-INFO:root:====> Round 7: Epoch: 127 Average loss: 143.2884
-INFO:root:2020-04-03 17:37:43.170951
-INFO:root:====> Round 7: Epoch 127: Test set loss: 132.0042
-INFO:root:====> Round 7: Epoch 127: Test set loss: 131.9467
-INFO:root:2020-04-03 17:38:01.500940
-INFO:root:Training finished
+Training on GPU
+2020-04-25 10:52:37.570931
+====== About to train for 1 epochs in round 0 with learning rate 0.0001========
+====> Round 0: Epoch: 0 Average loss: 370.8391
+2020-04-25 10:52:50.912209
+====> Round 0: Epoch 0: Test set loss: 283.7372
+====== About to train for 2 epochs in round 1 with learning rate 7.5e-05========
+====> Round 1: Epoch: 0 Average loss: 262.0953
+====> Round 1: Epoch: 1 Average loss: 229.8456
+2020-04-25 10:53:19.890592
+====> Round 1: Epoch 1: Test set loss: 212.1715
+====== About to train for 4 epochs in round 2 with learning rate 5.62e-05========
+====> Round 2: Epoch: 0 Average loss: 214.5700
+====> Round 2: Epoch: 1 Average loss: 206.6095
+====> Round 2: Epoch: 2 Average loss: 200.1357
+====> Round 2: Epoch: 3 Average loss: 195.3656
+2020-04-25 10:54:13.170511
+====> Round 2: Epoch 3: Test set loss: 182.8889
+====== About to train for 8 epochs in round 3 with learning rate 4.22e-05========
+====> Round 3: Epoch: 0 Average loss: 192.0599
+====> Round 3: Epoch: 1 Average loss: 190.2831
+====> Round 3: Epoch: 2 Average loss: 188.9832
+====> Round 3: Epoch: 3 Average loss: 187.4865
+====> Round 3: Epoch: 4 Average loss: 186.3309
+====> Round 3: Epoch: 5 Average loss: 184.8133
+====> Round 3: Epoch: 6 Average loss: 183.3348
+====> Round 3: Epoch: 7 Average loss: 181.7350
+2020-04-25 10:55:57.020931
+====> Round 3: Epoch 7: Test set loss: 168.1863
+====== About to train for 16 epochs in round 4 with learning rate 3.16e-05========
+====> Round 4: Epoch: 0 Average loss: 179.9834
+====> Round 4: Epoch: 1 Average loss: 178.7595
+====> Round 4: Epoch: 2 Average loss: 177.7328
+====> Round 4: Epoch: 3 Average loss: 176.8763
+====> Round 4: Epoch: 4 Average loss: 175.8922
+====> Round 4: Epoch: 5 Average loss: 175.1822
+====> Round 4: Epoch: 6 Average loss: 174.2962
+====> Round 4: Epoch: 7 Average loss: 173.4892
+====> Round 4: Epoch: 8 Average loss: 172.6755
+====> Round 4: Epoch: 9 Average loss: 172.1004
+====> Round 4: Epoch: 10 Average loss: 171.4395
+====> Round 4: Epoch: 11 Average loss: 171.0152
+====> Round 4: Epoch: 12 Average loss: 170.2612
+====> Round 4: Epoch: 13 Average loss: 169.7798
+====> Round 4: Epoch: 14 Average loss: 168.9387
+====> Round 4: Epoch: 15 Average loss: 168.5762
+2020-04-25 10:59:17.086572
+====> Round 4: Epoch 15: Test set loss: 154.5467
+====== About to train for 32 epochs in round 5 with learning rate 2.37e-05========
+====> Round 5: Epoch: 0 Average loss: 167.7610
+====> Round 5: Epoch: 1 Average loss: 167.2423
+====> Round 5: Epoch: 2 Average loss: 167.0448
+====> Round 5: Epoch: 3 Average loss: 166.4514
+====> Round 5: Epoch: 4 Average loss: 165.9701
+====> Round 5: Epoch: 5 Average loss: 165.6728
+====> Round 5: Epoch: 6 Average loss: 165.3774
+====> Round 5: Epoch: 7 Average loss: 164.8942
+====> Round 5: Epoch: 8 Average loss: 164.6208
+====> Round 5: Epoch: 9 Average loss: 163.9954
+====> Round 5: Epoch: 10 Average loss: 163.5434
+====> Round 5: Epoch: 11 Average loss: 163.2332
+====> Round 5: Epoch: 12 Average loss: 162.7850
+====> Round 5: Epoch: 13 Average loss: 162.3617
+====> Round 5: Epoch: 14 Average loss: 162.0150
+====> Round 5: Epoch: 15 Average loss: 161.5751
+====> Round 5: Epoch: 16 Average loss: 161.3797
+====> Round 5: Epoch: 17 Average loss: 160.8141
+====> Round 5: Epoch: 18 Average loss: 160.6837
+====> Round 5: Epoch: 19 Average loss: 160.3336
+====> Round 5: Epoch: 20 Average loss: 159.9488
+====> Round 5: Epoch: 21 Average loss: 159.6122
+====> Round 5: Epoch: 22 Average loss: 159.3730
+====> Round 5: Epoch: 23 Average loss: 159.1229
+====> Round 5: Epoch: 24 Average loss: 158.6643
+====> Round 5: Epoch: 25 Average loss: 158.3250
+====> Round 5: Epoch: 26 Average loss: 158.2698
+====> Round 5: Epoch: 27 Average loss: 157.7652
+====> Round 5: Epoch: 28 Average loss: 157.5351
+====> Round 5: Epoch: 29 Average loss: 157.3282
+====> Round 5: Epoch: 30 Average loss: 157.0449
+====> Round 5: Epoch: 31 Average loss: 156.7981
+2020-04-25 11:05:52.160027
+====> Round 5: Epoch 31: Test set loss: 143.5476
+====== About to train for 64 epochs in round 6 with learning rate 1.78e-05========
+====> Round 6: Epoch: 0 Average loss: 156.4721
+====> Round 6: Epoch: 1 Average loss: 156.2549
+====> Round 6: Epoch: 2 Average loss: 156.0410
+====> Round 6: Epoch: 3 Average loss: 155.8773
+====> Round 6: Epoch: 4 Average loss: 155.6995
+====> Round 6: Epoch: 5 Average loss: 155.4794
+====> Round 6: Epoch: 6 Average loss: 155.2694
+====> Round 6: Epoch: 7 Average loss: 155.0916
+====> Round 6: Epoch: 8 Average loss: 154.9062
+====> Round 6: Epoch: 9 Average loss: 154.6432
+====> Round 6: Epoch: 10 Average loss: 154.6585
+====> Round 6: Epoch: 11 Average loss: 154.4154
+====> Round 6: Epoch: 12 Average loss: 154.2818
+====> Round 6: Epoch: 13 Average loss: 154.1895
+====> Round 6: Epoch: 14 Average loss: 153.8407
+====> Round 6: Epoch: 15 Average loss: 153.8418
+====> Round 6: Epoch: 16 Average loss: 153.5840
+====> Round 6: Epoch: 17 Average loss: 153.4357
+====> Round 6: Epoch: 18 Average loss: 153.2273
+====> Round 6: Epoch: 19 Average loss: 152.8606
+====> Round 6: Epoch: 20 Average loss: 152.9311
+====> Round 6: Epoch: 21 Average loss: 152.8713
+====> Round 6: Epoch: 22 Average loss: 152.6336
+====> Round 6: Epoch: 23 Average loss: 152.4688
+====> Round 6: Epoch: 24 Average loss: 152.5453
+====> Round 6: Epoch: 25 Average loss: 152.1162
+====> Round 6: Epoch: 26 Average loss: 151.9723
+====> Round 6: Epoch: 27 Average loss: 151.8406
+====> Round 6: Epoch: 28 Average loss: 151.7708
+====> Round 6: Epoch: 29 Average loss: 151.6736
+====> Round 6: Epoch: 30 Average loss: 151.4859
+====> Round 6: Epoch: 31 Average loss: 151.3674
+====> Round 6: Epoch: 32 Average loss: 151.1569
+====> Round 6: Epoch: 33 Average loss: 151.0559
+====> Round 6: Epoch: 34 Average loss: 150.8295
+====> Round 6: Epoch: 35 Average loss: 150.8827
+====> Round 6: Epoch: 36 Average loss: 150.6283
+====> Round 6: Epoch: 37 Average loss: 150.4481
+====> Round 6: Epoch: 38 Average loss: 150.5431
+====> Round 6: Epoch: 39 Average loss: 150.4127
+====> Round 6: Epoch: 40 Average loss: 150.1921
+====> Round 6: Epoch: 41 Average loss: 150.2689
+====> Round 6: Epoch: 42 Average loss: 150.0901
+====> Round 6: Epoch: 43 Average loss: 150.0342
+====> Round 6: Epoch: 44 Average loss: 149.7537
+====> Round 6: Epoch: 45 Average loss: 149.5949
+====> Round 6: Epoch: 46 Average loss: 149.5666
+====> Round 6: Epoch: 47 Average loss: 149.2957
+====> Round 6: Epoch: 48 Average loss: 149.4159
+====> Round 6: Epoch: 49 Average loss: 149.3367
+====> Round 6: Epoch: 50 Average loss: 149.1787
+====> Round 6: Epoch: 51 Average loss: 149.1333
+====> Round 6: Epoch: 52 Average loss: 148.8908
+====> Round 6: Epoch: 53 Average loss: 148.8669
+====> Round 6: Epoch: 54 Average loss: 148.5818
+====> Round 6: Epoch: 55 Average loss: 148.8122
+====> Round 6: Epoch: 56 Average loss: 148.5420
+====> Round 6: Epoch: 57 Average loss: 148.5185
+====> Round 6: Epoch: 58 Average loss: 148.3046
+====> Round 6: Epoch: 59 Average loss: 148.2306
+====> Round 6: Epoch: 60 Average loss: 148.2078
+====> Round 6: Epoch: 61 Average loss: 148.0351
+====> Round 6: Epoch: 62 Average loss: 147.8621
+====> Round 6: Epoch: 63 Average loss: 147.7735
+2020-04-25 11:19:11.885232
+====> Round 6: Epoch 63: Test set loss: 135.8674
+====== About to train for 128 epochs in round 7 with learning rate 1.33e-05========
+====> Round 7: Epoch: 0 Average loss: 147.6423
+====> Round 7: Epoch: 1 Average loss: 147.5463
+====> Round 7: Epoch: 2 Average loss: 147.4530
+====> Round 7: Epoch: 3 Average loss: 147.3868
+====> Round 7: Epoch: 4 Average loss: 147.4373
+====> Round 7: Epoch: 5 Average loss: 147.2960
+====> Round 7: Epoch: 6 Average loss: 147.1967
+====> Round 7: Epoch: 7 Average loss: 147.1471
+====> Round 7: Epoch: 8 Average loss: 147.2001
+====> Round 7: Epoch: 9 Average loss: 146.8657
+====> Round 7: Epoch: 10 Average loss: 146.9425
+====> Round 7: Epoch: 11 Average loss: 146.8396
+====> Round 7: Epoch: 12 Average loss: 146.7059
+====> Round 7: Epoch: 13 Average loss: 146.6883
+====> Round 7: Epoch: 14 Average loss: 146.5933
+====> Round 7: Epoch: 15 Average loss: 146.4127
+====> Round 7: Epoch: 16 Average loss: 146.4454
+====> Round 7: Epoch: 17 Average loss: 146.2167
+====> Round 7: Epoch: 18 Average loss: 146.3054
+====> Round 7: Epoch: 19 Average loss: 146.2180
+====> Round 7: Epoch: 20 Average loss: 146.1823
+====> Round 7: Epoch: 21 Average loss: 146.0011
+====> Round 7: Epoch: 22 Average loss: 145.9155
+====> Round 7: Epoch: 23 Average loss: 145.9278
+====> Round 7: Epoch: 24 Average loss: 145.7531
+====> Round 7: Epoch: 25 Average loss: 145.8225
+====> Round 7: Epoch: 26 Average loss: 145.7815
+====> Round 7: Epoch: 27 Average loss: 145.6009
+====> Round 7: Epoch: 28 Average loss: 145.6406
+====> Round 7: Epoch: 29 Average loss: 145.3399
+====> Round 7: Epoch: 30 Average loss: 145.4224
+====> Round 7: Epoch: 31 Average loss: 145.4039
+====> Round 7: Epoch: 32 Average loss: 145.2727
+====> Round 7: Epoch: 33 Average loss: 145.2273
+====> Round 7: Epoch: 34 Average loss: 145.0668
+====> Round 7: Epoch: 35 Average loss: 145.1380
+====> Round 7: Epoch: 36 Average loss: 144.9179
+====> Round 7: Epoch: 37 Average loss: 144.7715
+====> Round 7: Epoch: 38 Average loss: 144.6587
+====> Round 7: Epoch: 39 Average loss: 144.7947
+====> Round 7: Epoch: 40 Average loss: 144.7516
+====> Round 7: Epoch: 41 Average loss: 144.8074
+====> Round 7: Epoch: 42 Average loss: 144.7870
+====> Round 7: Epoch: 43 Average loss: 144.6112
+====> Round 7: Epoch: 44 Average loss: 144.4801
+====> Round 7: Epoch: 45 Average loss: 144.3139
+====> Round 7: Epoch: 46 Average loss: 144.2971
+====> Round 7: Epoch: 47 Average loss: 144.2761
+====> Round 7: Epoch: 48 Average loss: 144.3359
+====> Round 7: Epoch: 49 Average loss: 144.1908
+====> Round 7: Epoch: 50 Average loss: 144.0680
+====> Round 7: Epoch: 51 Average loss: 144.0339
+====> Round 7: Epoch: 52 Average loss: 143.9103
+====> Round 7: Epoch: 53 Average loss: 143.9663
+====> Round 7: Epoch: 54 Average loss: 143.8390
+====> Round 7: Epoch: 55 Average loss: 143.8820
+====> Round 7: Epoch: 56 Average loss: 143.6160
+====> Round 7: Epoch: 57 Average loss: 143.7023
+====> Round 7: Epoch: 58 Average loss: 143.6055
+====> Round 7: Epoch: 59 Average loss: 143.5978
+====> Round 7: Epoch: 60 Average loss: 143.5382
+====> Round 7: Epoch: 61 Average loss: 143.4512
+====> Round 7: Epoch: 62 Average loss: 143.3947
+====> Round 7: Epoch: 63 Average loss: 143.4065
+====> Round 7: Epoch: 64 Average loss: 143.3035
+====> Round 7: Epoch: 65 Average loss: 143.2037
+====> Round 7: Epoch: 66 Average loss: 143.2593
+====> Round 7: Epoch: 67 Average loss: 143.0596
+====> Round 7: Epoch: 68 Average loss: 143.1191
+====> Round 7: Epoch: 69 Average loss: 143.1027
+====> Round 7: Epoch: 70 Average loss: 142.9254
+====> Round 7: Epoch: 71 Average loss: 142.9442
+====> Round 7: Epoch: 72 Average loss: 142.8215
+====> Round 7: Epoch: 73 Average loss: 142.8816
+====> Round 7: Epoch: 74 Average loss: 142.7145
+====> Round 7: Epoch: 75 Average loss: 142.7854
+====> Round 7: Epoch: 76 Average loss: 142.5801
+====> Round 7: Epoch: 77 Average loss: 142.6233
+====> Round 7: Epoch: 78 Average loss: 142.4379
+====> Round 7: Epoch: 79 Average loss: 142.4324
+====> Round 7: Epoch: 80 Average loss: 142.2528
+====> Round 7: Epoch: 81 Average loss: 142.4123
+====> Round 7: Epoch: 82 Average loss: 142.2640
+====> Round 7: Epoch: 83 Average loss: 142.3372
+====> Round 7: Epoch: 84 Average loss: 142.2485
+====> Round 7: Epoch: 85 Average loss: 142.1842
+====> Round 7: Epoch: 86 Average loss: 142.1623
+====> Round 7: Epoch: 87 Average loss: 142.0229
+====> Round 7: Epoch: 88 Average loss: 141.8516
+====> Round 7: Epoch: 89 Average loss: 141.8202
+====> Round 7: Epoch: 90 Average loss: 141.8788
+====> Round 7: Epoch: 91 Average loss: 141.7609
+====> Round 7: Epoch: 92 Average loss: 141.5899
+====> Round 7: Epoch: 93 Average loss: 141.6488
+====> Round 7: Epoch: 94 Average loss: 141.4910
+====> Round 7: Epoch: 95 Average loss: 141.5571
+====> Round 7: Epoch: 96 Average loss: 141.5694
+====> Round 7: Epoch: 97 Average loss: 141.4921
+====> Round 7: Epoch: 98 Average loss: 141.2976
+====> Round 7: Epoch: 99 Average loss: 141.2707
+====> Round 7: Epoch: 100 Average loss: 141.2409
+====> Round 7: Epoch: 101 Average loss: 141.2435
+====> Round 7: Epoch: 102 Average loss: 141.0308
+====> Round 7: Epoch: 103 Average loss: 141.1019
+====> Round 7: Epoch: 104 Average loss: 141.0186
+====> Round 7: Epoch: 105 Average loss: 141.0238
+====> Round 7: Epoch: 106 Average loss: 141.0298
+====> Round 7: Epoch: 107 Average loss: 140.9960
+====> Round 7: Epoch: 108 Average loss: 140.8557
+====> Round 7: Epoch: 109 Average loss: 140.6872
+====> Round 7: Epoch: 110 Average loss: 140.5960
+====> Round 7: Epoch: 111 Average loss: 140.7700
+====> Round 7: Epoch: 112 Average loss: 140.6862
+====> Round 7: Epoch: 113 Average loss: 140.5774
+====> Round 7: Epoch: 114 Average loss: 140.6387
+====> Round 7: Epoch: 115 Average loss: 140.3245
+====> Round 7: Epoch: 116 Average loss: 140.3847
+====> Round 7: Epoch: 117 Average loss: 140.3109
+====> Round 7: Epoch: 118 Average loss: 140.2264
+====> Round 7: Epoch: 119 Average loss: 140.2125
+====> Round 7: Epoch: 120 Average loss: 140.1814
+====> Round 7: Epoch: 121 Average loss: 140.0804
+====> Round 7: Epoch: 122 Average loss: 139.9487
+====> Round 7: Epoch: 123 Average loss: 139.9651
+====> Round 7: Epoch: 124 Average loss: 140.0242
+====> Round 7: Epoch: 125 Average loss: 139.8680
+====> Round 7: Epoch: 126 Average loss: 139.8269
+====> Round 7: Epoch: 127 Average loss: 139.7460
+2020-04-25 11:45:22.022665
+====> Round 7: Epoch 127: Test set loss: 128.7294
+====== About to train for 256 epochs in round 8 with learning rate 1e-05========
+====> Round 8: Epoch: 0 Average loss: 139.5528
+====> Round 8: Epoch: 1 Average loss: 139.5327
+====> Round 8: Epoch: 2 Average loss: 139.4558
+====> Round 8: Epoch: 3 Average loss: 139.7263
+====> Round 8: Epoch: 4 Average loss: 139.5167
+====> Round 8: Epoch: 5 Average loss: 139.3933
+====> Round 8: Epoch: 6 Average loss: 139.5009
+====> Round 8: Epoch: 7 Average loss: 139.2612
+====> Round 8: Epoch: 8 Average loss: 139.2756
+====> Round 8: Epoch: 9 Average loss: 139.2945
+====> Round 8: Epoch: 10 Average loss: 139.2435
+====> Round 8: Epoch: 11 Average loss: 139.1608
+====> Round 8: Epoch: 12 Average loss: 139.1112
+====> Round 8: Epoch: 13 Average loss: 139.1792
+====> Round 8: Epoch: 14 Average loss: 139.1045
+====> Round 8: Epoch: 15 Average loss: 139.0370
+====> Round 8: Epoch: 16 Average loss: 138.9134
+====> Round 8: Epoch: 17 Average loss: 138.8487
+====> Round 8: Epoch: 18 Average loss: 138.9598
+====> Round 8: Epoch: 19 Average loss: 138.7368
+====> Round 8: Epoch: 20 Average loss: 138.8561
+====> Round 8: Epoch: 21 Average loss: 138.7129
+====> Round 8: Epoch: 22 Average loss: 138.6549
+====> Round 8: Epoch: 23 Average loss: 138.7067
+====> Round 8: Epoch: 24 Average loss: 138.6052
+====> Round 8: Epoch: 25 Average loss: 138.6904
+====> Round 8: Epoch: 26 Average loss: 138.5186
+====> Round 8: Epoch: 27 Average loss: 138.6278
+====> Round 8: Epoch: 28 Average loss: 138.4093
+====> Round 8: Epoch: 29 Average loss: 138.4911
+====> Round 8: Epoch: 30 Average loss: 138.2733
+====> Round 8: Epoch: 31 Average loss: 138.2396
+====> Round 8: Epoch: 32 Average loss: 138.1814
+====> Round 8: Epoch: 33 Average loss: 138.4016
+====> Round 8: Epoch: 34 Average loss: 138.3640
+====> Round 8: Epoch: 35 Average loss: 138.1075
+====> Round 8: Epoch: 36 Average loss: 138.1927
+====> Round 8: Epoch: 37 Average loss: 138.0244
+====> Round 8: Epoch: 38 Average loss: 138.0330
+====> Round 8: Epoch: 39 Average loss: 137.9150
+====> Round 8: Epoch: 40 Average loss: 137.8724
+====> Round 8: Epoch: 41 Average loss: 137.8911
+====> Round 8: Epoch: 42 Average loss: 138.0191
+====> Round 8: Epoch: 43 Average loss: 137.8963
+====> Round 8: Epoch: 44 Average loss: 137.7020
+====> Round 8: Epoch: 45 Average loss: 137.7903
+====> Round 8: Epoch: 46 Average loss: 137.7449
+====> Round 8: Epoch: 47 Average loss: 137.6490
+====> Round 8: Epoch: 48 Average loss: 137.5949
+====> Round 8: Epoch: 49 Average loss: 137.7488
+====> Round 8: Epoch: 50 Average loss: 137.7061
+====> Round 8: Epoch: 51 Average loss: 137.4580
+====> Round 8: Epoch: 52 Average loss: 137.4295
+====> Round 8: Epoch: 53 Average loss: 137.2817
+====> Round 8: Epoch: 54 Average loss: 137.4401
+====> Round 8: Epoch: 55 Average loss: 137.3734
+====> Round 8: Epoch: 56 Average loss: 137.3397
+====> Round 8: Epoch: 57 Average loss: 137.3126
+====> Round 8: Epoch: 58 Average loss: 137.3082
+====> Round 8: Epoch: 59 Average loss: 137.1286
+====> Round 8: Epoch: 60 Average loss: 137.1093
+====> Round 8: Epoch: 61 Average loss: 137.1005
+====> Round 8: Epoch: 62 Average loss: 137.0116
+====> Round 8: Epoch: 63 Average loss: 136.9312
+====> Round 8: Epoch: 64 Average loss: 136.9169
+====> Round 8: Epoch: 65 Average loss: 136.8909
+====> Round 8: Epoch: 66 Average loss: 136.8605
+====> Round 8: Epoch: 67 Average loss: 136.8226
+====> Round 8: Epoch: 68 Average loss: 136.8584
+====> Round 8: Epoch: 69 Average loss: 136.7865
+====> Round 8: Epoch: 70 Average loss: 136.7183
+====> Round 8: Epoch: 71 Average loss: 136.6139
+====> Round 8: Epoch: 72 Average loss: 136.6083
+====> Round 8: Epoch: 73 Average loss: 136.6484
+====> Round 8: Epoch: 74 Average loss: 136.5497
+====> Round 8: Epoch: 75 Average loss: 136.4887
+====> Round 8: Epoch: 76 Average loss: 136.5891
+====> Round 8: Epoch: 77 Average loss: 136.4024
+====> Round 8: Epoch: 78 Average loss: 136.3690
+====> Round 8: Epoch: 79 Average loss: 136.3965
+====> Round 8: Epoch: 80 Average loss: 136.4582
+====> Round 8: Epoch: 81 Average loss: 136.2807
+====> Round 8: Epoch: 82 Average loss: 136.2682
+====> Round 8: Epoch: 83 Average loss: 136.2198
+====> Round 8: Epoch: 84 Average loss: 136.2997
+====> Round 8: Epoch: 85 Average loss: 136.1343
+====> Round 8: Epoch: 86 Average loss: 136.1432
+====> Round 8: Epoch: 87 Average loss: 136.0884
+====> Round 8: Epoch: 88 Average loss: 136.0675
+====> Round 8: Epoch: 89 Average loss: 136.1131
+====> Round 8: Epoch: 90 Average loss: 135.8585
+====> Round 8: Epoch: 91 Average loss: 135.8494
+====> Round 8: Epoch: 92 Average loss: 135.8357
+====> Round 8: Epoch: 93 Average loss: 135.9033
+====> Round 8: Epoch: 94 Average loss: 135.8442
+====> Round 8: Epoch: 95 Average loss: 135.8604
+====> Round 8: Epoch: 96 Average loss: 135.6865
+====> Round 8: Epoch: 97 Average loss: 135.5920
+====> Round 8: Epoch: 98 Average loss: 135.6042
+====> Round 8: Epoch: 99 Average loss: 135.5724
+====> Round 8: Epoch: 100 Average loss: 135.5388
+====> Round 8: Epoch: 101 Average loss: 135.5805
+====> Round 8: Epoch: 102 Average loss: 135.5619
+====> Round 8: Epoch: 103 Average loss: 135.5640
+====> Round 8: Epoch: 104 Average loss: 135.3728
+====> Round 8: Epoch: 105 Average loss: 135.4359
+====> Round 8: Epoch: 106 Average loss: 135.2829
+====> Round 8: Epoch: 107 Average loss: 135.2583
+====> Round 8: Epoch: 108 Average loss: 135.3237
+====> Round 8: Epoch: 109 Average loss: 135.2852
+====> Round 8: Epoch: 110 Average loss: 135.2081
+====> Round 8: Epoch: 111 Average loss: 135.2748
+====> Round 8: Epoch: 112 Average loss: 135.1096
+====> Round 8: Epoch: 113 Average loss: 135.0408
+====> Round 8: Epoch: 114 Average loss: 135.0483
+====> Round 8: Epoch: 115 Average loss: 135.0677
+====> Round 8: Epoch: 116 Average loss: 134.8407
+====> Round 8: Epoch: 117 Average loss: 134.9103
+====> Round 8: Epoch: 118 Average loss: 135.0017
+====> Round 8: Epoch: 119 Average loss: 134.7829
+====> Round 8: Epoch: 120 Average loss: 134.7999
+====> Round 8: Epoch: 121 Average loss: 134.7593
+====> Round 8: Epoch: 122 Average loss: 134.8278
+====> Round 8: Epoch: 123 Average loss: 134.7664
+====> Round 8: Epoch: 124 Average loss: 134.6834
+====> Round 8: Epoch: 125 Average loss: 134.7437
+====> Round 8: Epoch: 126 Average loss: 134.6792
+====> Round 8: Epoch: 127 Average loss: 134.4847
+====> Round 8: Epoch: 128 Average loss: 134.5999
+====> Round 8: Epoch: 129 Average loss: 134.6422
+====> Round 8: Epoch: 130 Average loss: 134.4224
+====> Round 8: Epoch: 131 Average loss: 134.4407
+====> Round 8: Epoch: 132 Average loss: 134.4265
+====> Round 8: Epoch: 133 Average loss: 134.3202
+====> Round 8: Epoch: 134 Average loss: 134.4084
+====> Round 8: Epoch: 135 Average loss: 134.3291
+====> Round 8: Epoch: 136 Average loss: 134.2965
+====> Round 8: Epoch: 137 Average loss: 134.1636
+====> Round 8: Epoch: 138 Average loss: 134.1643
+====> Round 8: Epoch: 139 Average loss: 134.3083
+====> Round 8: Epoch: 140 Average loss: 134.0596
+====> Round 8: Epoch: 141 Average loss: 134.1075
+====> Round 8: Epoch: 142 Average loss: 134.1653
+====> Round 8: Epoch: 143 Average loss: 134.1356
+====> Round 8: Epoch: 144 Average loss: 134.0871
+====> Round 8: Epoch: 145 Average loss: 133.9701
+====> Round 8: Epoch: 146 Average loss: 133.8985
+====> Round 8: Epoch: 147 Average loss: 133.8634
+====> Round 8: Epoch: 148 Average loss: 133.9124
+====> Round 8: Epoch: 149 Average loss: 133.8213
+====> Round 8: Epoch: 150 Average loss: 133.8015
+====> Round 8: Epoch: 151 Average loss: 133.7353
+====> Round 8: Epoch: 152 Average loss: 133.7320
+====> Round 8: Epoch: 153 Average loss: 133.6812
+====> Round 8: Epoch: 154 Average loss: 133.8144
+====> Round 8: Epoch: 155 Average loss: 133.6857
+====> Round 8: Epoch: 156 Average loss: 133.5640
+====> Round 8: Epoch: 157 Average loss: 133.6191
+====> Round 8: Epoch: 158 Average loss: 133.5046
+====> Round 8: Epoch: 159 Average loss: 133.4686
+====> Round 8: Epoch: 160 Average loss: 133.4245
+====> Round 8: Epoch: 161 Average loss: 133.3786
+====> Round 8: Epoch: 162 Average loss: 133.3715
+====> Round 8: Epoch: 163 Average loss: 133.3130
+====> Round 8: Epoch: 164 Average loss: 133.2815
+====> Round 8: Epoch: 165 Average loss: 133.2720
+====> Round 8: Epoch: 166 Average loss: 133.2941
+====> Round 8: Epoch: 167 Average loss: 133.2790
+====> Round 8: Epoch: 168 Average loss: 133.1399
+====> Round 8: Epoch: 169 Average loss: 133.1125
+====> Round 8: Epoch: 170 Average loss: 133.1483
+====> Round 8: Epoch: 171 Average loss: 133.1330
+====> Round 8: Epoch: 172 Average loss: 133.2438
+====> Round 8: Epoch: 173 Average loss: 132.9745
+====> Round 8: Epoch: 174 Average loss: 133.0496
+====> Round 8: Epoch: 175 Average loss: 132.9175
+====> Round 8: Epoch: 176 Average loss: 132.7897
+====> Round 8: Epoch: 177 Average loss: 132.8970
+====> Round 8: Epoch: 178 Average loss: 132.9612
+====> Round 8: Epoch: 179 Average loss: 132.8186
+====> Round 8: Epoch: 180 Average loss: 132.8687
+====> Round 8: Epoch: 181 Average loss: 132.8269
+====> Round 8: Epoch: 182 Average loss: 132.8164
+====> Round 8: Epoch: 183 Average loss: 132.6954
+====> Round 8: Epoch: 184 Average loss: 132.5857
+====> Round 8: Epoch: 185 Average loss: 132.5893
+====> Round 8: Epoch: 186 Average loss: 132.4896
+====> Round 8: Epoch: 187 Average loss: 132.6996
+====> Round 8: Epoch: 188 Average loss: 132.5368
+====> Round 8: Epoch: 189 Average loss: 132.4416
+====> Round 8: Epoch: 190 Average loss: 132.4322
+====> Round 8: Epoch: 191 Average loss: 132.5679
+====> Round 8: Epoch: 192 Average loss: 132.4247
+====> Round 8: Epoch: 193 Average loss: 132.2676
+====> Round 8: Epoch: 194 Average loss: 132.1792
+====> Round 8: Epoch: 195 Average loss: 132.3387
+====> Round 8: Epoch: 196 Average loss: 132.3128
+====> Round 8: Epoch: 197 Average loss: 132.1084
+====> Round 8: Epoch: 198 Average loss: 132.2027
+====> Round 8: Epoch: 199 Average loss: 132.2622
+====> Round 8: Epoch: 200 Average loss: 132.1395
+====> Round 8: Epoch: 201 Average loss: 132.0714
+====> Round 8: Epoch: 202 Average loss: 132.1283
+====> Round 8: Epoch: 203 Average loss: 132.0695
+====> Round 8: Epoch: 204 Average loss: 131.9462
+====> Round 8: Epoch: 205 Average loss: 131.8626
+====> Round 8: Epoch: 206 Average loss: 131.9653
+====> Round 8: Epoch: 207 Average loss: 131.9307
+====> Round 8: Epoch: 208 Average loss: 131.8273
+====> Round 8: Epoch: 209 Average loss: 131.8679
+====> Round 8: Epoch: 210 Average loss: 131.7251
+====> Round 8: Epoch: 211 Average loss: 131.7852
+====> Round 8: Epoch: 212 Average loss: 131.7761
+====> Round 8: Epoch: 213 Average loss: 131.5656
+====> Round 8: Epoch: 214 Average loss: 131.7285
+====> Round 8: Epoch: 215 Average loss: 131.6362
+====> Round 8: Epoch: 216 Average loss: 131.5040
+====> Round 8: Epoch: 217 Average loss: 131.6090
+====> Round 8: Epoch: 218 Average loss: 131.4985
+====> Round 8: Epoch: 219 Average loss: 131.5942
+====> Round 8: Epoch: 220 Average loss: 131.4958
+====> Round 8: Epoch: 221 Average loss: 131.3491
+====> Round 8: Epoch: 222 Average loss: 131.4837
+====> Round 8: Epoch: 223 Average loss: 131.4554
+====> Round 8: Epoch: 224 Average loss: 131.2805
+====> Round 8: Epoch: 225 Average loss: 131.3627
+====> Round 8: Epoch: 226 Average loss: 131.2628
+====> Round 8: Epoch: 227 Average loss: 131.2325
+====> Round 8: Epoch: 228 Average loss: 131.2952
+====> Round 8: Epoch: 229 Average loss: 131.1915
+====> Round 8: Epoch: 230 Average loss: 131.0561
+====> Round 8: Epoch: 231 Average loss: 131.1674
+====> Round 8: Epoch: 232 Average loss: 131.1717
+====> Round 8: Epoch: 233 Average loss: 131.0525
+====> Round 8: Epoch: 234 Average loss: 131.0462
+====> Round 8: Epoch: 235 Average loss: 131.1020
+====> Round 8: Epoch: 236 Average loss: 130.9386
+====> Round 8: Epoch: 237 Average loss: 130.9483
+====> Round 8: Epoch: 238 Average loss: 130.8725
+====> Round 8: Epoch: 239 Average loss: 130.9070
+====> Round 8: Epoch: 240 Average loss: 130.8158
+====> Round 8: Epoch: 241 Average loss: 130.8748
+====> Round 8: Epoch: 242 Average loss: 130.7596
+====> Round 8: Epoch: 243 Average loss: 130.9847
+====> Round 8: Epoch: 244 Average loss: 130.6617
+====> Round 8: Epoch: 245 Average loss: 130.7036
+====> Round 8: Epoch: 246 Average loss: 130.6668
+====> Round 8: Epoch: 247 Average loss: 130.5902
+====> Round 8: Epoch: 248 Average loss: 130.6670
+====> Round 8: Epoch: 249 Average loss: 130.7070
+====> Round 8: Epoch: 250 Average loss: 130.6311
+====> Round 8: Epoch: 251 Average loss: 130.5375
+====> Round 8: Epoch: 252 Average loss: 130.4619
+====> Round 8: Epoch: 253 Average loss: 130.5287
+====> Round 8: Epoch: 254 Average loss: 130.2160
+====> Round 8: Epoch: 255 Average loss: 130.3237
+2020-04-25 12:39:00.061739
+====> Round 8: Epoch 255: Test set loss: 121.8825
+====> Round 8: Epoch 255: Test set loss: 121.8386
+2020-04-25 12:39:05.689943
+Training finished

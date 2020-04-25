@@ -137,3 +137,7 @@ t10k-images-idx3-ubyte
 t10k-labels-idx1-ubyte
 train-images-idx3-ubyte
 train-labels-idx1-ubyte
+/experiments/extra epochs silhouettes/iwae_silhouettes_K50_M20_extra/iwae_silhouettes_K50_M20/
+/experiments/extra epochs silhouettes/iwae_silhouettes_K5_M20_extra/iwae_silhouettes_K5_M20/
+experiments/extra epochs silhouettes/iwae_silhouettes_K50_M20_extra/real.py
+experiments/fashion/vae_fashion_L1_K50_M128/real.py

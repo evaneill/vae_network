@@ -537,3 +537,42 @@ INFO:root:====> Round 7: Epoch 127: Test set loss: 133.6238
 INFO:root:====> Round 7: Epoch 127: Test set loss: 133.7696
 INFO:root:2020-04-03 15:09:47.579570
 INFO:root:Training finished
+INFO:root:Training on GPU
+INFO:root:2020-04-25 13:01:03.222542
+INFO:root:====== About to train for 1 epochs in round 0 with learning rate 0.0001========
+INFO:root:====> Round 0: Epoch: 0 Average loss: 384.0889
+INFO:root:2020-04-25 13:01:15.615321
+INFO:root:====> Round 0: Epoch 0: Test set loss: 293.7512
+INFO:root:====== About to train for 2 epochs in round 1 with learning rate 7.5e-05========
+INFO:root:====> Round 1: Epoch: 0 Average loss: 279.1229
+INFO:root:====> Round 1: Epoch: 1 Average loss: 248.6654
+INFO:root:2020-04-25 13:01:43.486644
+INFO:root:====> Round 1: Epoch 1: Test set loss: 222.7829
+INFO:root:====== About to train for 4 epochs in round 2 with learning rate 5.62e-05========
+INFO:root:====> Round 2: Epoch: 0 Average loss: 233.7632
+INFO:root:====> Round 2: Epoch: 1 Average loss: 226.3335
+INFO:root:====> Round 2: Epoch: 2 Average loss: 221.4289
+INFO:root:====> Round 2: Epoch: 3 Average loss: 216.2405
+INFO:root:2020-04-25 13:02:35.348779
+INFO:root:====> Round 2: Epoch 3: Test set loss: 193.5554
+INFO:root:====== About to train for 8 epochs in round 3 with learning rate 4.22e-05========
+INFO:root:====> Round 3: Epoch: 0 Average loss: 212.1817
+INFO:root:====> Round 3: Epoch: 1 Average loss: 209.4345
+INFO:root:====> Round 3: Epoch: 2 Average loss: 207.0157
+INFO:root:====> Round 3: Epoch: 3 Average loss: 205.4398
+INFO:root:====> Round 3: Epoch: 4 Average loss: 203.9851
+INFO:root:====> Round 3: Epoch: 5 Average loss: 203.0091
+INFO:root:====> Round 3: Epoch: 6 Average loss: 201.4780
+INFO:root:====> Round 3: Epoch: 7 Average loss: 200.0903
+INFO:root:2020-04-25 13:04:17.351262
+INFO:root:====> Round 3: Epoch 7: Test set loss: 176.9715
+INFO:root:====== About to train for 16 epochs in round 4 with learning rate 3.16e-05========
+INFO:root:====> Round 4: Epoch: 0 Average loss: 198.6750
+INFO:root:====> Round 4: Epoch: 1 Average loss: 197.6019
+INFO:root:====> Round 4: Epoch: 2 Average loss: 196.5612
+INFO:root:====> Round 4: Epoch: 3 Average loss: 195.5131
+INFO:root:====> Round 4: Epoch: 4 Average loss: 194.5064
+INFO:root:====> Round 4: Epoch: 5 Average loss: 193.6127
+INFO:root:====> Round 4: Epoch: 6 Average loss: 192.2742
+INFO:root:====> Round 4: Epoch: 7 Average loss: 191.3185
+INFO:root:====> Round 4: Epoch: 8 Average loss: 190.6159
