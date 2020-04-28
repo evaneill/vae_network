@@ -19,7 +19,7 @@ model_type = 'vralpha'
 
 device = torch.device("cuda" if cuda else "cpu")
 
-if model_type!="general_alpha" and model_type!="vralpha":
+if model_type not in ["general_alpha","vralpha"]:
 	model_name=model_type
 else:
 	model_name = model_type+str(alpha)
