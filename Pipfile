@@ -11,6 +11,7 @@ scipy = "*"
 python-mnist = "*"
 numpy = "*"
 torchvision = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.6"
