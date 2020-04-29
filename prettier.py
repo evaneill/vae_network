@@ -498,9 +498,7 @@ def _test(epoch):
 
 def load_data_and_initialize_loaders(data_name, train_batch, test_batch):
     data_name = data_name.lower()
-
     kwargs = {'num_workers': 1, 'pin_memory': True}
-
     if data_name == 'mnist':
         train_data = datasets.MNIST('./data', train=True, download=True, transform=transforms.ToTensor())
         test_data = datasets.MNIST('./data', train=False, transform=transforms.ToTensor())
