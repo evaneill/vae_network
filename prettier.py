@@ -13,36 +13,31 @@ from torchvision.utils import save_image
 
 os.makedirs('results', exist_ok=True)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = 'cpu'
+# Hyperparameters
+alpha = -500 # alpha value used in Renyi alpha-divergence, ignored when model_type is vae/iwae/vrmax
+K = 5 # number of samples taken per input data point
+L = 2 # number of stochastic layers in network architecture; either 1 or 2
 
-K = 5
-batch_size = 100
-test_batch_size = 32
+model_type = 'vralpha' # one of ['vae', 'iwae', 'vrmax', 'vralpha', 'general_alpha']
+data_name = 'mnist' # one of ['mnist', 'fashion', 'fashionmnist']
+
 epochs = 501
-seed = 1
-
-log_interval = 1
-test_interval = 1
 learning_rate = 1e-3
-discrete_data = True
-alpha = -500
+
+log_interval = 1 # how frequently to log average training loss
+test_interval = 1 # how frequently to test
+train_batch_size = 100 # batch size during training
+test_batch_size = 32 # batch size used during testing, different than training because testing is done with K=5000
+
+seed = 1 # fixed seed
 torch.manual_seed(seed)
-L = 1
-model_type = 'iwae'
-# omniglot doesn't work currently
-data_name = 'fashion'
+discrete_data = True # always True for MNIST/FashionMNIST, but needed when training on continuous data
 
-assert (L in [1, 2])
-assert (model_type in ['vae', 'iwae', 'vrmax', 'vralpha', 'general_alpha'])
-assert (alpha != 1 or model_type not in ['vralpha', 'general_alpha'])
-
-
-# Define likelihood functions
-def compute_log_probabitility_gaussian(obs, mu, logstd, axis=1):
-    # leaving out constant factor related to 2 pi in formula
-    return torch.sum(-0.5 * ((obs-mu) / torch.exp(logstd)) ** 2 - logstd, axis)-.5*obs.shape[1]*T.log(torch.tensor(2*np.pi))
-
-def compute_log_probabitility_bernoulli(theta, obs, axis=1):
-    return torch.sum(obs*torch.log(theta+1e-18) + (1-obs)*torch.log(1-theta+1e-18), axis)
+assert(L in [1, 2]) # we only have networks with 1 or 2 stochastic layers
+assert(model_type in ['vae', 'iwae', 'vrmax', 'vralpha', 'general_alpha'])
+assert(not(alpha==1 and model_type in ['vralpha', 'general_alpha'])) # divide by 0 error otherwise
+assert(data_name in ['mnist', 'fashion', 'fashionmnist'])
 
 class mnist_omniglot_model1(nn.Module):
     def __init__(self, alpha):
@@ -61,7 +56,6 @@ class mnist_omniglot_model1(nn.Module):
         self.alpha = alpha
 
     def encode(self, x):
-        #h1 = F.relu(self.fc1(x))
         h1 = torch.tanh(self.fc1(x))
         h2 = torch.tanh(self.fc2(h1))
         return self.fc31(h2), self.fc32(h2)
@@ -191,18 +185,9 @@ class mnist_omniglot_model2(nn.Module):
         return self.decode(z), mu, logstd
 
     def compute_loss_for_batch(self, data, model, K=K, test=False):
-        alpha = self.alpha
-        # data = (N,560)
-        if model_type == 'vae':
-            alpha = 1
-        elif model_type in ('iwae', 'vrmax'):
-            alpha = 0
-        else:
-            # use whatever alpha is defined in hyperparameters
-            if abs(alpha - 1) <= 1e-3:
-                alpha = 1
-
-        data_k_vec = data.repeat_interleave(K, 0)
+        B, _, H, W = data.shape
+        data_k_vec = data.repeat((1, K, 1, 1)).view(-1, H * W)
+        # data_k_vec = data.repeat_interleave(K, 0)
 
         mu, log_std, [x, z1] = self.encode(data_k_vec)
         # (B*K, #latents)
@@ -250,7 +235,7 @@ class mnist_omniglot_model2(nn.Module):
             log_w_matrix = (log_p_z + log_ph1_z + log_px_h1 - log_qz_h1 - log_qh1_x).view(-1, 1) * 1 / K
             return -torch.sum(log_w_matrix)
         elif model_type == 'general_alpha' or model_type == 'vralpha':
-            log_w_matrix = (log_p_z + log_ph1_z + log_px_h1 - log_qz_h1 - log_qh1_x).view(-1, K) * (1 - alpha)
+            log_w_matrix = (log_p_z + log_ph1_z + log_px_h1 - log_qz_h1 - log_qh1_x).view(-1, K) * (1 - self.alpha)
         elif model_type == 'vrmax':
             log_w_matrix = (log_p_z + log_ph1_z + log_px_h1 - log_qz_h1 - log_qh1_x).view(-1, K).max(axis=1,
                                                                                                      keepdim=True).values
@@ -267,10 +252,20 @@ class mnist_omniglot_model2(nn.Module):
             ws_sum_per_datapoint = torch.sum(log_w_matrix * ws_norm, 1)
 
         if model_type in ["general_alpha", "vralpha"] and not test:
-            ws_sum_per_datapoint /= (1 - alpha)
+            ws_sum_per_datapoint /= (1 - self.alpha)
         loss = -torch.sum(ws_sum_per_datapoint)
 
         return loss
+
+# Compute N(obs| mu, sigma) for all K samples and sum over probabilities of the K samples
+def compute_log_probabitility_gaussian(obs, mu, logstd, axis=1):
+    # leaving out constant factor related to 2 pi in formula
+    return torch.sum(-0.5 * ((obs-mu) / torch.exp(logstd)) ** 2 - logstd, axis)-.5*obs.shape[1]*T.log(torch.tensor(2*np.pi))
+
+# Compute Ber(obs| theta) for all K samples and sum over probabilities of the K samples
+def compute_log_probabitility_bernoulli(theta, obs, axis=1):
+    # 1e-18 needed to avoid numerical errors
+    return torch.sum(obs*torch.log(theta+1e-18) + (1-obs)*torch.log(1-theta+1e-18), axis)
 
 # Define the model
 # class silhouettes_model(nn.Module):
@@ -501,9 +496,9 @@ def _test(epoch):
     logging.info(f'====> Epoch: {epoch} Test set loss: {test_loss:.4f}')
     return test_loss
 
-def load_data(data_name, train_batch, test_batch):
+def load_data_and_initialize_loaders(data_name, train_batch, test_batch):
     data_name = data_name.lower()
-    assert(data_name in ['mnist', 'fashion', 'fashionmnist', 'omniglot'])
+
     kwargs = {'num_workers': 1, 'pin_memory': True}
 
     if data_name == 'mnist':
@@ -525,7 +520,7 @@ if __name__ == "__main__":
         model = mnist_omniglot_model1(alpha).to(device)
     else:
         model = mnist_omniglot_model2(alpha).to(device)
-    train_loader, test_loader = load_data(data_name, batch_size, test_batch_size)
+    train_loader, test_loader = load_data_and_initialize_loaders(data_name, train_batch_size, test_batch_size)
     if torch.cuda.is_available():
         print("Training on GPU")
         logging.info("Training on GPU")
@@ -543,3 +538,6 @@ if __name__ == "__main__":
     logging.info(datetime.datetime.now())
     print("Training finished")
     logging.info("Training finished")
+    print("Saving model")
+    torch.save(model.state_dict(),
+               f'models/{model_type}_L={L}_{data_name}_alpha={alpha}_K={K}_epochs={epochs}.pt')
