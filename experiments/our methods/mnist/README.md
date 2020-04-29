@@ -1,0 +1,1 @@
+Note that the folders containing the scripts to run the MNIST experiments on VAE, IWAE and VR-max do not contain training logs. This is because we ran these experiments before we started saved training logs.
