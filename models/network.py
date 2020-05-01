@@ -13,7 +13,7 @@ from .layers import StochasticGaussianLayer, StochasticBernoulliLayer, Determini
 class VRalphaNet(nn.Module):
 	""" 'Renyi Divergence AutoEncoder Net' """
 
-	def __init__(self,train_data,layers,activations,n_samples=5,alpha=1,data_type='binary'):
+	def __init__(self,train_data,layers,activations,K=5,alpha=1,data_type='binary'):
 		"""Implements a fully connected FF network with stochastic and deterministic layers
 		
 		Args:
@@ -25,7 +25,7 @@ class VRalphaNet(nn.Module):
 		
 		    activations (str): activation of all but final layer, whose activation is determined by the task and choice of loss. Must be exactly the name of an activation, i.e. "nn.<activations>" must be in the torch.nn library
 		
-		    n_samples (int, optional): Number of samples to generate for the decoder for each sample input at each stochastic layer (beware blowup with multiple stochastic layers!)
+		    K (int, optional): Number of samples to generate for the decoder for each sample input at each stochastic layer (beware blowup with multiple stochastic layers!)
 		
 		    alpha (int, optional): Renyi divergence hyperparameter alpha
 		    
@@ -45,20 +45,20 @@ class VRalphaNet(nn.Module):
 
 		super(VRalphaNet,self).__init__()
 
-		self.encoder = EncoderNet(train_data,layers,activations,n_samples)
+		self.encoder = EncoderNet(train_data,layers,activations,K)
 		self.decoder = DecoderNet(train_data,layers[::-1],activations,data_type)
 
 		# self._params = nn.ParameterList()
 		# self._params.extend(self.encoder._params)
 		# self._params.extend(self.decoder._params)
 
-	def forward(self,x,n_samples=None):
+	def forward(self,x,K=None):
 
 		# Sampling is built into the logic of stochastic layers, which the encoder should end in
-		if not n_samples:
+		if not K:
 			q_samples, qmu, qlog_sigma = self.encoder.encode(x)
 		else:
-			q_samples, qmu, qlog_sigma = self.encoder.encode(x,n_samples=n_samples)
+			q_samples, qmu, qlog_sigma = self.encoder.encode(x,K=K)
 
 		# I guess this was actually unnecessary...
 		# output, pmu, plog_sigma = self.decoder.decode(q_samples[-1]) 
@@ -72,7 +72,7 @@ class VRalphaNet(nn.Module):
 
 class EncoderNet(nn.Module):
 
-	def __init__(self,data,layers,activations,n_samples):
+	def __init__(self,data,layers,activations,K):
 		"""Summary
 		
 		Args:
@@ -103,14 +103,14 @@ class EncoderNet(nn.Module):
 				print(f"'{next_layer[1]}' isn't a valid type of layer - gotta be 's' or 'd' bruh")
 				raise BadInputException
 
-		self.n_samples = n_samples
+		self.K = K
 
-	def encode(self,data,sample=True,n_samples=None):
+	def encode(self,data,sample=True,K=None):
 		if sample:
-			if not n_samples:
-				outputs = [data.repeat_interleave(self.n_samples,dim=0)]
+			if not K:
+				outputs = [data.repeat_interleave(self.K,dim=0)]
 			else:
-				outputs = [data.repeat_interleave(n_samples,dim=0)]
+				outputs = [data.repeat_interleave(K,dim=0)]
 		else:
 			outputs = [data]
 

@@ -15,14 +15,14 @@ def main(data,model,alpha,optimize_on,batch_size):
 	output, qmu, qlog_sigma = model.forward(data_train_t[:batch_size,:])
 
 	print(f"Trying to test loss with alpha={str(alpha)} and L={len(model.encoder.layers)}")
-	print(f"==== Loss = {VRBound(alpha,model,output,qmu,qlog_sigma,optimize_on=optimize_on)} =====")
+	print(f"==== Loss = {VRBound(alpha,model,output,qmu,qlog_sigma,optimize_on=optimize_on)/batch_size} =====")
 
 if __name__=="__main__":
 	parser = argparse.ArgumentParser(description='test feed forward of architecture')
 	parser.add_argument('--data','-d',choices = DATASETS.keys(),default="mnist_binary")
 	parser.add_argument('--L','-l',type=int,choices=[1,2],default=1)
 	parser.add_argument('--alpha','-a',type=float,default=1.)
-	parser.add_argument('--optimize_on',choices=['full_lowerbound','max'],default='full_lowerbound')
+	parser.add_argument('--optimize_on',choices=['full_bound','max','sample'],default='full_bound')
 	parser.add_argument('--n_samples','-k',type=int,default=5)
 	parser.add_argument('--batch_size','-batch',type=int,default=100)
 
@@ -45,6 +45,6 @@ if __name__=="__main__":
 	if l==1:
 		model = net.VRalphaNet(data[0],[(200,'d'),(200,'d'),(50,'s')],'softplus',data_type=data_type,n_samples=n_samples)
 	else:
-		model = net.VRalphaNet(data[0],[(200,'d'),(200,'d'),(100,'s'),(100,'d'),(100,'d'),(50,'s')],'tanh',data_type=data_type)
+		model = net.VRalphaNet(data[0],[(200,'d'),(200,'d'),(100,'s'),(100,'d'),(100,'d'),(50,'s')],'tanh',data_type=data_type,n_amples=n_samples)
 
 	main(data,model,alpha,optimize_on,batch_size)
